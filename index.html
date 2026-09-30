@@ -70,20 +70,37 @@ a.map{font-size:12px;font-weight:700;line-height:1;padding:5px 8px;border-radius
 .sec>p.sub{margin:4px 0 14px;color:var(--muted);font-size:14px}
 
 /* plays */
-.plays{display:grid;gap:10px;margin-top:12px}
-.play{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
-.play.main{border:2px solid var(--accent);padding:13px 15px}
-.play h3{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font:700 18px/1.35 var(--body)}
-.play .bd{font-size:11px;font-weight:700;line-height:1;padding:5px 8px;border-radius:6px;background:var(--soft);border:1px solid var(--line);color:var(--muted)}
+.pg{margin:20px 0 0;font:700 15px/1.4 var(--body);color:var(--muted)}
+.plays{display:grid;gap:8px;margin-top:8px}
+.play{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:clip}
+.play.main{border:2px solid var(--accent)}
+.play>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto minmax(0,1fr) 22px;gap:10px;align-items:center;padding:12px 14px;min-height:60px}
+.play>summary::-webkit-details-marker{display:none}
+.play .bd{font-size:11px;font-weight:700;line-height:1;padding:5px 8px;border-radius:6px;background:var(--soft);border:1px solid var(--line);color:var(--muted);white-space:nowrap}
 .play.main .bd{background:var(--accent);border-color:var(--accent);color:var(--on)}
-.play .gen{margin:3px 0 0;color:var(--muted);font-size:13.5px}
-.play dl{margin:10px 0 0}
+.play .pt strong{display:block;font:700 17px/1.35 var(--body)}
+.play .pt small{display:block;color:var(--muted);font-size:13px;line-height:1.45}
+.play .chev{width:22px;height:22px;position:relative}
+.play .chev::before{content:"";position:absolute;left:5px;top:5px;width:9px;height:9px;border-right:2.5px solid var(--muted);border-bottom:2.5px solid var(--muted);transform:rotate(45deg);transition:transform .15s}
+.play[open] .chev::before{transform:rotate(-135deg);top:9px}
+.play .pb{padding:0 14px 14px}
+.play dl{margin:0}
 .play dl>div{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;padding:9px 0;border-top:1px solid var(--line)}
 .play dt{font-weight:700;font-size:13px;color:var(--accent);padding-top:1px}
 .play dd{margin:0}
 .play dd small{display:block;margin-top:2px;color:var(--muted);font-size:13px}
+.play .sl{display:block}
+.play .sl b{display:inline-block;min-width:66px;font-family:var(--mono);font-size:12.5px;font-weight:500;color:var(--muted)}
 .play .bk{display:flex;align-items:center;justify-content:center;min-height:46px;margin-top:6px;border-radius:12px;background:var(--accent);color:var(--on);font-weight:700;text-decoration:none}
 .play:not(.main) .bk{background:var(--surface);color:var(--accent);border:1.5px solid var(--accent)}
+.others{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:clip}
+.others>summary{list-style:none;cursor:pointer;padding:14px;min-height:52px;font-weight:700;color:var(--muted)}
+.others>summary::-webkit-details-marker{display:none}
+.others ul{list-style:none;margin:0;padding:0 14px 6px}
+.others li{padding:9px 0;border-top:1px solid var(--line);font-size:14px}
+.others li strong{font-size:14.5px}
+.others li span{margin-left:6px;color:var(--muted);font-size:12.5px}
+.others li p{margin:2px 0 0;color:var(--muted);font-size:13.5px}
 
 /* rules */
 .rules{margin:12px 0 0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 16px}
@@ -161,8 +178,21 @@ a.map{font-size:12px;font-weight:700;line-height:1;padding:5px 8px;border-radius
 .hrs{margin:4px 0 0;font:500 12.5px/1.5 var(--mono);color:var(--muted)}
 .note{margin:4px 0 0;font-size:14.5px}
 .warn{margin:6px 0 0;padding:7px 10px;border-radius:8px;background:var(--warn-soft);color:var(--warn-ink);font-size:13.5px;line-height:1.55}
-.alt{margin:6px 0 0;padding:7px 10px;border-radius:8px;background:var(--soft);border:1px dashed var(--line);color:var(--muted);font-size:13.5px;line-height:1.55}
-.alt b{color:var(--ink)}
+.alts{margin:6px 0 0;border-radius:8px;background:var(--soft);border:1px dashed var(--line);font-size:13.5px;line-height:1.55}
+.alts>summary{list-style:none;cursor:pointer;padding:9px 10px;min-height:40px;font-weight:700;color:var(--ink)}
+.alts>summary::-webkit-details-marker{display:none}
+.alts>summary::after{content:"펼치기";float:right;font-weight:500;font-size:12px;color:var(--muted)}
+.alts[open]>summary::after{content:"접기"}
+.alts ul{list-style:none;margin:0;padding:0 10px}
+.alts li{padding:8px 0;border-top:1px solid var(--line)}
+.alts .an{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.alts .ai{min-width:0}
+.alts .an strong{font-size:14px}
+.alts .an span{margin-left:6px;color:var(--muted);font-size:12.5px}
+.alts .an a.map{flex:none;margin-left:0}
+.alts .ar{display:block;color:var(--muted)}
+.alts .ar b{font-family:var(--mono);font-weight:500;color:var(--ink);margin-right:6px}
+.alts .fx{margin:0;padding:8px 10px 10px;color:var(--muted);border-top:1px solid var(--line)}
 a.map.book{background:var(--accent);border-color:var(--accent);color:var(--on)}
 
 footer{margin-top:44px;padding:20px 0 calc(48px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
@@ -187,36 +217,127 @@ footer a{color:var(--muted)}
 <main class="wrap">
   <section class="sec" id="play" aria-labelledby="pl-h">
     <h2 id="pl-h">참여형 연극</h2>
-    <p class="sub">10가지 코스에 모두 한 편씩 넣었어요. 기본은 히든퍼즐이고, 멜로에 차질로 바꾸는 방법도 코스마다 적었어요.</p>
+    <p class="sub">대학로에서 지금 하는 관객 참여형 연극 8편을 10/3~5 회차까지 확인했어요. 10가지 코스에는 모두 히든퍼즐을 넣었고, 코스마다 "다른 참여형 연극으로 바꾸면"에서 그날 시간에 맞는 회차를 골라요.</p>
+    <h3 class="pg">결말·범인을 관객이 정하는 연극</h3>
     <div class="plays">
-    <article class="play main">
-      <h3><span class="bd">기본</span>히든퍼즐</h3>
-      <p class="gen">추리 코미디 · 80분 · 중학생 이상</p>
-      <dl>
-        <div><dt>방식</dt><dd>객석 전원이 극 중 CCTV가 돼서 단서와 알리바이를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 추리와 선택에 따라 결말이 달라져요.</dd></div>
-        <div><dt>극장</dt><dd>컬쳐씨어터<a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>서울 종로구 대학로8가길 80 (매표소 1층, 공연장 5층) · 혜화역 2번 출구에서 381m</small></dd></div>
-        <div><dt>회차</dt><dd>10/3(토) · 10/4(일) · 10/5(월)<small>모두 14:30 · 16:30 · 18:30 (하루 세 번)</small></dd></div>
-        <div><dt>가격</dt><dd>예스24 표시 16,900~19,900원(정가 5만 원). 네이버 지도 가격표엔 주말 25,000원으로 적혀 있어요.</dd></div>
-      </dl>
-      <a class="bk" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예스24에서 예매하기</a>
-    </article>
-    <article class="play">
-      <h3><span class="bd">바꿀 때</span>멜로에 차질</h3>
-      <p class="gen">로맨스 코미디 · 85분 · 14세 이상(중학생 이상)</p>
-      <dl>
-        <div><dt>방식</dt><dd>평범한 남자 주인공의 연애 이야기예요. 관객이 극에 개입해 결말을 골라서 매회 결말이 달라져요. 무대에 올라가는지는 확인하지 못했어요.</dd></div>
-        <div><dt>극장</dt><dd>나인진홀 2관<a class="map" href="https://map.naver.com/p/entry/place/1697675120?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>서울 종로구 동숭길 47 지하 1층 · 혜화역 2번 출구에서 277m</small></dd></div>
-        <div><dt>회차</dt><dd>10/3(토) · 10/4(일) · 10/5(월)<small>모두 13:30 · 15:30 · 17:30 (하루 세 번)</small></dd></div>
-        <div><dt>가격</dt><dd>예스24 표시 16,900~19,900원(정가 5만 원).</dd></div>
-      </dl>
-      <a class="bk" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예스24에서 예매하기</a>
-    </article>
+    <details class="play main" open>
+      <summary><span class="bd">기본</span><span class="pt"><strong>히든퍼즐</strong><small>추리 코미디 · 80분 · 중학생 이상 · 컬쳐씨어터</small></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="pb">
+        <dl>
+          <div><dt>방식</dt><dd>객석 전원이 극 중 CCTV가 돼서 단서와 알리바이를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 추리와 선택에 따라 결말이 달라져요.</dd></div>
+          <div><dt>극장</dt><dd>컬쳐씨어터<a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>서울 종로구 대학로8가길 80 (매표소 1층, 공연장 5층) · 혜화역 2번 출구에서 381m</small></dd></div>
+          <div><dt>회차</dt><dd>10/3(토) · 10/4(일) · 10/5(월)<small>모두 14:30 · 16:30 · 18:30</small></dd></div>
+          <div><dt>가격</dt><dd>예스24 표시 16,900~19,900원(정가 5만 원). 네이버 지도 가격표엔 주말 25,000원으로 적혀 있어요.</dd></div>
+          <div><dt>후기</dt><dd>타임티켓 ★4.7 (후기 117건)</dd></div>
+        </dl>
+        <a class="bk" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예스24에서 예매하기</a>
+      </div>
+    </details>
+    <details class="play">
+      <summary><span class="bd">결말 선택</span><span class="pt"><strong>멜로에 차질</strong><small>로맨스 코미디 · 85분 · 중학생 이상 · 나인진홀 2관</small></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="pb">
+        <dl>
+          <div><dt>방식</dt><dd>평범한 남자 주인공의 연애 이야기예요. 관객이 극에 개입해 결말을 골라서 매회 결말이 달라져요. 무대에 올라가는지는 확인하지 못했어요.</dd></div>
+          <div><dt>극장</dt><dd>나인진홀 2관<a class="map" href="https://map.naver.com/p/entry/place/1697675120?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>서울 종로구 동숭길 47 지하 1층 · 혜화역 2번 출구에서 277m</small></dd></div>
+          <div><dt>회차</dt><dd>10/3(토) · 10/4(일) · 10/5(월)<small>모두 13:30 · 15:30 · 17:30</small></dd></div>
+          <div><dt>가격</dt><dd>예스24 표시 16,900~19,900원(정가 5만 원).</dd></div>
+          <div><dt>후기</dt><dd>타임티켓 ★4.9 (후기 35건)</dd></div>
+        </dl>
+        <a class="bk" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예스24에서 예매하기</a>
+      </div>
+    </details>
+    <details class="play">
+      <summary><span class="bd">범인 추리</span><span class="pt"><strong>쉬어매드니스</strong><small>코믹 추리극 · 110분 · 콘텐츠박스</small></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="pb">
+        <dl>
+          <div><dt>방식</dt><dd>미용실 살인사건의 목격자가 돼서 관객이 배우들에게 질문하며 범인을 추리해요. 관객의 추리에 따라 매번 다른 결말이 나와요. 무대에 올라가는지는 확인하지 못했어요.</dd></div>
+          <div><dt>극장</dt><dd>콘텐츠박스<a class="map" href="https://map.naver.com/p/entry/place/2012695051?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>서울 종로구 동숭길 55 지하 1층 · 혜화역 2번 출구에서 241m</small></dd></div>
+          <div><dt>회차</dt><dd>10/3(토) · 10/4(일) · 10/5(월)<small>모두 13:00 · 16:00 · 19:00</small></dd></div>
+          <div><dt>가격</dt><dd>타임티켓 표시 13,500~16,500원(정가 6만 원).</dd></div>
+          <div><dt>후기</dt><dd>타임티켓 ★4.8 (후기 1,523건)</dd></div>
+        </dl>
+        <a class="bk" href="https://timeticket.co.kr/product/4404" target="_blank" rel="noopener">타임티켓에서 예매하기</a>
+      </div>
+    </details>
+    <details class="play">
+      <summary><span class="bd">범인 추리</span><span class="pt"><strong>마피아 게임</strong><small>코미디 추리극 · 90분 · 중학생 이상 · 아라아트홀</small></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="pb">
+        <dl>
+          <div><dt>방식</dt><dd>관객이 배심원이 돼서 국민참여재판 형식으로 범인을 추리하고, 선택에 따라 결말이 달라져요. 관객이 직접 참여할 기회가 있었다는 후기가 있어요.</dd></div>
+          <div><dt>극장</dt><dd>아라아트홀<a class="map" href="https://map.naver.com/p/entry/place/1173106804?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>서울 종로구 대학로8가길 30 4층 · 혜화역 1번 출구에서 133m</small></dd></div>
+          <div><dt>회차</dt><dd><span class="sl"><b>10/3(토)</b> 15:30 · 17:30 · 19:30</span><span class="sl"><b>10/4(일)</b> 15:30 · 17:30</span><span class="sl"><b>10/5(월)</b> 15:30 · 17:30</span></dd></div>
+          <div><dt>가격</dt><dd>타임티켓 표시 13,500~17,500원(정가 5만 원).</dd></div>
+          <div><dt>후기</dt><dd>타임티켓 ★4.6 (후기 95건)</dd></div>
+        </dl>
+        <a class="bk" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">타임티켓에서 예매하기</a>
+      </div>
+    </details>
     </div>
+    <h3 class="pg">배우와 관객이 직접 주고받는 연극</h3>
+    <div class="plays">
+    <details class="play">
+      <summary><span class="bd">18년 스테디셀러</span><span class="pt"><strong>죽여주는 이야기</strong><small>블랙코미디 · 90분 · 초등학생 이상 · 지인시어터</small></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="pb">
+        <dl>
+          <div><dt>방식</dt><dd>죽음을 소재로 한 블랙코미디예요. 배우와 관객이 직접 주고받으며 극에 함께 참여하는 관객참여형 연극이에요. 무대에 올라가는지는 확인하지 못했어요.</dd></div>
+          <div><dt>극장</dt><dd>지인시어터<a class="map" href="https://map.naver.com/p/entry/place/1461359698?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>서울 종로구 동숭길 25 지하 1층 · 혜화역 2번 출구에서 314m</small></dd></div>
+          <div><dt>회차</dt><dd>10/3(토) · 10/4(일) · 10/5(월)<small>모두 12:00 · 14:10 · 16:30 · 19:00</small></dd></div>
+          <div><dt>가격</dt><dd>타임티켓 표시 16,400~19,000원(정가 5만 원). 놀티켓 단독 판매예요.</dd></div>
+          <div><dt>후기</dt><dd>타임티켓 ★4.9 (후기 3,659건)</dd></div>
+        </dl>
+        <a class="bk" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">놀티켓에서 예매하기</a>
+      </div>
+    </details>
+    <details class="play">
+      <summary><span class="bd">공포 코미디</span><span class="pt"><strong>오 마이 갓</strong><small>공포 코미디 · 75분 · 중학생 이상 · 오마이갓 전용관</small></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="pb">
+        <dl>
+          <div><dt>방식</dt><dd>공포와 웃음을 섞은 코믹 호러예요. 후기에 관객 참여형 연출이 나오고, 깜짝 놀라는 장면이 많다고 해요.</dd></div>
+          <div><dt>극장</dt><dd>오마이갓 전용관<a class="map" href="https://map.naver.com/p/entry/place/1997986273?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>서울 종로구 동숭길 68 지하 1층 · 혜화역 2번 출구에서 283m</small></dd></div>
+          <div><dt>회차</dt><dd>10/3(토) · 10/4(일) · 10/5(월)<small>모두 13:40 · 15:30 · 17:30 · 19:20</small></dd></div>
+          <div><dt>가격</dt><dd>타임티켓 표시 15,000~18,000원(정가 8만 원).</dd></div>
+          <div><dt>후기</dt><dd>타임티켓 ★4.8 (후기 919건)</dd></div>
+        </dl>
+        <a class="bk" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">타임티켓에서 예매하기</a>
+      </div>
+    </details>
+    <details class="play">
+      <summary><span class="bd">로맨스 코미디</span><span class="pt"><strong>한뼘사이</strong><small>로맨스 코미디 · 105분 · 12세 이상 · 라온아트홀</small></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="pb">
+        <dl>
+          <div><dt>방식</dt><dd>남녀 사이의 미묘한 감정을 그린 로맨스 코미디예요. 후기에 현장 애드립과 관객 참여가 나와요.</dd></div>
+          <div><dt>극장</dt><dd>라온아트홀<a class="map" href="https://map.naver.com/p/entry/place/1464592641?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>서울 종로구 대학로10길 11 · 혜화역 2번 출구에서 100m</small></dd></div>
+          <div><dt>회차</dt><dd><span class="sl"><b>10/3(토)</b> 11:50 · 14:00 · 16:10 · 18:20 · 20:30</span><span class="sl"><b>10/4(일)</b> 11:50 · 14:00 · 16:10 · 18:20 · 20:30</span><span class="sl"><b>10/5(월)</b> 13:00 · 15:10 · 17:20 · 19:30</span></dd></div>
+          <div><dt>가격</dt><dd>타임티켓 표시 15,900원부터.</dd></div>
+          <div><dt>후기</dt><dd>타임티켓 ★4.9 (후기 1,199건)</dd></div>
+        </dl>
+        <a class="bk" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">타임티켓에서 예매하기</a>
+      </div>
+    </details>
+    <details class="play">
+      <summary><span class="bd">로맨틱 코미디</span><span class="pt"><strong>사내연애 보고서</strong><small>로맨틱 코미디 · 100분 · 12세 이상 · 제나아트홀</small></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="pb">
+        <dl>
+          <div><dt>방식</dt><dd>직장 연애를 그린 로맨틱 코미디예요. 후기에 관객 참여 형식이 나와요.</dd></div>
+          <div><dt>극장</dt><dd>제나아트홀<a class="map" href="https://map.naver.com/p/entry/place/1735995245?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>서울 종로구 대학로10길 12 지하 1층 · 혜화역 2번 출구에서 107m</small></dd></div>
+          <div><dt>회차</dt><dd><span class="sl"><b>10/3(토)</b> 13:30 · 15:40 · 17:50 · 20:00</span><span class="sl"><b>10/4(일)</b> 13:30 · 15:40 · 17:50 · 20:00</span><span class="sl"><b>10/5(월)</b> 14:30 · 16:40 · 19:00</span></dd></div>
+          <div><dt>가격</dt><dd>타임티켓 표시 14,800원부터.</dd></div>
+          <div><dt>후기</dt><dd>타임티켓 ★4.8 (후기 405건)</dd></div>
+        </dl>
+        <a class="bk" href="https://timeticket.co.kr/product/5465" target="_blank" rel="noopener">타임티켓에서 예매하기</a>
+      </div>
+    </details>
+    </div>
+    <details class="others">
+      <summary>코스에 넣지 않은 참여형·소통형 공연 (9편)</summary>
+      <ul><li><strong>남주를 부탁해</strong> <span>스케치홀</span><p>관객이 리모컨으로 결말을 고르는 로맨스 코미디예요. 네이버 지도엔 공연중(오픈런)인데 10월 회차표를 찾지 못해서 뺐어요.</p></li><li><strong>드립소년단</strong> <span>스케치홀</span><p>관객 투표로 결말을 만드는 코미디인데 전체관람가라 아이 동반용이에요. 10/3 15:00 · 10/4 13:00 · 10/5 14:00.</p></li><li><strong>맥주 한잔 하실래요?</strong> <span>극장 더더더(중구)</span><p>19세 이상, 150분. 2부에 배우와 맥주를 마시며 이야기를 나눠요. 10/3·4·5 모두 18:00 한 회차뿐이라 코스에 넣기 어려웠어요.</p></li><li><strong>스위치</strong> <span>아스가르드 씨어터</span><p>관객과 소통하는 공포 코미디예요(후기). 10/3·4는 13:30 · 15:40 · 17:50 · 20:00, 10/5는 14:30 · 16:40 · 18:50. 참여 요소가 약해서 뺐어요.</p></li><li><strong>너의 목소리가 들려</strong> <span>도토리씨어터</span><p>후기에 관객 참여형 요소가 나와요. 10/3·4는 14:00 · 16:10 · 18:20, 10/5는 13:00 · 15:10 · 17:20. 극장 위치를 확인하지 못해서 뺐어요.</p></li><li><strong>돌고돌아, 도라희 · 영시기</strong> <span>성수소극장</span><p>후기에 관객 참여·상호작용이 나와요. 성수라서 코스에서 멀고 회차는 확인하지 못했어요.</p></li><li><strong>핫식스</strong> <span>도토리씨어터</span><p>20세 이상 성인 코미디예요(후기에 관객 참여). 회차는 확인하지 못했어요.</p></li><li><strong>VL</strong> <span>링크더스페이스 2관</span><p>17세 이상, 후기에 참여형 무대가 나와요. 회차는 확인하지 못했어요.</p></li><li><strong>슬립노모어 서울</strong> <span>이머시브 공연</span><p>돌아다니며 보는 이머시브 공연이라 결말을 고르는 참여형 연극과는 종류가 달라요. 회차와 가격은 확인하지 못했어요.</p></li></ul>
+    </details>
     <ul class="checks">
-      <li>둘 다 같은 제작사(유머러's)가 만든 대학로 연극이에요. 극장이 250m쯤 떨어져 있어서 바꿔도 동선이 거의 같아요.</li>
-      <li>오늘 예매하세요. 개천절 연휴라 주말·공휴일 회차가 먼저 찰 수 있어요. 예스24는 관람 30분 전까지 예매돼요.</li>
-      <li>티켓은 현장에서 받아요. 취소하면 관람 3일 전까지 티켓값의 20%, 2일 전부터 30%가 빠져요(예스24 기본 규정이라 공연마다 다를 수 있어요).</li>
-      <li>남은 좌석과 날짜별 최종가는 확인하지 못했어요(예스24 조회가 막혔어요). 히든퍼즐은 10/3·4·5가 예매 가능 날짜에 들어 있는 것까지 봤고, 멜로에 차질은 10월 회차표만 확인했어요.</li>
+      <li>대학로 연극 72편을 후기 요약 태그까지 훑어서 골랐어요. 작은 극장의 신작이나 태그에 안 잡힌 공연은 놓쳤을 수 있어요.</li>
+      <li>오늘 예매하세요. 개천절 연휴라 주말·공휴일 회차가 먼저 찰 수 있어요. 예매 마감은 공연 10분~2시간 전으로 작품마다 달라요.</li>
+      <li>티켓은 현장에서 받아요. 소극장은 공연이 시작하면 들어갈 수 없는 곳이 많으니 30분 전에는 도착하세요.</li>
+      <li>취소하면 관람 3일 전까지 티켓값의 20%, 2일 전부터 30%가 빠져요(예스24·놀티켓 기본 규정이라 공연마다 다를 수 있어요).</li>
+      <li>남은 좌석과 날짜별 최종가는 확인하지 못했어요(예스24 조회가 막혔어요). 가격은 9/30에 예매처에 표시된 값이에요.</li>
     </ul>
   </section>
 
@@ -371,7 +492,11 @@ footer a{color:var(--muted)}
     <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
     <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
     <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
-    <p class="alt"><b>멜로에 차질로 바꾸면</b> 17:30 회차(나인진홀 2관)를 잡으세요. 전시를 16:00까지 보고, 저녁은 19:15쯤 먹어요. 숙소 도착은 22:00쯤이에요.</p>
+    <details class="alts">
+      <summary>다른 참여형 연극으로 바꾸면 (6편)</summary>
+      <ul><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:30~18:00</b> 숙소 도착 약 21:25</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:10~17:55</b> 숙소 도착 약 21:20</span></li><li><div class="an"><div class="ai"><strong>쉬어매드니스</strong><span>콘텐츠박스 · 110분</span></div><a class="map book" href="https://timeticket.co.kr/product/4404" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:00~17:50</b> 숙소 도착 약 21:15</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~18:55</b> 숙소 도착 약 22:20</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~19:00</b> 숙소 도착 약 22:25</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~18:45</b> 숙소 도착 약 22:10</span></li></ul>
+      <p class="fx">전시를 더 보거나 줄여서 맞추세요. 전시 입장은 19:00까지예요. 이 날 이 시간대에 맞는 회차가 없는 사내연애 보고서는 뺐어요.</p>
+    </details>
   </div>
 </li>
 <li class="stop k-move">
@@ -724,7 +849,11 @@ footer a{color:var(--muted)}
     <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
     <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
     <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
-    <p class="alt"><b>멜로에 차질로 바꾸면</b> 15:30 회차(나인진홀 2관)를 잡으세요. 카페는 빼고 14:30에 신용산역을 출발해요. 공연이 끝나면 학림에서 쉬다가 18:15에 저녁을 먹어요.</p>
+    <details class="alts">
+      <summary>다른 참여형 연극으로 바꾸면 (7편)</summary>
+      <ul><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:30~18:00</b> 숙소 도착 약 21:25</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:10~17:55</b> 숙소 도착 약 21:20</span></li><li><div class="an"><div class="ai"><strong>쉬어매드니스</strong><span>콘텐츠박스 · 110분</span></div><a class="map book" href="https://timeticket.co.kr/product/4404" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:00~17:50</b> 숙소 도착 약 21:15</span></li><li><div class="an"><div class="ai"><strong>사내연애 보고서</strong><span>제나아트홀 · 100분</span></div><a class="map book" href="https://timeticket.co.kr/product/5465" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:40~17:20</b> 숙소 도착 약 20:45</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~16:55</b> 숙소 도착 약 20:45</span><span class="ar"><b>17:30~18:55</b> 숙소 도착 약 22:20</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~17:00</b> 숙소 도착 약 20:45</span><span class="ar"><b>17:30~19:00</b> 숙소 도착 약 22:25</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~16:45</b> 숙소 도착 약 20:45</span><span class="ar"><b>17:30~18:45</b> 숙소 도착 약 22:10</span></li></ul>
+      <p class="fx">테디뵈르하우스 카페 시간을 늘리거나 줄여서 맞추세요. 15:30 회차면 카페를 빼고 14:30에 신용산역을 출발해요.</p>
+    </details>
   </div>
 </li>
 <li class="stop k-food">
@@ -1010,7 +1139,11 @@ footer a{color:var(--muted)}
     <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
     <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
     <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
-    <p class="alt"><b>멜로에 차질로 바꾸면</b> 17:30 회차(나인진홀 2관)를 잡으세요. 전시를 16:00까지 보고, 저녁은 19:15쯤 먹어요. 숙소 도착은 22:00쯤이에요.</p>
+    <details class="alts">
+      <summary>다른 참여형 연극으로 바꾸면 (6편)</summary>
+      <ul><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:30~18:00</b> 숙소 도착 약 21:25</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:10~17:55</b> 숙소 도착 약 21:20</span></li><li><div class="an"><div class="ai"><strong>쉬어매드니스</strong><span>콘텐츠박스 · 110분</span></div><a class="map book" href="https://timeticket.co.kr/product/4404" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:00~17:50</b> 숙소 도착 약 21:15</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~18:55</b> 숙소 도착 약 22:20</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~19:00</b> 숙소 도착 약 22:25</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~18:45</b> 숙소 도착 약 22:10</span></li></ul>
+      <p class="fx">전시를 더 보거나 줄여서 맞추세요. 전시 입장은 19:00까지예요. 이 날 이 시간대에 맞는 회차가 없는 사내연애 보고서는 뺐어요.</p>
+    </details>
   </div>
 </li>
 <li class="stop k-move">
@@ -1259,7 +1392,11 @@ footer a{color:var(--muted)}
     <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
     <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
     <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
-    <p class="alt"><b>멜로에 차질로 바꾸면</b> 17:30 회차(나인진홀 2관)를 잡으세요. 안국 카페에서 한 시간 더 쉬고 16:35에 출발해요. 삼계탕은 19:40쯤 먹고, 숙소 도착은 21:50쯤이에요.</p>
+    <details class="alts">
+      <summary>다른 참여형 연극으로 바꾸면 (6편)</summary>
+      <ul><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:30~18:00</b> 숙소 도착 약 21:15</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:10~17:55</b> 숙소 도착 약 21:10</span></li><li><div class="an"><div class="ai"><strong>쉬어매드니스</strong><span>콘텐츠박스 · 110분</span></div><a class="map book" href="https://timeticket.co.kr/product/4404" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:00~17:50</b> 숙소 도착 약 21:05</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~18:55</b> 숙소 도착 약 22:10</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~19:00</b> 숙소 도착 약 22:15</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~18:45</b> 숙소 도착 약 22:00</span></li></ul>
+      <p class="fx">안국 카페 시간을 늘리거나 줄여서 맞추세요. 삼계탕집은 21:00까지 주문할 수 있어요. 이 날 이 시간대에 맞는 회차가 없는 사내연애 보고서는 뺐어요.</p>
+    </details>
   </div>
 </li>
 <li class="stop k-move">
@@ -1438,7 +1575,11 @@ footer a{color:var(--muted)}
     <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
     <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
     <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
-    <p class="alt"><b>멜로에 차질로 바꾸면</b> 15:30 회차(나인진홀 2관)를 잡으세요. 카페는 빼고 14:30에 신용산역을 출발해요. 공연이 끝나면 학림에서 쉬다가 18:15에 저녁을 먹어요.</p>
+    <details class="alts">
+      <summary>다른 참여형 연극으로 바꾸면 (7편)</summary>
+      <ul><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:30~18:00</b> 숙소 도착 약 21:25</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:10~17:55</b> 숙소 도착 약 21:20</span></li><li><div class="an"><div class="ai"><strong>쉬어매드니스</strong><span>콘텐츠박스 · 110분</span></div><a class="map book" href="https://timeticket.co.kr/product/4404" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:00~17:50</b> 숙소 도착 약 21:15</span></li><li><div class="an"><div class="ai"><strong>사내연애 보고서</strong><span>제나아트홀 · 100분</span></div><a class="map book" href="https://timeticket.co.kr/product/5465" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:40~17:20</b> 숙소 도착 약 20:45</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~16:55</b> 숙소 도착 약 20:45</span><span class="ar"><b>17:30~18:55</b> 숙소 도착 약 22:20</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~17:00</b> 숙소 도착 약 20:45</span><span class="ar"><b>17:30~19:00</b> 숙소 도착 약 22:25</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~16:45</b> 숙소 도착 약 20:45</span><span class="ar"><b>17:30~18:45</b> 숙소 도착 약 22:10</span></li></ul>
+      <p class="fx">테디뵈르하우스 카페 시간을 늘리거나 줄여서 맞추세요. 15:30 회차면 카페를 빼고 14:30에 신용산역을 출발해요.</p>
+    </details>
   </div>
 </li>
 <li class="stop k-food">
@@ -1771,7 +1912,11 @@ footer a{color:var(--muted)}
     <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
     <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
     <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
-    <p class="alt"><b>멜로에 차질로 바꾸면</b> 17:30 회차(나인진홀 2관)를 잡으세요. 전시를 16:00까지 보고, 저녁은 19:15쯤 먹어요. 숙소 도착은 22:00쯤이에요.</p>
+    <details class="alts">
+      <summary>다른 참여형 연극으로 바꾸면 (6편)</summary>
+      <ul><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:30~18:00</b> 숙소 도착 약 21:25</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:10~17:55</b> 숙소 도착 약 21:20</span></li><li><div class="an"><div class="ai"><strong>쉬어매드니스</strong><span>콘텐츠박스 · 110분</span></div><a class="map book" href="https://timeticket.co.kr/product/4404" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:00~17:50</b> 숙소 도착 약 21:15</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~18:55</b> 숙소 도착 약 22:20</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~19:00</b> 숙소 도착 약 22:25</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~18:45</b> 숙소 도착 약 22:10</span></li></ul>
+      <p class="fx">전시를 더 보거나 줄여서 맞추세요. 전시 입장은 19:00까지예요. 이 날 이 시간대에 맞는 회차가 없는 사내연애 보고서는 뺐어요.</p>
+    </details>
   </div>
 </li>
 <li class="stop k-move">
@@ -2020,7 +2165,11 @@ footer a{color:var(--muted)}
     <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
     <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 학림에서 걸어서 3분쯤이에요. 끝나고 남는 시간엔 마로니에공원이나 근처 카페에서 쉬어요.</p>
     <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
-    <p class="alt"><b>멜로에 차질로 바꾸면</b> 15:30 회차(나인진홀 2관)를 잡으세요. 학림에서 45분 더 쉬고, 공연이 끝나는 16:55에 곧바로 낙산으로 가요. 낙산 도착은 17:20쯤이에요.</p>
+    <details class="alts">
+      <summary>다른 참여형 연극으로 바꾸면 (6편)</summary>
+      <ul><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:10~15:40</b> 낙산 도착 약 17:15</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:00~15:45</b> 낙산 도착 약 17:15</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>13:40~14:55</b> 낙산 도착 약 17:15</span><span class="ar"><b>15:30~16:45</b> 낙산 도착 약 17:15</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>13:30~14:55</b> 낙산 도착 약 17:15</span><span class="ar"><b>15:30~16:55</b> 낙산 도착 약 17:20</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~17:00</b> 낙산 도착 약 17:25</span></li><li><div class="an"><div class="ai"><strong>사내연애 보고서</strong><span>제나아트홀 · 100분</span></div><a class="map book" href="https://timeticket.co.kr/product/5465" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>13:30~15:10</b> 낙산 도착 약 17:15</span><span class="ar"><b>15:40~17:20</b> 낙산 도착 약 17:45</span></li></ul>
+      <p class="fx">학림에서 쉬는 시간을 늘리거나 줄여서 맞추세요. 13:30 회차면 학림을 공연 뒤로 옮겨요. 이 날 이 시간대에 맞는 회차가 없는 쉬어매드니스는 뺐어요.</p>
+    </details>
   </div>
 </li>
 <li class="stop k-move">
@@ -2393,7 +2542,11 @@ footer a{color:var(--muted)}
     <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
     <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 학림에서 걸어서 3분쯤이에요. 10/5는 대체공휴일이라 특별 회차표로 3번 열려요.</p>
     <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
-    <p class="alt"><b>멜로에 차질로 바꾸면</b> 15:30 회차(나인진홀 2관)를 잡으세요. 학림에서 한 시간 더 쉬고, 공연이 끝나는 16:55에 귀가해요. 숙소 도착은 18:15쯤이에요.</p>
+    <details class="alts">
+      <summary>다른 참여형 연극으로 바꾸면 (6편)</summary>
+      <ul><li><div class="an"><div class="ai"><strong>사내연애 보고서</strong><span>제나아트홀 · 100분</span></div><a class="map book" href="https://timeticket.co.kr/product/5465" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:30~16:10</b> 숙소 도착 약 17:35</span></li><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:10~15:40</b> 숙소 도착 약 17:05</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:10~16:55</b> 숙소 도착 약 18:20</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>13:40~14:55</b> 숙소 도착 약 16:20</span><span class="ar"><b>15:30~16:45</b> 숙소 도착 약 18:10</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>13:30~14:55</b> 숙소 도착 약 16:20</span><span class="ar"><b>15:30~16:55</b> 숙소 도착 약 18:20</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~17:00</b> 숙소 도착 약 18:25</span></li></ul>
+      <p class="fx">학림에서 쉬는 시간을 늘리거나 줄여서 맞추세요. 13:30 회차면 학림을 공연 뒤로 옮겨요. 이 날 이 시간대에 맞는 회차가 없는 쉬어매드니스는 뺐어요.</p>
+    </details>
   </div>
 </li>
 <li class="stop k-move">
@@ -2535,7 +2688,11 @@ footer a{color:var(--muted)}
     <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
     <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 학림에서 걸어서 3분쯤이에요. 끝나고 남는 시간엔 마로니에공원이나 근처 카페에서 쉬어요.</p>
     <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
-    <p class="alt"><b>멜로에 차질로 바꾸면</b> 15:30 회차(나인진홀 2관)를 잡으세요. 학림에서 45분 더 쉬고, 공연이 끝나는 16:55에 곧바로 낙산으로 가요. 낙산 도착은 17:20쯤이에요.</p>
+    <details class="alts">
+      <summary>다른 참여형 연극으로 바꾸면 (6편)</summary>
+      <ul><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:10~15:40</b> 낙산 도착 약 17:15</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:00~15:45</b> 낙산 도착 약 17:15</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>13:40~14:55</b> 낙산 도착 약 17:15</span><span class="ar"><b>15:30~16:45</b> 낙산 도착 약 17:15</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>13:30~14:55</b> 낙산 도착 약 17:15</span><span class="ar"><b>15:30~16:55</b> 낙산 도착 약 17:20</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~17:00</b> 낙산 도착 약 17:25</span></li><li><div class="an"><div class="ai"><strong>사내연애 보고서</strong><span>제나아트홀 · 100분</span></div><a class="map book" href="https://timeticket.co.kr/product/5465" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>13:30~15:10</b> 낙산 도착 약 17:15</span><span class="ar"><b>15:40~17:20</b> 낙산 도착 약 17:45</span></li></ul>
+      <p class="fx">학림에서 쉬는 시간을 늘리거나 줄여서 맞추세요. 13:30 회차면 학림을 공연 뒤로 옮겨요. 이 날 이 시간대에 맞는 회차가 없는 쉬어매드니스는 뺐어요.</p>
+    </details>
   </div>
 </li>
 <li class="stop k-move">
@@ -2811,7 +2968,11 @@ footer a{color:var(--muted)}
     <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
     <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
     <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
-    <p class="alt"><b>멜로에 차질로 바꾸면</b> 17:30 회차(나인진홀 2관)를 잡으세요. 안국 카페에서 한 시간 더 쉬고 16:35에 출발해요. 삼계탕은 19:40쯤 먹고, 숙소 도착은 21:50쯤이에요.</p>
+    <details class="alts">
+      <summary>다른 참여형 연극으로 바꾸면 (6편)</summary>
+      <ul><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:30~18:00</b> 숙소 도착 약 21:15</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:10~17:55</b> 숙소 도착 약 21:10</span></li><li><div class="an"><div class="ai"><strong>쉬어매드니스</strong><span>콘텐츠박스 · 110분</span></div><a class="map book" href="https://timeticket.co.kr/product/4404" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:00~17:50</b> 숙소 도착 약 21:05</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~18:55</b> 숙소 도착 약 22:10</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~19:00</b> 숙소 도착 약 22:15</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>17:30~18:45</b> 숙소 도착 약 22:00</span></li></ul>
+      <p class="fx">안국 카페 시간을 늘리거나 줄여서 맞추세요. 삼계탕집은 21:00까지 주문할 수 있어요. 이 날 이 시간대에 맞는 회차가 없는 사내연애 보고서는 뺐어요.</p>
+    </details>
   </div>
 </li>
 <li class="stop k-move">
@@ -2929,6 +3090,16 @@ footer a{color:var(--muted)}
 <li><a href="https://www.nc.press/news/articleView.html?idxno=627149" target="_blank" rel="noopener">멜로에 차질·히든퍼즐 소개(뉴스컬처, 2026-09-24)</a></li>
 <li><a href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">컬쳐씨어터 위치·가격표(네이버 지도)</a></li>
 <li><a href="https://map.naver.com/p/entry/place/1697675120?placePath=%2Fhome" target="_blank" rel="noopener">나인진홀 2관 위치(네이버 지도)</a></li>
+<li><a href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">죽여주는 이야기 회차·가격(놀티켓, 2026-09-30)</a></li>
+<li><a href="https://www.artkoreatv.com/news/articleView.html?idxno=104679" target="_blank" rel="noopener">쉬어매드니스 관객 질문 방식(아트코리아방송)</a></li>
+<li><a href="https://timeticket.co.kr/product/4404" target="_blank" rel="noopener">쉬어매드니스 회차·가격(타임티켓, 2026-09-30)</a></li>
+<li><a href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">마피아 게임 회차·가격(타임티켓, 2026-09-30)</a></li>
+<li><a href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">오 마이 갓 회차·가격(타임티켓, 2026-09-30)</a></li>
+<li><a href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">한뼘사이 회차·가격(타임티켓, 2026-09-30)</a></li>
+<li><a href="https://timeticket.co.kr/product/5465" target="_blank" rel="noopener">사내연애 보고서 회차·가격(타임티켓, 2026-09-30)</a></li>
+<li><a href="https://map.naver.com/p/entry/place/1461359698?placePath=%2Fhome" target="_blank" rel="noopener">지인시어터 위치·상연작(네이버 지도)</a></li>
+<li><a href="https://map.naver.com/p/entry/place/2012695051?placePath=%2Fhome" target="_blank" rel="noopener">콘텐츠박스 위치(네이버 지도)</a></li>
+<li><a href="https://map.naver.com/p/entry/place/1173106804?placePath=%2Fhome" target="_blank" rel="noopener">아라아트홀 위치·상연작(네이버 지도)</a></li>
   </ul>
 </footer>
 <script>
