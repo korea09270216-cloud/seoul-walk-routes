@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#EEF1F5" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0D131C" media="(prefers-color-scheme: dark)">
 <title>서울 3일 코스 10</title>
-<meta name="description" content="일산 원당역 숙소에서 아침에 출발해 저녁에 돌아오는 서울 뚜벅이 커플 3일 코스 10가지">
+<meta name="description" content="일산 원당역 숙소에서 아침에 출발해 저녁에 돌아오는 서울 뚜벅이 커플 3일 코스 10가지. 모든 코스에 대학로 참여형 연극 한 편이 들어 있어요">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Mono:wght@500&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
@@ -69,6 +69,22 @@ a.map{font-size:12px;font-weight:700;line-height:1;padding:5px 8px;border-radius
 .sec>h2{font:400 24px/1.25 var(--display)}
 .sec>p.sub{margin:4px 0 14px;color:var(--muted);font-size:14px}
 
+/* plays */
+.plays{display:grid;gap:10px;margin-top:12px}
+.play{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.play.main{border:2px solid var(--accent);padding:13px 15px}
+.play h3{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font:700 18px/1.35 var(--body)}
+.play .bd{font-size:11px;font-weight:700;line-height:1;padding:5px 8px;border-radius:6px;background:var(--soft);border:1px solid var(--line);color:var(--muted)}
+.play.main .bd{background:var(--accent);border-color:var(--accent);color:var(--on)}
+.play .gen{margin:3px 0 0;color:var(--muted);font-size:13.5px}
+.play dl{margin:10px 0 0}
+.play dl>div{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.play dt{font-weight:700;font-size:13px;color:var(--accent);padding-top:1px}
+.play dd{margin:0}
+.play dd small{display:block;margin-top:2px;color:var(--muted);font-size:13px}
+.play .bk{display:flex;align-items:center;justify-content:center;min-height:46px;margin-top:6px;border-radius:12px;background:var(--accent);color:var(--on);font-weight:700;text-decoration:none}
+.play:not(.main) .bk{background:var(--surface);color:var(--accent);border:1.5px solid var(--accent)}
+
 /* rules */
 .rules{margin:12px 0 0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 16px}
 .rules div{display:grid;grid-template-columns:64px minmax(0,1fr);gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}
@@ -107,6 +123,7 @@ a.map{font-size:12px;font-weight:700;line-height:1;padding:5px 8px;border-radius
 .ttl{display:block;font:700 18px/1.35 var(--body);letter-spacing:-.01em}
 .hook{display:block;margin-top:3px;color:var(--muted);font-size:14px}
 .tri{display:grid;gap:5px;margin-top:10px}
+.dr i.pl{font-style:normal;font-size:11px;font-weight:700;line-height:1;padding:3px 6px;border-radius:999px;background:var(--c);color:var(--on);margin-left:6px;vertical-align:1px;white-space:nowrap}
 .dr{display:grid;grid-template-columns:26px minmax(0,1fr);gap:8px;align-items:center;font-size:13.5px}
 .dr b{display:grid;place-items:center;height:22px;border-radius:6px;background:var(--cs);color:var(--ci);font-size:12px}
 .chev{width:22px;height:22px;margin-top:9px;position:relative}
@@ -144,6 +161,9 @@ a.map{font-size:12px;font-weight:700;line-height:1;padding:5px 8px;border-radius
 .hrs{margin:4px 0 0;font:500 12.5px/1.5 var(--mono);color:var(--muted)}
 .note{margin:4px 0 0;font-size:14.5px}
 .warn{margin:6px 0 0;padding:7px 10px;border-radius:8px;background:var(--warn-soft);color:var(--warn-ink);font-size:13.5px;line-height:1.55}
+.alt{margin:6px 0 0;padding:7px 10px;border-radius:8px;background:var(--soft);border:1px dashed var(--line);color:var(--muted);font-size:13.5px;line-height:1.55}
+.alt b{color:var(--ink)}
+a.map.book{background:var(--accent);border-color:var(--accent);color:var(--on)}
 
 footer{margin-top:44px;padding:20px 0 calc(48px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
 footer p{margin:0 0 10px}
@@ -157,7 +177,7 @@ footer a{color:var(--muted)}
 <header class="hero wrap">
   <p class="eyebrow">10/3 (토) – 10/5 (월) · 2박 3일 · 뚜벅이</p>
   <h1>서울 3일 코스 10</h1>
-  <p class="lede">제시 하나를 고르면 토·일·월 일정이 통째로 나와요. 아침엔 숙소에서 출발하고, 저녁엔 숙소로 돌아와요.</p>
+  <p class="lede">제시 하나를 고르면 토·일·월 일정이 통째로 나와요. 아침엔 숙소에서 출발하고, 저녁엔 숙소로 돌아와요. 10가지 모두 대학로 참여형 연극이 한 편씩 들어 있어요.</p>
   <dl class="stay">
     <div><dt>숙소</dt><dd>호텔 라엘르 고양일산 본점<a class="map" href="https://map.naver.com/p/entry/place/1442275496?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>경기 고양시 덕양구 고양시청로 30-14</small></dd></div>
     <div><dt>가까운 역</dt><dd>3호선 원당역<small>서울 도심까지 3호선 직통 30~55분</small></dd></div>
@@ -165,11 +185,46 @@ footer a{color:var(--muted)}
 </header>
 
 <main class="wrap">
+  <section class="sec" id="play" aria-labelledby="pl-h">
+    <h2 id="pl-h">참여형 연극</h2>
+    <p class="sub">10가지 코스에 모두 한 편씩 넣었어요. 기본은 히든퍼즐이고, 멜로에 차질로 바꾸는 방법도 코스마다 적었어요.</p>
+    <div class="plays">
+    <article class="play main">
+      <h3><span class="bd">기본</span>히든퍼즐</h3>
+      <p class="gen">추리 코미디 · 80분 · 중학생 이상</p>
+      <dl>
+        <div><dt>방식</dt><dd>객석 전원이 극 중 CCTV가 돼서 단서와 알리바이를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 추리와 선택에 따라 결말이 달라져요.</dd></div>
+        <div><dt>극장</dt><dd>컬쳐씨어터<a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>서울 종로구 대학로8가길 80 (매표소 1층, 공연장 5층) · 혜화역 2번 출구에서 381m</small></dd></div>
+        <div><dt>회차</dt><dd>10/3(토) · 10/4(일) · 10/5(월)<small>모두 14:30 · 16:30 · 18:30 (하루 세 번)</small></dd></div>
+        <div><dt>가격</dt><dd>예스24 표시 16,900~19,900원(정가 5만 원). 네이버 지도 가격표엔 주말 25,000원으로 적혀 있어요.</dd></div>
+      </dl>
+      <a class="bk" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예스24에서 예매하기</a>
+    </article>
+    <article class="play">
+      <h3><span class="bd">바꿀 때</span>멜로에 차질</h3>
+      <p class="gen">로맨스 코미디 · 85분 · 14세 이상(중학생 이상)</p>
+      <dl>
+        <div><dt>방식</dt><dd>평범한 남자 주인공의 연애 이야기예요. 관객이 극에 개입해 결말을 골라서 매회 결말이 달라져요. 무대에 올라가는지는 확인하지 못했어요.</dd></div>
+        <div><dt>극장</dt><dd>나인진홀 2관<a class="map" href="https://map.naver.com/p/entry/place/1697675120?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>서울 종로구 동숭길 47 지하 1층 · 혜화역 2번 출구에서 277m</small></dd></div>
+        <div><dt>회차</dt><dd>10/3(토) · 10/4(일) · 10/5(월)<small>모두 13:30 · 15:30 · 17:30 (하루 세 번)</small></dd></div>
+        <div><dt>가격</dt><dd>예스24 표시 16,900~19,900원(정가 5만 원).</dd></div>
+      </dl>
+      <a class="bk" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예스24에서 예매하기</a>
+    </article>
+    </div>
+    <ul class="checks">
+      <li>둘 다 같은 제작사(유머러's)가 만든 대학로 연극이에요. 극장이 250m쯤 떨어져 있어서 바꿔도 동선이 거의 같아요.</li>
+      <li>오늘 예매하세요. 개천절 연휴라 주말·공휴일 회차가 먼저 찰 수 있어요. 예스24는 관람 30분 전까지 예매돼요.</li>
+      <li>티켓은 현장에서 받아요. 취소하면 관람 3일 전까지 티켓값의 20%, 2일 전부터 30%가 빠져요(예스24 기본 규정이라 공연마다 다를 수 있어요).</li>
+      <li>남은 좌석과 날짜별 최종가는 확인하지 못했어요(예스24 조회가 막혔어요). 히든퍼즐은 10/3·4·5가 예매 가능 날짜에 들어 있는 것까지 봤고, 멜로에 차질은 10월 회차표만 확인했어요.</li>
+    </ul>
+  </section>
+
   <section class="sec" aria-labelledby="rl-h">
     <h2 id="rl-h">이렇게 짰어요</h2>
     <dl class="rules">
       <div><dt>뺀 것</dt><dd>경복궁, 청계천, 백화점, 걷기만 하는 코스</dd></div>
-      <div><dt>넣은 것</dt><dd>먹거리, 미술관·박물관, 전망·야경, 체험 한 가지씩</dd></div>
+      <div><dt>넣은 것</dt><dd>먹거리, 미술관·박물관, 전망·야경, 체험 한 가지씩, 그리고 모든 제시에 참여형 연극 한 편</dd></div>
       <div><dt>거리</dt><dd>숙소에서 편도 60분 안쪽만 골랐어요(대학로만 65분).</dd></div>
       <div><dt>토요일</dt><dd>체크인 전이면 짐을 프런트에 맡기고 출발해요.</dd></div>
       <div><dt>월요일</dt><dd>체크아웃 날이라 오후 일찍 숙소로 돌아와 짐을 찾는 반나절 일정이에요. 바로 귀가하면 마지막 이동만 빼세요.</dd></div>
@@ -228,16 +283,16 @@ footer a{color:var(--muted)}
     <span class="head">
       <span class="sr">제시 1. </span><span class="ttl">시장 · 노포 먹방</span>
       <span class="hook">광장시장부터 냉면 노포까지, 배부른 3일</span>
-      <span class="tri"><span class="dr"><b>토</b><span>종로 · 동대문</span></span><span class="dr"><b>일</b><span>을지로 · 시청 · 남산</span></span><span class="dr"><b>월</b><span>광화문 · 서촌</span></span></span>
+      <span class="tri"><span class="dr"><b>토</b><span>종로 · 동대문 · 대학로<i class="pl">연극</i></span></span><span class="dr"><b>일</b><span>을지로 · 시청 · 남산</span></span><span class="dr"><b>월</b><span>광화문 · 서촌</span></span></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">토요일엔 시장과 전시를 실내 위주로 돌고, 일요일엔 냉면 노포와 남산으로 가요. 비 예보가 있는 월요일은 박물관과 삼계탕으로 끝내요.</p>
-    <ul class="picks"><li>빈대떡 · 육회 · 닭한마리</li><li>우래옥 평양냉면</li><li>남산 노을</li><li>삼계탕</li></ul>
+    <p class="why">토요일엔 시장과 전시를 실내 위주로 돌고 오후엔 대학로에서 참여형 연극을 봐요. 일요일엔 냉면 노포와 남산으로 가요. 비 예보가 있는 월요일은 박물관과 삼계탕으로 끝내요.</p>
+    <ul class="picks"><li>빈대떡 · 육회 · 닭한마리</li><li>우래옥 평양냉면</li><li>남산 노을</li><li>삼계탕</li><li>참여형 연극</li></ul>
 <section class="day">
-    <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">광장시장 · 익선동 · DDP 전시 · 닭한마리</span></h4>
-    <p class="dm">편도 약 45분 · 흐림 11~21℃ · 시장에서 세 곳을 먹고, 디저트 화가의 전시를 보고, 저녁은 닭한마리</p>
+    <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">광장시장 · DDP 전시 · 참여형 연극 · 닭한마리</span></h4>
+    <p class="dm">편도 약 45분 · 흐림 11~21℃ · 시장에서 세 곳을 먹고, 디저트 화가의 전시를 보고, 참여형 연극을 본 뒤 닭한마리로 마무리</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
@@ -245,6 +300,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
     <p class="note">원당역에서 3호선, 종로3가역에서 내려요. 숙소에서 약 45분.</p>
+    
     
   </div>
 </li>
@@ -255,6 +311,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–21:00 · 마지막 주문 20:30</p>
     <p class="note">광장시장 대표 빈대떡집이에요. 바삭한 녹두 빈대떡부터 시작해요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -263,6 +320,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">부촌육회 본점</strong><a class="map" href="https://map.naver.com/p/entry/place/36428555?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–21:30 · 마지막 주문 21:00</p>
     <p class="note">육회를 먹어요. 한 곳에서 많이 시키지 말고 세 곳에 나눠 먹어요.</p>
+    
     
   </div>
 </li>
@@ -273,55 +331,81 @@ footer a{color:var(--muted)}
     <p class="hrs">09:00–21:00</p>
     <p class="note">미니 김밥으로 마무리해요. 재료가 떨어지면 일찍 닫아요.</p>
     
-  </div>
-</li>
-<li class="stop k-food">
-  <span class="t">13:45</span>
-  <div class="s">
-    <div class="l1"><span class="kind">카페</span><strong class="nm">청수당 베이커리</strong><a class="map" href="https://map.naver.com/p/entry/place/1262377225?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:30–19:00 · 마지막 주문 18:30</p>
-    <p class="note">익선동 한옥 골목에 있는 베이커리 카페예요. 오티씨커피 익선(09:00–21:30)도 가까워요.</p>
     
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">15:30</span>
+  <span class="t">13:45</span>
   <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">익선동 → 동대문</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">광장시장 → 동대문</strong></div>
     
-    <p class="note">종로3가역에서 1호선으로 동대문역까지 가요. 전시장까지 걸어서 10분쯤이에요.</p>
+    <p class="note">종로5가역에서 1호선으로 동대문역까지 한 정거장 가요. 전시장까지 걸어서 10분쯤이에요.</p>
+    
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">16:00</span>
+  <span class="t">14:15</span>
   <div class="s">
     <div class="l1"><span class="kind">전시</span><strong class="nm">DDP 웨인 티보 전</strong><a class="map" href="https://map.naver.com/p/entry/place/18063223?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–20:00 · 입장 마감 19:00</p>
-    <p class="note">케이크와 파이 같은 디저트를 그린 것으로 유명한 미국 화가의 회고전이에요(작품 105점, 2027/2/21까지). 먹는 걸 좋아하는 두 분께 잘 맞아요. 티켓은 현대카드 DIVE 앱·NOL티켓·카카오톡 예약하기에서 사요.</p>
+    <p class="note">케이크와 파이 같은 디저트를 그린 것으로 유명한 미국 화가의 회고전이에요(작품 105점, 2027/2/21까지). 먹는 걸 좋아하는 두 분께 잘 맞아요. 1시간 반쯤 봐요. 티켓은 현대카드 DIVE 앱·NOL티켓·카카오톡 예약하기에서 사요.</p>
     <p class="warn">관람료는 예매처에서 확인하세요.</p>
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">15:50</span>
+  <div class="s">
+    <div class="l1"><span class="kind">이동</span><strong class="nm">DDP → 혜화</strong></div>
+    
+    <p class="note">동대문역사문화공원역에서 4호선을 타고 두 정거장 가서 혜화역 2번 출구로 나와요. 극장까지 걸어서 6분쯤이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-do">
+  <span class="t">16:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">공연</span><strong class="nm">참여형 연극 〈히든퍼즐〉</strong><a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
+    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
+    <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
+    <p class="alt"><b>멜로에 차질로 바꾸면</b> 17:30 회차(나인진홀 2관)를 잡으세요. 전시를 16:00까지 보고, 저녁은 19:15쯤 먹어요. 숙소 도착은 22:00쯤이에요.</p>
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">18:00</span>
+  <div class="s">
+    <div class="l1"><span class="kind">이동</span><strong class="nm">혜화 → 동대문</strong></div>
+    
+    <p class="note">4호선으로 동대문역까지 한 정거장 가요. 9번 출구에서 식당까지 걸어서 5분쯤이에요.</p>
+    
+    
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">18:15</span>
+  <span class="t">18:30</span>
   <div class="s">
     <div class="l1"><span class="kind">저녁</span><strong class="nm">진옥화할매원조닭한마리</strong><a class="map" href="https://map.naver.com/p/entry/place/11619295?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:30–01:00 · 마지막 주문 23:30</p>
     <p class="note">닭한마리에 칼국수 사리를 넣어 먹는 동대문 명물이에요.</p>
     <p class="warn">저녁엔 줄이 길어요. 미리 가서 이름을 올려 두세요.</p>
+    
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">19:45</span>
+  <span class="t">20:00</span>
   <div class="s">
     <div class="l1"><span class="kind">귀가</span><strong class="nm">동대문역 → 원당역</strong></div>
     
-    <p class="note">1호선으로 종로3가역까지 가서 3호선으로 갈아타요. 숙소 도착 약 21:00.</p>
+    <p class="note">1호선으로 종로3가역까지 가서 3호선으로 갈아타요. 숙소 도착 약 21:15.</p>
+    
     
   </div>
 </li>
     </ol>
-    <p class="dtip">비가 와도 시장과 전시장은 지붕 아래라서 괜찮아요.</p>
+    <p class="dtip">비가 와도 시장과 전시장, 극장이 모두 지붕 아래라서 괜찮아요. 연극을 넣느라 익선동 카페(청수당)는 뺐어요.</p>
   </section>
 <section class="day">
     <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">우래옥 · 시립미술관 · 남산 야경</span></h4>
@@ -334,6 +418,7 @@ footer a{color:var(--muted)}
     
     <p class="note">3호선 을지로3가역에서 2호선으로 갈아타고 을지로4가역에서 내려요. 숙소에서 약 55분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -343,6 +428,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:30–21:00 · 마지막 주문 20:20 · 월요일 휴무</p>
     <p class="note">평양냉면 노포예요.</p>
     <p class="warn">월요일엔 쉬어서 일요일에 넣었어요. 점심엔 줄이 길어요.</p>
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -351,6 +437,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">을지로4가 → 시청</strong></div>
     
     <p class="note">2호선으로 시청역까지 가요(약 10분).</p>
+    
     
   </div>
 </li>
@@ -361,6 +448,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–19:00 · 입장은 종료 1시간 전까지 · 무료</p>
     <p class="note">《유영국: 산은 내 안에 있다》를 10/25까지 해요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -369,6 +457,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">카페</span><strong class="nm">더 스팟 패뷸러스</strong><a class="map" href="https://map.naver.com/p/entry/place/181633326?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–22:50</p>
     <p class="note">명동에서 후기가 많은 카페예요(7천 건 이상).</p>
+    
     
   </div>
 </li>
@@ -379,6 +468,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–23:00 · 연중무휴</p>
     <p class="note">명동역 3번 출구에서 걸어서 10~15분(오르막)이에요. 왕복 약 1.5만 원/인.</p>
     <p class="warn">비바람이 세면 운행이 멈출 수 있어요. 비가 오면 이 오후는 카페를 한 곳 더 가세요.</p>
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -387,6 +477,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">전망</span><strong class="nm">N서울타워 전망대</strong><a class="map" href="https://map.naver.com/p/entry/place/11662870?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–23:00 · 매표 마감 30분 전</p>
     <p class="note">일몰이 18:11이에요. 노을에서 야경으로 바뀌는 걸 봐요.</p>
+    
     
   </div>
 </li>
@@ -397,6 +488,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:30–21:00 · 마지막 주문 20:30</p>
     <p class="note">칼국수와 만두예요.</p>
     <p class="warn">늘 줄이 있어요. 20:00 전에 도착하세요.</p>
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -405,6 +497,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">명동역 → 원당역</strong></div>
     
     <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 22:00.</p>
+    
     
   </div>
 </li>
@@ -422,6 +515,7 @@ footer a{color:var(--muted)}
     
     <p class="note">짐을 맡기고 3호선 종로3가역에서 5호선으로 갈아타 광화문역에서 내려요. 약 55분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -431,6 +525,7 @@ footer a{color:var(--muted)}
     <p class="hrs">월요일이 공휴일이라 개관 · 무료</p>
     <p class="note">서울의 역사를 모형과 유물로 봐요. 1~1.5시간 잡아요. 광화문역에서 걸어서 10분쯤이에요.</p>
     <p class="warn">운영 시간은 방문 전에 확인하세요. 네이버에는 09:00–21:00으로 나와요.</p>
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -440,6 +535,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–22:00 · 마지막 주문 21:00</p>
     <p class="note">서촌의 삼계탕 노포예요.</p>
     <p class="warn">점심엔 웨이팅이 길어요. 택시로 5분쯤 걸려요.</p>
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -449,6 +545,7 @@ footer a{color:var(--muted)}
     <p class="hrs">08:00–21:00</p>
     <p class="note">서촌 카페예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -457,6 +554,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">경복궁역 → 원당역</strong></div>
     
     <p class="note">3호선 직통이에요. 숙소 도착 약 16:45, 짐을 찾아 귀가해요.</p>
+    
     
   </div>
 </li>
@@ -471,13 +569,13 @@ footer a{color:var(--muted)}
     <span class="head">
       <span class="sr">제시 2. </span><span class="ttl">핫플 미식</span>
       <span class="hook">연남 · 망원, 용리단길, 삼청동까지 유행하는 곳 위주</span>
-      <span class="tri"><span class="dr"><b>토</b><span>연남 · 망원 · 합정</span></span><span class="dr"><b>일</b><span>용산</span></span><span class="dr"><b>월</b><span>안국 · 삼청</span></span></span>
+      <span class="tri"><span class="dr"><b>토</b><span>연남 · 망원 · 합정</span></span><span class="dr"><b>일</b><span>용산 · 대학로<i class="pl">연극</i></span></span><span class="dr"><b>월</b><span>안국 · 삼청</span></span></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">흐린 토요일엔 연남·망원에서 먹는 데 집중해요. 이슬비가 올 수 있는 일요일과 비 오는 월요일은 실내 전시가 있는 곳으로 잡았어요.</p>
-    <ul class="picks"><li>망원시장</li><li>국립중앙박물관 밥상전</li><li>삼청동수제비</li><li>국립현대미술관</li></ul>
+    <p class="why">흐린 토요일엔 연남·망원에서 먹는 데 집중해요. 이슬비가 올 수 있는 일요일엔 국립중앙박물관 전시와 용리단길을 돌고 오후에 대학로에서 참여형 연극을 봐요. 비 오는 월요일은 실내 전시가 있는 곳으로 잡았어요.</p>
+    <ul class="picks"><li>망원시장</li><li>국립중앙박물관 밥상전</li><li>삼청동수제비</li><li>국립현대미술관</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">연남 · 망원 먹방</span></h4>
     <p class="dm">편도 약 50분 · 흐림 11~21℃ · 일식 점심, 망원시장 간식, 국밥 저녁</p>
@@ -489,6 +587,7 @@ footer a{color:var(--muted)}
     
     <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 홍대입구역에서 내려요. 숙소에서 약 50분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -497,6 +596,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">죠죠 연남점</strong><a class="map" href="https://map.naver.com/p/entry/place/1135648893?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:30–22:00 · 브레이크 16:00–17:00</p>
     <p class="note">일식당이에요. 후기가 3천 건 가까이 돼요.</p>
+    
     
   </div>
 </li>
@@ -507,6 +607,7 @@ footer a{color:var(--muted)}
     <p class="hrs">토 10:00–20:00 · 일 11:00–20:00 · 월요일 휴무</p>
     <p class="note">연남동 카페예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -515,6 +616,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">홍대입구 → 망원</strong></div>
     
     <p class="note">2호선으로 합정역까지 가서 6호선으로 망원역에 가요(약 20분).</p>
+    
     
   </div>
 </li>
@@ -525,6 +627,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:30–21:00 · 브레이크 16:00–17:00 · 마지막 주문 15:00, 20:00</p>
     <p class="note">망원시장 안 멕시칸 가게예요. 후기가 4천 건이 넘어요.</p>
     <p class="warn">오후 브레이크 전 마지막 주문이 15:00이에요. 훈훈호떡(11:00–20:30, 월요일 휴무)은 시장 지하 1층에 있어요.</p>
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -533,6 +636,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">카페</span><strong class="nm">비캔드</strong><a class="map" href="https://map.naver.com/p/entry/place/1461786894?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">09:00–21:30</p>
     <p class="note">망원동 브런치 카페예요.</p>
+    
     
   </div>
 </li>
@@ -543,6 +647,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:00–21:00 · 마지막 주문 20:30</p>
     <p class="note">돼지곰탕(국밥)이에요. 합정역 근처예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -552,14 +657,15 @@ footer a{color:var(--muted)}
     
     <p class="note">2호선으로 홍대입구역, 경의중앙선으로 대곡역, 3호선으로 원당역이에요. 숙소 도착 약 21:00.</p>
     
+    
   </div>
 </li>
     </ol>
     <p class="dtip">가게마다 브레이크타임이 달라서 시간표대로 움직이는 게 좋아요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">국립중앙박물관 밥상 특별전 · 용리단길</span></h4>
-    <p class="dm">편도 약 60분 · 이슬비 가능 13~24℃ · 음식을 주제로 한 특별전을 보고 용리단길에서 먹어요</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">국립중앙박물관 밥상 특별전 · 용리단길 · 참여형 연극</span></h4>
+    <p class="dm">편도 약 60분 · 이슬비 가능 13~24℃ · 음식을 주제로 한 특별전을 보고 용리단길에서 먹은 뒤, 대학로에서 참여형 연극을 봐요</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
@@ -567,6 +673,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
     <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 이촌역에서 내려요. 숙소에서 약 60분. 이촌역에서 박물관까지는 지하 통로로 이어져요.</p>
+    
     
   </div>
 </li>
@@ -577,6 +684,7 @@ footer a{color:var(--muted)}
     <p class="hrs">토 09:30–21:00(입장 20:30) · 일 09:30–17:30(입장 17:00)</p>
     <p class="note">7/1부터 10/25까지 특별전시실 2에서 열려요. 한국인의 밥상 이야기를 1.5시간쯤 봐요.</p>
     <p class="warn">특별전은 유료예요. 티켓링크·네이버에서 예매하거나 특별전시실 1 앞 매표소에서 사요. 상설전은 무료예요.</p>
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -586,46 +694,61 @@ footer a{color:var(--muted)}
     <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
     <p class="note">이촌역에서 4호선으로 한 정거장, 신용산역 쪽 용리단길이에요. 양식이에요. 마다밀(양식, 10:30–21:30)도 근처예요.</p>
     
-  </div>
-</li>
-<li class="stop k-food">
-  <span class="t">15:00</span>
-  <div class="s">
-    <div class="l1"><span class="kind">카페</span><strong class="nm">테디뵈르하우스 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1125171430?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:00–22:00</p>
-    <p class="note">테디베어 장식이 있는 버터 베이커리 카페예요. 웨이팅이 있을 수 있어요. 스탠다드번(08:00–23:00)도 가까워요.</p>
     
   </div>
 </li>
-<li class="stop k-do">
-  <span class="t">16:15</span>
-  <div class="s">
-    <div class="l1"><span class="kind">전시</span><strong class="nm">전쟁기념관</strong><a class="map" href="https://map.naver.com/p/entry/place/11620311?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">09:30–17:40 · 입장 마감 17:00 · 월요일 휴관</p>
-    <p class="note">무료 상설 전시가 있는 박물관이에요.</p>
-    <p class="warn">선택이에요. 큰 곳이라 1시간이면 하이라이트만 봐요. 삼각지역 바로 옆이에요.</p>
-  </div>
-</li>
 <li class="stop k-food">
-  <span class="t">18:00</span>
+  <span class="t">14:40</span>
   <div class="s">
-    <div class="l1"><span class="kind">저녁</span><strong class="nm">효뜨</strong><a class="map" href="https://map.naver.com/p/entry/place/1813533684?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">11:30–22:00 · 마지막 주문 21:00 · 공휴일은 주말과 같아요</p>
-    <p class="note">베트남 음식점이에요. 신용산역 근처예요.</p>
+    <div class="l1"><span class="kind">카페</span><strong class="nm">테디뵈르하우스 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1125171430?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">10:00–22:00</p>
+    <p class="note">테디베어 장식이 있는 버터 베이커리 카페예요. 45분쯤 쉬어요. 웨이팅이 있을 수 있어요. 스탠다드번(08:00–23:00)도 가까워요.</p>
+    
     
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">19:30</span>
+  <span class="t">15:30</span>
   <div class="s">
-    <div class="l1"><span class="kind">귀가</span><strong class="nm">신용산역 → 원당역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 혜화</strong></div>
     
-    <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 21:00.</p>
+    <p class="note">신용산역에서 4호선을 타고 혜화역까지 한 번에 가요(약 25분). 2번 출구로 나와 극장까지 걸어서 6분쯤이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-do">
+  <span class="t">16:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">공연</span><strong class="nm">참여형 연극 〈히든퍼즐〉</strong><a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
+    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
+    <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
+    <p class="alt"><b>멜로에 차질로 바꾸면</b> 15:30 회차(나인진홀 2관)를 잡으세요. 카페는 빼고 14:30에 신용산역을 출발해요. 공연이 끝나면 학림에서 쉬다가 18:15에 저녁을 먹어요.</p>
+  </div>
+</li>
+<li class="stop k-food">
+  <span class="t">18:15</span>
+  <div class="s">
+    <div class="l1"><span class="kind">저녁</span><strong class="nm">페르시안궁전</strong><a class="map" href="https://map.naver.com/p/entry/place/11710271?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–21:25 · 브레이크 15:00–16:00 · 마지막 주문 20:45</p>
+    <p class="note">인도 음식점이에요. 후기가 1만 5천 건이 넘어요. 극장에서 걸어서 10분쯤이에요.</p>
+    <p class="warn">주말 저녁엔 줄이 길 수 있어요. 그러면 천막집 혜화점(17:00–00:30)으로 가세요.</p>
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">19:45</span>
+  <div class="s">
+    <div class="l1"><span class="kind">귀가</span><strong class="nm">혜화역 → 원당역</strong></div>
+    
+    <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 21:15.</p>
+    
     
   </div>
 </li>
     </ol>
-    <p class="dtip">일요일엔 박물관이 17:30에 닫아요. 오전에 특별전부터 보는 순서로 짰어요.</p>
+    <p class="dtip">일요일엔 박물관이 17:30에 닫아요. 오전에 특별전부터 보는 순서로 짰어요. 연극을 넣느라 전쟁기념관과 효뜨(저녁)는 뺐어요.</p>
   </section>
 <section class="day">
     <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">삼청동수제비 · 국립현대미술관</span></h4>
@@ -638,6 +761,7 @@ footer a{color:var(--muted)}
     
     <p class="note">짐을 맡기고 원당역에서 3호선 직통, 안국역에서 내려요. 약 40분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -646,6 +770,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">삼청동수제비</strong><a class="map" href="https://map.naver.com/p/entry/place/11569605?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:00–20:00</p>
     <p class="note">수제비 맛집이에요. 비 오는 날 잘 맞아요. 안국역에서 걸어서 15분쯤이에요.</p>
+    
     
   </div>
 </li>
@@ -656,6 +781,7 @@ footer a{color:var(--muted)}
     <p class="hrs">월 10:00–18:00</p>
     <p class="note">《올해의 작가상 2026》(2,000원, 12/6까지) 등을 봐요. 전시마다 요금이 달라요(통합권 10,000원). 2시간 잡아요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -665,6 +791,7 @@ footer a{color:var(--muted)}
     <p class="hrs">08:30–22:00(공휴일 동일)</p>
     <p class="note">삼청동수제비 옆 골목 카페예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -673,6 +800,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">안국역 → 원당역</strong></div>
     
     <p class="note">3호선 직통이에요. 숙소 도착 약 17:00, 짐을 찾아 귀가해요.</p>
+    
     
   </div>
 </li>
@@ -687,13 +815,13 @@ footer a{color:var(--muted)}
     <span class="head">
       <span class="sr">제시 3. </span><span class="ttl">한식과 밥상</span>
       <span class="hook">수제비 · 삼계탕 · 닭한마리, 마지막은 음식 전시</span>
-      <span class="tri"><span class="dr"><b>토</b><span>안국 · 서촌</span></span><span class="dr"><b>일</b><span>종로 · 동대문</span></span><span class="dr"><b>월</b><span>용산</span></span></span>
+      <span class="tri"><span class="dr"><b>토</b><span>안국 · 서촌</span></span><span class="dr"><b>일</b><span>종로 · 동대문 · 대학로<i class="pl">연극</i></span></span><span class="dr"><b>월</b><span>용산</span></span></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">토요일엔 수제비와 삼계탕, 일요일엔 시장 먹거리와 닭한마리로 한식을 먹어요. 월요일엔 한국인의 밥상을 다룬 국립중앙박물관 특별전을 보고 용리단길에서 점심을 먹어요. 토요일 밤엔 국립현대미술관이 무료예요.</p>
-    <ul class="picks"><li>수제비 · 삼계탕</li><li>시장 먹방</li><li>국립현대미술관 야간 무료</li><li>음식 특별전</li></ul>
+    <p class="why">토요일엔 수제비와 삼계탕, 일요일엔 시장 먹거리와 닭한마리로 한식을 먹고 그 사이에 참여형 연극을 봐요. 월요일엔 한국인의 밥상을 다룬 국립중앙박물관 특별전을 보고 용리단길에서 점심을 먹어요. 토요일 밤엔 국립현대미술관이 무료예요.</p>
+    <ul class="picks"><li>수제비 · 삼계탕</li><li>시장 먹방</li><li>국립현대미술관 야간 무료</li><li>음식 특별전</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">삼청 · 서촌 미식 + 공예박물관 + MMCA 야간</span></h4>
     <p class="dm">편도 약 40분 · 흐림 11~21℃ · 먹고 전시 보고, 토요일 밤엔 국립현대미술관이 무료</p>
@@ -705,6 +833,7 @@ footer a{color:var(--muted)}
     
     <p class="note">원당역에서 3호선 직통, 안국역에서 내려요. 숙소에서 약 40분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -713,6 +842,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">삼청동수제비</strong><a class="map" href="https://map.naver.com/p/entry/place/11569605?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:00–20:00</p>
     <p class="note">수제비 맛집이에요. 후기가 1만 건이 넘어요. 안국역에서 걸어서 15분쯤(오르막)이에요.</p>
+    
     
   </div>
 </li>
@@ -723,6 +853,7 @@ footer a{color:var(--muted)}
     <p class="hrs">08:30–22:00(공휴일 동일)</p>
     <p class="note">삼청동수제비 바로 옆 골목 카페예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -731,6 +862,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">전시</span><strong class="nm">서울공예박물관</strong><a class="map" href="https://map.naver.com/p/entry/place/1922603121?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–18:00 · 월요일 휴관</p>
     <p class="note">안국역에서 걸어서 5분쯤이에요. 공예 전시를 1~1.5시간 봐요. 전시마다 요금이 달라요.</p>
+    
     
   </div>
 </li>
@@ -741,6 +873,7 @@ footer a{color:var(--muted)}
     
     <p class="note">3호선으로 한 정거장이에요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -749,6 +882,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">간식</span><strong class="nm">서촌 금상고로케</strong><a class="map" href="https://map.naver.com/p/entry/place/37996721?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:00–20:00 · 마지막 주문 19:30</p>
     <p class="note">고로케 가게예요. 후기가 2만 4천 건이 넘어요.</p>
+    
     
   </div>
 </li>
@@ -759,6 +893,7 @@ footer a{color:var(--muted)}
     <p class="hrs">08:00–21:00</p>
     <p class="note">서촌 카페예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -768,6 +903,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–22:00 · 마지막 주문 21:00</p>
     <p class="note">서촌의 삼계탕 노포예요.</p>
     <p class="warn">웨이팅이 길지만 회전이 빨라요.</p>
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -776,6 +912,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">전시</span><strong class="nm">국립현대미술관 서울관 야간개장</strong><a class="map" href="https://map.naver.com/p/entry/place/19691123?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">토 10:00–21:00 · 18:00~21:00 무료</p>
     <p class="note">토요일과 수요일 밤 6시부터 9시까지 무료예요. 《올해의 작가상 2026》 같은 전시를 봐요(전시는 미술관 누리집에서 확인). 경복궁역에서 안국역으로 한 정거장 가요.</p>
+    
     
   </div>
 </li>
@@ -786,14 +923,15 @@ footer a{color:var(--muted)}
     
     <p class="note">3호선 직통이에요. 숙소 도착 약 22:00.</p>
     
+    
   </div>
 </li>
     </ol>
     <p class="dtip">야간 무료는 토요일만이에요. 전시마다 줄이 생길 수 있으니 19시 전에 가세요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">광장시장 · 익선동 · DDP 전시 · 닭한마리</span></h4>
-    <p class="dm">편도 약 45분 · 이슬비 가능 13~24℃ · 시장에서 세 곳을 먹고, 디저트 화가의 전시를 보고, 저녁은 닭한마리</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">광장시장 · DDP 전시 · 참여형 연극 · 닭한마리</span></h4>
+    <p class="dm">편도 약 45분 · 이슬비 가능 13~24℃ · 시장에서 세 곳을 먹고, 디저트 화가의 전시를 보고, 참여형 연극을 본 뒤 닭한마리로 마무리</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
@@ -801,6 +939,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
     <p class="note">원당역에서 3호선, 종로3가역에서 내려요. 숙소에서 약 45분.</p>
+    
     
   </div>
 </li>
@@ -811,6 +950,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–21:00 · 마지막 주문 20:30</p>
     <p class="note">광장시장 대표 빈대떡집이에요. 바삭한 녹두 빈대떡부터 시작해요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -819,6 +959,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">부촌육회 본점</strong><a class="map" href="https://map.naver.com/p/entry/place/36428555?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–21:30 · 마지막 주문 21:00</p>
     <p class="note">육회를 먹어요. 한 곳에서 많이 시키지 말고 세 곳에 나눠 먹어요.</p>
+    
     
   </div>
 </li>
@@ -829,55 +970,81 @@ footer a{color:var(--muted)}
     <p class="hrs">09:00–21:00</p>
     <p class="note">미니 김밥으로 마무리해요. 재료가 떨어지면 일찍 닫아요.</p>
     
-  </div>
-</li>
-<li class="stop k-food">
-  <span class="t">13:45</span>
-  <div class="s">
-    <div class="l1"><span class="kind">카페</span><strong class="nm">청수당 베이커리</strong><a class="map" href="https://map.naver.com/p/entry/place/1262377225?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:30–19:00 · 마지막 주문 18:30</p>
-    <p class="note">익선동 한옥 골목에 있는 베이커리 카페예요. 오티씨커피 익선(09:00–21:30)도 가까워요.</p>
     
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">15:30</span>
+  <span class="t">13:45</span>
   <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">익선동 → 동대문</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">광장시장 → 동대문</strong></div>
     
-    <p class="note">종로3가역에서 1호선으로 동대문역까지 가요. 전시장까지 걸어서 10분쯤이에요.</p>
+    <p class="note">종로5가역에서 1호선으로 동대문역까지 한 정거장 가요. 전시장까지 걸어서 10분쯤이에요.</p>
+    
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">16:00</span>
+  <span class="t">14:15</span>
   <div class="s">
     <div class="l1"><span class="kind">전시</span><strong class="nm">DDP 웨인 티보 전</strong><a class="map" href="https://map.naver.com/p/entry/place/18063223?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–20:00 · 입장 마감 19:00</p>
-    <p class="note">케이크와 파이 같은 디저트를 그린 것으로 유명한 미국 화가의 회고전이에요(작품 105점, 2027/2/21까지). 먹는 걸 좋아하는 두 분께 잘 맞아요. 티켓은 현대카드 DIVE 앱·NOL티켓·카카오톡 예약하기에서 사요.</p>
+    <p class="note">케이크와 파이 같은 디저트를 그린 것으로 유명한 미국 화가의 회고전이에요(작품 105점, 2027/2/21까지). 먹는 걸 좋아하는 두 분께 잘 맞아요. 1시간 반쯤 봐요. 티켓은 현대카드 DIVE 앱·NOL티켓·카카오톡 예약하기에서 사요.</p>
     <p class="warn">관람료는 예매처에서 확인하세요.</p>
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">15:50</span>
+  <div class="s">
+    <div class="l1"><span class="kind">이동</span><strong class="nm">DDP → 혜화</strong></div>
+    
+    <p class="note">동대문역사문화공원역에서 4호선을 타고 두 정거장 가서 혜화역 2번 출구로 나와요. 극장까지 걸어서 6분쯤이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-do">
+  <span class="t">16:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">공연</span><strong class="nm">참여형 연극 〈히든퍼즐〉</strong><a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
+    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
+    <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
+    <p class="alt"><b>멜로에 차질로 바꾸면</b> 17:30 회차(나인진홀 2관)를 잡으세요. 전시를 16:00까지 보고, 저녁은 19:15쯤 먹어요. 숙소 도착은 22:00쯤이에요.</p>
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">18:00</span>
+  <div class="s">
+    <div class="l1"><span class="kind">이동</span><strong class="nm">혜화 → 동대문</strong></div>
+    
+    <p class="note">4호선으로 동대문역까지 한 정거장 가요. 9번 출구에서 식당까지 걸어서 5분쯤이에요.</p>
+    
+    
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">18:15</span>
+  <span class="t">18:30</span>
   <div class="s">
     <div class="l1"><span class="kind">저녁</span><strong class="nm">진옥화할매원조닭한마리</strong><a class="map" href="https://map.naver.com/p/entry/place/11619295?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:30–01:00 · 마지막 주문 23:30</p>
     <p class="note">닭한마리에 칼국수 사리를 넣어 먹는 동대문 명물이에요.</p>
     <p class="warn">저녁엔 줄이 길어요. 미리 가서 이름을 올려 두세요.</p>
+    
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">19:45</span>
+  <span class="t">20:00</span>
   <div class="s">
     <div class="l1"><span class="kind">귀가</span><strong class="nm">동대문역 → 원당역</strong></div>
     
-    <p class="note">1호선으로 종로3가역까지 가서 3호선으로 갈아타요. 숙소 도착 약 21:00.</p>
+    <p class="note">1호선으로 종로3가역까지 가서 3호선으로 갈아타요. 숙소 도착 약 21:15.</p>
+    
     
   </div>
 </li>
     </ol>
-    <p class="dtip">비가 와도 시장과 전시장은 지붕 아래라서 괜찮아요.</p>
+    <p class="dtip">비가 와도 시장과 전시장, 극장이 모두 지붕 아래라서 괜찮아요. 연극을 넣느라 익선동 카페(청수당)는 뺐어요.</p>
   </section>
 <section class="day">
     <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">국립중앙박물관 밥상 특별전 · 용리단길</span></h4>
@@ -890,6 +1057,7 @@ footer a{color:var(--muted)}
     
     <p class="note">짐을 맡기고 원당역에서 대곡역, 경의중앙선으로 이촌역까지 가요. 약 60분. 이촌역에서 박물관까지 지하 통로로 이어져요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -899,6 +1067,7 @@ footer a{color:var(--muted)}
     <p class="hrs">월 09:30–17:30(입장 17:00)</p>
     <p class="note">음식을 주제로 한 전시예요. 상설전은 무료예요. 1.5시간 잡아요.</p>
     <p class="warn">특별전은 유료예요. 티켓링크·네이버에서 예매할 수 있어요.</p>
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -907,6 +1076,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
     <p class="note">신용산역 쪽 용리단길 양식당이에요. 마다밀(10:30–21:30)도 근처예요.</p>
+    
     
   </div>
 </li>
@@ -917,6 +1087,7 @@ footer a{color:var(--muted)}
     <p class="hrs">08:00–23:00</p>
     <p class="note">삼각지역 근처 번(빵) 디저트 카페예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -925,6 +1096,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">신용산역 → 원당역</strong></div>
     
     <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 17:15, 짐을 찾아 귀가해요.</p>
+    
     
   </div>
 </li>
@@ -942,13 +1114,13 @@ footer a{color:var(--muted)}
     <span class="head">
       <span class="sr">제시 4. </span><span class="ttl">현대미술 데이트</span>
       <span class="hook">리움, 국립현대미술관, 웨인 티보 전으로 하루 한 곳씩</span>
-      <span class="tri"><span class="dr"><b>토</b><span>한남</span></span><span class="dr"><b>일</b><span>안국 · 서촌</span></span><span class="dr"><b>월</b><span>동대문 · 종로</span></span></span>
+      <span class="tri"><span class="dr"><b>토</b><span>한남</span></span><span class="dr"><b>일</b><span>안국 · 대학로 · 서촌<i class="pl">연극</i></span></span><span class="dr"><b>월</b><span>동대문 · 종로</span></span></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">월요일엔 리움이 쉬어서 리움은 토요일에 넣었어요. 월요일에도 여는 DDP 전시를 보고 시장에서 점심을 먹어요.</p>
-    <ul class="picks"><li>리움미술관</li><li>국립현대미술관</li><li>DDP 웨인 티보 전</li></ul>
+    <p class="why">월요일엔 리움이 쉬어서 리움은 토요일에 넣었어요. 일요일엔 국립현대미술관을 보고 대학로에서 참여형 연극을 본 뒤 서촌에서 저녁을 먹어요. 월요일에도 여는 DDP 전시를 보고 시장에서 점심을 먹어요.</p>
+    <ul class="picks"><li>리움미술관</li><li>국립현대미술관</li><li>DDP 웨인 티보 전</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">리움미술관 · 한남 다이닝</span></h4>
     <p class="dm">편도 약 60분 · 흐림 11~21℃ · 미술관을 천천히 보고 한남동에서 저녁</p>
@@ -960,6 +1132,7 @@ footer a{color:var(--muted)}
     
     <p class="note">원당역에서 3호선, 약수역에서 6호선으로 갈아타고 한강진역에서 내려요. 숙소에서 약 60분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -968,6 +1141,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">클럽하우스서울</strong><a class="map" href="https://map.naver.com/p/entry/place/1222059761?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">토 10:00–15:00 · 일 10:00–20:00</p>
     <p class="note">브런치 카페예요. 한강진역에서 걸어서 갈 수 있어요.</p>
+    
     
   </div>
 </li>
@@ -978,6 +1152,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–18:00 · 월요일 휴관</p>
     <p class="note">고미술과 현대미술을 함께 봐요. 기획전 〈다른 공간 안으로〉를 11/29까지 해요. 2시간 잡아요.</p>
     <p class="warn">상설전은 무료지만 예약이 필요해요. 기획전은 유료예요.</p>
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -986,6 +1161,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">카페</span><strong class="nm">카멜커피 리움미술관점</strong><a class="map" href="https://map.naver.com/p/entry/place/2060902523?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–18:00</p>
     <p class="note">미술관 로비에 있는 카페예요.</p>
+    
     
   </div>
 </li>
@@ -996,6 +1172,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:00–21:00</p>
     <p class="note">대만식 우유 도넛 가게예요(2026년 4월 오픈).</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1004,6 +1181,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">저녁</span><strong class="nm">공간양 용산한남점</strong><a class="map" href="https://map.naver.com/p/entry/place/1947927816?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">토 13:00–01:00 · 일 15:00–23:00</p>
     <p class="note">양갈비 전문점이에요. 한강진역 쪽 대사관로에 있어요.</p>
+    
     
   </div>
 </li>
@@ -1014,14 +1192,15 @@ footer a{color:var(--muted)}
     
     <p class="note">6호선으로 약수역까지 가서 3호선으로 갈아타요. 숙소 도착 약 21:45.</p>
     
+    
   </div>
 </li>
     </ol>
     <p class="dtip">월요일엔 리움이 쉬어요. 토·일요일에만 넣으세요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">삼청 · 서촌 미식 + 국립현대미술관</span></h4>
-    <p class="dm">편도 약 40분 · 이슬비 가능 13~24℃ · 수제비로 시작해 미술관 오후, 저녁은 삼계탕</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">삼청 · 국립현대미술관 · 참여형 연극 · 서촌 삼계탕</span></h4>
+    <p class="dm">편도 약 40분 · 이슬비 가능 13~24℃ · 수제비와 미술관, 오후엔 참여형 연극, 저녁은 서촌 삼계탕</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
@@ -1029,6 +1208,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
     <p class="note">원당역에서 3호선 직통, 안국역에서 내려요. 숙소에서 약 40분.</p>
+    
     
   </div>
 </li>
@@ -1039,6 +1219,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:00–20:00</p>
     <p class="note">수제비 맛집이에요. 안국역에서 걸어서 15분쯤(오르막)이에요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -1048,6 +1229,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–18:00</p>
     <p class="note">《올해의 작가상 2026》(2,000원, 12/6까지) 등을 봐요. 전시마다 요금이 달라요(유료 전시가 3개 이상이면 통합권 10,000원). 2시간쯤 잡아요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1055,48 +1237,63 @@ footer a{color:var(--muted)}
   <div class="s">
     <div class="l1"><span class="kind">카페</span><strong class="nm">도토리가든 안국점</strong><a class="map" href="https://map.naver.com/p/entry/place/1198045151?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">08:00–23:00</p>
-    <p class="note">안국역 근처 카페예요. 포스톤즈 삼청(08:30–22:00)도 가까워요.</p>
+    <p class="note">안국역 근처 카페예요. 40분쯤 쉬어요. 포스톤즈 삼청(08:30–22:00)도 가까워요.</p>
+    
     
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">16:00</span>
+  <span class="t">15:40</span>
   <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">안국 → 경복궁역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">안국 → 혜화</strong></div>
     
-    <p class="note">3호선으로 한 정거장이에요.</p>
+    <p class="note">안국역에서 3호선으로 충무로역까지 가서 4호선으로 갈아타고 혜화역 2번 출구로 나와요(약 30분). 극장까지 걸어서 6분쯤이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-do">
+  <span class="t">16:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">공연</span><strong class="nm">참여형 연극 〈히든퍼즐〉</strong><a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
+    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
+    <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
+    <p class="alt"><b>멜로에 차질로 바꾸면</b> 17:30 회차(나인진홀 2관)를 잡으세요. 안국 카페에서 한 시간 더 쉬고 16:35에 출발해요. 삼계탕은 19:40쯤 먹고, 숙소 도착은 21:50쯤이에요.</p>
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">18:00</span>
+  <div class="s">
+    <div class="l1"><span class="kind">이동</span><strong class="nm">혜화 → 경복궁역</strong></div>
+    
+    <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타고 경복궁역에서 내려요(약 30분).</p>
+    
     
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">16:15</span>
-  <div class="s">
-    <div class="l1"><span class="kind">간식</span><strong class="nm">서촌 금상고로케</strong><a class="map" href="https://map.naver.com/p/entry/place/37996721?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">11:00–20:00 · 마지막 주문 19:30</p>
-    <p class="note">고로케 가게예요. 효자베이커리(08:00–19:40, 월요일 휴무)도 서촌에 있어요.</p>
-    
-  </div>
-</li>
-<li class="stop k-food">
-  <span class="t">17:45</span>
+  <span class="t">18:45</span>
   <div class="s">
     <div class="l1"><span class="kind">저녁</span><strong class="nm">토속촌삼계탕</strong><a class="map" href="https://map.naver.com/p/entry/place/35597924?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–22:00 · 마지막 주문 21:00</p>
     <p class="note">서촌의 삼계탕 노포예요.</p>
-    <p class="warn">웨이팅이 길지만 회전이 빨라요.</p>
+    <p class="warn">웨이팅이 길지만 회전이 빨라요. 도착하자마자 이름부터 올리세요.</p>
+    
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">19:30</span>
+  <span class="t">20:15</span>
   <div class="s">
     <div class="l1"><span class="kind">귀가</span><strong class="nm">경복궁역 → 원당역</strong></div>
     
-    <p class="note">3호선 직통이에요. 숙소 도착 약 20:20.</p>
+    <p class="note">3호선 직통이에요. 숙소 도착 약 21:05.</p>
+    
     
   </div>
 </li>
     </ol>
-    <p class="dtip">비 예보가 있어도 이동이 짧고 실내 위주라서 부담이 적어요.</p>
+    <p class="dtip">비가 와도 실내 위주라서 괜찮아요. 연극 뒤에 서촌에서 저녁을 먹느라 금상고로케(간식)는 뺐어요.</p>
   </section>
 <section class="day">
     <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">DDP 웨인 티보 전 · 광장시장</span></h4>
@@ -1109,6 +1306,7 @@ footer a{color:var(--muted)}
     
     <p class="note">짐을 맡기고 원당역에서 3호선, 종로3가역에서 내려요. 약 45분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1117,6 +1315,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">원조순희네빈대떡</strong><a class="map" href="https://map.naver.com/p/entry/place/11619260?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–21:00 · 마지막 주문 20:30</p>
     <p class="note">광장시장 대표 빈대떡집이에요.</p>
+    
     
   </div>
 </li>
@@ -1127,6 +1326,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–21:30 · 마지막 주문 21:00</p>
     <p class="note">육회를 먹어요. 시장은 지붕이 있어서 비가 와도 괜찮아요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -1135,6 +1335,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">종로5가 → 동대문</strong></div>
     
     <p class="note">1호선으로 동대문역까지 가요. 전시장까지 걸어서 10분쯤이에요.</p>
+    
     
   </div>
 </li>
@@ -1145,6 +1346,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–20:00 · 입장 마감 19:00</p>
     <p class="note">케이크와 파이 같은 디저트를 그린 화가의 회고전이에요. 1.5시간 잡아요.</p>
     <p class="warn">관람료는 예매처(현대카드 DIVE 앱·NOL티켓·카카오톡 예약하기)에서 확인하세요.</p>
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -1153,6 +1355,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">동대문역 → 원당역</strong></div>
     
     <p class="note">1호선으로 종로3가역까지 가서 3호선으로 갈아타요. 숙소 도착 약 16:45, 짐을 찾아 귀가해요.</p>
+    
     
   </div>
 </li>
@@ -1167,16 +1370,16 @@ footer a{color:var(--muted)}
     <span class="head">
       <span class="sr">제시 5. </span><span class="ttl">박물관 · 고미술 · 역사</span>
       <span class="hook">국립중앙박물관, 리움의 고미술, 서울역사박물관</span>
-      <span class="tri"><span class="dr"><b>토</b><span>용산</span></span><span class="dr"><b>일</b><span>한남</span></span><span class="dr"><b>월</b><span>광화문 · 서촌</span></span></span>
+      <span class="tri"><span class="dr"><b>토</b><span>용산 · 대학로<i class="pl">연극</i></span></span><span class="dr"><b>일</b><span>한남</span></span><span class="dr"><b>월</b><span>광화문 · 서촌</span></span></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">국립중앙박물관은 토요일에 21시까지 열어서 여유 있어요. 월요일엔 공휴일이라 여는 서울역사박물관(무료)으로 가요.</p>
-    <ul class="picks"><li>국립중앙박물관</li><li>리움미술관</li><li>서울역사박물관</li></ul>
+    <p class="why">국립중앙박물관은 토요일에 21시까지 열어서 여유 있어요. 오전에 특별전을 보고 오후엔 대학로에서 참여형 연극을 봐요. 월요일엔 공휴일이라 여는 서울역사박물관(무료)으로 가요.</p>
+    <ul class="picks"><li>국립중앙박물관</li><li>리움미술관</li><li>서울역사박물관</li><li>참여형 연극</li></ul>
 <section class="day">
-    <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">국립중앙박물관 밥상 특별전 · 용리단길</span></h4>
-    <p class="dm">편도 약 60분 · 흐림 11~21℃ · 음식을 주제로 한 특별전을 보고 용리단길에서 먹어요</p>
+    <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">국립중앙박물관 밥상 특별전 · 용리단길 · 참여형 연극</span></h4>
+    <p class="dm">편도 약 60분 · 흐림 11~21℃ · 음식을 주제로 한 특별전을 보고 용리단길에서 먹은 뒤, 대학로에서 참여형 연극을 봐요</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
@@ -1184,6 +1387,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
     <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 이촌역에서 내려요. 숙소에서 약 60분. 이촌역에서 박물관까지는 지하 통로로 이어져요.</p>
+    
     
   </div>
 </li>
@@ -1194,6 +1398,7 @@ footer a{color:var(--muted)}
     <p class="hrs">토 09:30–21:00(입장 20:30) · 일 09:30–17:30(입장 17:00)</p>
     <p class="note">7/1부터 10/25까지 특별전시실 2에서 열려요. 한국인의 밥상 이야기를 1.5시간쯤 봐요.</p>
     <p class="warn">특별전은 유료예요. 티켓링크·네이버에서 예매하거나 특별전시실 1 앞 매표소에서 사요. 상설전은 무료예요.</p>
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1203,46 +1408,61 @@ footer a{color:var(--muted)}
     <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
     <p class="note">이촌역에서 4호선으로 한 정거장, 신용산역 쪽 용리단길이에요. 양식이에요. 마다밀(양식, 10:30–21:30)도 근처예요.</p>
     
-  </div>
-</li>
-<li class="stop k-food">
-  <span class="t">15:00</span>
-  <div class="s">
-    <div class="l1"><span class="kind">카페</span><strong class="nm">테디뵈르하우스 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1125171430?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:00–22:00</p>
-    <p class="note">테디베어 장식이 있는 버터 베이커리 카페예요. 웨이팅이 있을 수 있어요. 스탠다드번(08:00–23:00)도 가까워요.</p>
     
   </div>
 </li>
-<li class="stop k-do">
-  <span class="t">16:15</span>
-  <div class="s">
-    <div class="l1"><span class="kind">전시</span><strong class="nm">전쟁기념관</strong><a class="map" href="https://map.naver.com/p/entry/place/11620311?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">09:30–17:40 · 입장 마감 17:00 · 월요일 휴관</p>
-    <p class="note">무료 상설 전시가 있는 박물관이에요.</p>
-    <p class="warn">선택이에요. 큰 곳이라 1시간이면 하이라이트만 봐요. 삼각지역 바로 옆이에요.</p>
-  </div>
-</li>
 <li class="stop k-food">
-  <span class="t">18:00</span>
+  <span class="t">14:40</span>
   <div class="s">
-    <div class="l1"><span class="kind">저녁</span><strong class="nm">효뜨</strong><a class="map" href="https://map.naver.com/p/entry/place/1813533684?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">11:30–22:00 · 마지막 주문 21:00 · 공휴일은 주말과 같아요</p>
-    <p class="note">베트남 음식점이에요. 신용산역 근처예요.</p>
+    <div class="l1"><span class="kind">카페</span><strong class="nm">테디뵈르하우스 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1125171430?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">10:00–22:00</p>
+    <p class="note">테디베어 장식이 있는 버터 베이커리 카페예요. 45분쯤 쉬어요. 웨이팅이 있을 수 있어요. 스탠다드번(08:00–23:00)도 가까워요.</p>
+    
     
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">19:30</span>
+  <span class="t">15:30</span>
   <div class="s">
-    <div class="l1"><span class="kind">귀가</span><strong class="nm">신용산역 → 원당역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 혜화</strong></div>
     
-    <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 21:00.</p>
+    <p class="note">신용산역에서 4호선을 타고 혜화역까지 한 번에 가요(약 25분). 2번 출구로 나와 극장까지 걸어서 6분쯤이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-do">
+  <span class="t">16:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">공연</span><strong class="nm">참여형 연극 〈히든퍼즐〉</strong><a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
+    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
+    <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
+    <p class="alt"><b>멜로에 차질로 바꾸면</b> 15:30 회차(나인진홀 2관)를 잡으세요. 카페는 빼고 14:30에 신용산역을 출발해요. 공연이 끝나면 학림에서 쉬다가 18:15에 저녁을 먹어요.</p>
+  </div>
+</li>
+<li class="stop k-food">
+  <span class="t">18:15</span>
+  <div class="s">
+    <div class="l1"><span class="kind">저녁</span><strong class="nm">페르시안궁전</strong><a class="map" href="https://map.naver.com/p/entry/place/11710271?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–21:25 · 브레이크 15:00–16:00 · 마지막 주문 20:45</p>
+    <p class="note">인도 음식점이에요. 후기가 1만 5천 건이 넘어요. 극장에서 걸어서 10분쯤이에요.</p>
+    <p class="warn">주말 저녁엔 줄이 길 수 있어요. 그러면 천막집 혜화점(17:00–00:30)으로 가세요.</p>
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">19:45</span>
+  <div class="s">
+    <div class="l1"><span class="kind">귀가</span><strong class="nm">혜화역 → 원당역</strong></div>
+    
+    <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 21:15.</p>
+    
     
   </div>
 </li>
     </ol>
-    <p class="dtip">일요일엔 박물관이 17:30에 닫아요. 오전에 특별전부터 보는 순서로 짰어요.</p>
+    <p class="dtip">일요일엔 박물관이 17:30에 닫아요. 오전에 특별전부터 보는 순서로 짰어요. 연극을 넣느라 전쟁기념관과 효뜨(저녁)는 뺐어요.</p>
   </section>
 <section class="day">
     <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">리움미술관 · 한남 다이닝</span></h4>
@@ -1255,6 +1475,7 @@ footer a{color:var(--muted)}
     
     <p class="note">원당역에서 3호선, 약수역에서 6호선으로 갈아타고 한강진역에서 내려요. 숙소에서 약 60분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1263,6 +1484,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">클럽하우스서울</strong><a class="map" href="https://map.naver.com/p/entry/place/1222059761?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">토 10:00–15:00 · 일 10:00–20:00</p>
     <p class="note">브런치 카페예요. 한강진역에서 걸어서 갈 수 있어요.</p>
+    
     
   </div>
 </li>
@@ -1273,6 +1495,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–18:00 · 월요일 휴관</p>
     <p class="note">고미술과 현대미술을 함께 봐요. 기획전 〈다른 공간 안으로〉를 11/29까지 해요. 2시간 잡아요.</p>
     <p class="warn">상설전은 무료지만 예약이 필요해요. 기획전은 유료예요.</p>
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1281,6 +1504,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">카페</span><strong class="nm">카멜커피 리움미술관점</strong><a class="map" href="https://map.naver.com/p/entry/place/2060902523?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–18:00</p>
     <p class="note">미술관 로비에 있는 카페예요.</p>
+    
     
   </div>
 </li>
@@ -1291,6 +1515,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:00–21:00</p>
     <p class="note">대만식 우유 도넛 가게예요(2026년 4월 오픈).</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1300,6 +1525,7 @@ footer a{color:var(--muted)}
     <p class="hrs">토 13:00–01:00 · 일 15:00–23:00</p>
     <p class="note">양갈비 전문점이에요. 한강진역 쪽 대사관로에 있어요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -1308,6 +1534,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">한강진역 → 원당역</strong></div>
     
     <p class="note">6호선으로 약수역까지 가서 3호선으로 갈아타요. 숙소 도착 약 21:45.</p>
+    
     
   </div>
 </li>
@@ -1325,6 +1552,7 @@ footer a{color:var(--muted)}
     
     <p class="note">짐을 맡기고 3호선 종로3가역에서 5호선으로 갈아타 광화문역에서 내려요. 약 55분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -1334,6 +1562,7 @@ footer a{color:var(--muted)}
     <p class="hrs">월요일이 공휴일이라 개관 · 무료</p>
     <p class="note">서울의 역사를 모형과 유물로 봐요. 1~1.5시간 잡아요. 광화문역에서 걸어서 10분쯤이에요.</p>
     <p class="warn">운영 시간은 방문 전에 확인하세요. 네이버에는 09:00–21:00으로 나와요.</p>
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1343,6 +1572,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–22:00 · 마지막 주문 21:00</p>
     <p class="note">서촌의 삼계탕 노포예요.</p>
     <p class="warn">점심엔 웨이팅이 길어요. 택시로 5분쯤 걸려요.</p>
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1352,6 +1582,7 @@ footer a{color:var(--muted)}
     <p class="hrs">08:00–21:00</p>
     <p class="note">서촌 카페예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -1360,6 +1591,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">경복궁역 → 원당역</strong></div>
     
     <p class="note">3호선 직통이에요. 숙소 도착 약 16:45, 짐을 찾아 귀가해요.</p>
+    
     
   </div>
 </li>
@@ -1374,13 +1606,13 @@ footer a{color:var(--muted)}
     <span class="head">
       <span class="sr">제시 6. </span><span class="ttl">공예 · 디자인 · 전통</span>
       <span class="hook">서울공예박물관과 DDP 전시, 인사동 전통차</span>
-      <span class="tri"><span class="dr"><b>토</b><span>안국 · 인사동</span></span><span class="dr"><b>일</b><span>종로 · 동대문</span></span><span class="dr"><b>월</b><span>안국 · 삼청</span></span></span>
+      <span class="tri"><span class="dr"><b>토</b><span>안국 · 인사동</span></span><span class="dr"><b>일</b><span>종로 · 동대문 · 대학로<i class="pl">연극</i></span></span><span class="dr"><b>월</b><span>안국 · 삼청</span></span></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">공예와 디자인 전시를 중심으로 하고 전통차와 한식 저녁을 곁들여요. 이동이 짧아 첫날에 잘 맞아요.</p>
-    <ul class="picks"><li>서울공예박물관</li><li>DDP 웨인 티보 전</li><li>인사동 전통차</li><li>국립현대미술관</li></ul>
+    <p class="why">공예와 디자인 전시를 중심으로 하고 전통차와 한식 저녁을 곁들여요. 이동이 짧아 첫날에 잘 맞아요. 일요일엔 DDP 전시 뒤에 대학로에서 참여형 연극을 봐요.</p>
+    <ul class="picks"><li>서울공예박물관</li><li>DDP 웨인 티보 전</li><li>인사동 전통차</li><li>국립현대미술관</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">인사동 · 안국 전통 먹방</span></h4>
     <p class="dm">편도 약 40분 · 흐림 11~21℃ · 일식 점심, 공예 전시, 전통차, 한식 저녁</p>
@@ -1392,6 +1624,7 @@ footer a{color:var(--muted)}
     
     <p class="note">원당역에서 3호선 직통, 안국역에서 내려요. 숙소에서 약 40분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1401,6 +1634,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:10–21:30 · 브레이크 15:00–17:00 · 마지막 주문 14:00, 20:30</p>
     <p class="note">일식 야끼 가게예요. 후기가 1만 건이 넘어요. 안국역에서 걸어서 10분쯤이에요.</p>
     <p class="warn">점심 주문은 14:00까지예요.</p>
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -1409,6 +1643,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">전시</span><strong class="nm">서울공예박물관</strong><a class="map" href="https://map.naver.com/p/entry/place/1922603121?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–18:00 · 월요일 휴관</p>
     <p class="note">안국역에서 가까워요. 공예 전시를 1~1.5시간 봐요. 전시마다 요금이 달라요. 안에 밀크로지커피 안국역점(10:00–18:00)이 있어요.</p>
+    
     
   </div>
 </li>
@@ -1419,6 +1654,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–22:00</p>
     <p class="note">전통차와 디저트예요. 후기가 8천 건이 넘어요. 한옥찻집(11:30–21:50)도 있어요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1427,6 +1663,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">간식</span><strong class="nm">스탠다드브레드 익선</strong><a class="map" href="https://map.naver.com/p/entry/place/2039605875?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">09:00–19:30 · 마지막 주문 19:00</p>
     <p class="note">익선동 베이커리예요. 저녁 전에 빵을 하나 먹어요.</p>
+    
     
   </div>
 </li>
@@ -1437,6 +1674,7 @@ footer a{color:var(--muted)}
     <p class="hrs">토 11:00–21:30 · 일 11:00–21:00 · 브레이크 15:00–17:00</p>
     <p class="note">한식당이에요. 후기가 3천 건이 넘어요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -1446,14 +1684,15 @@ footer a{color:var(--muted)}
     
     <p class="note">3호선 직통이에요. 숙소 도착 약 20:45.</p>
     
+    
   </div>
 </li>
     </ol>
     <p class="dtip">이동이 짧아서 도착일이나 늦게 출발하는 날에 잘 맞아요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">광장시장 · 익선동 · DDP 전시 · 닭한마리</span></h4>
-    <p class="dm">편도 약 45분 · 이슬비 가능 13~24℃ · 시장에서 세 곳을 먹고, 디저트 화가의 전시를 보고, 저녁은 닭한마리</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">광장시장 · DDP 전시 · 참여형 연극 · 닭한마리</span></h4>
+    <p class="dm">편도 약 45분 · 이슬비 가능 13~24℃ · 시장에서 세 곳을 먹고, 디저트 화가의 전시를 보고, 참여형 연극을 본 뒤 닭한마리로 마무리</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
@@ -1461,6 +1700,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
     <p class="note">원당역에서 3호선, 종로3가역에서 내려요. 숙소에서 약 45분.</p>
+    
     
   </div>
 </li>
@@ -1471,6 +1711,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–21:00 · 마지막 주문 20:30</p>
     <p class="note">광장시장 대표 빈대떡집이에요. 바삭한 녹두 빈대떡부터 시작해요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1479,6 +1720,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">부촌육회 본점</strong><a class="map" href="https://map.naver.com/p/entry/place/36428555?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–21:30 · 마지막 주문 21:00</p>
     <p class="note">육회를 먹어요. 한 곳에서 많이 시키지 말고 세 곳에 나눠 먹어요.</p>
+    
     
   </div>
 </li>
@@ -1489,55 +1731,81 @@ footer a{color:var(--muted)}
     <p class="hrs">09:00–21:00</p>
     <p class="note">미니 김밥으로 마무리해요. 재료가 떨어지면 일찍 닫아요.</p>
     
-  </div>
-</li>
-<li class="stop k-food">
-  <span class="t">13:45</span>
-  <div class="s">
-    <div class="l1"><span class="kind">카페</span><strong class="nm">청수당 베이커리</strong><a class="map" href="https://map.naver.com/p/entry/place/1262377225?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:30–19:00 · 마지막 주문 18:30</p>
-    <p class="note">익선동 한옥 골목에 있는 베이커리 카페예요. 오티씨커피 익선(09:00–21:30)도 가까워요.</p>
     
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">15:30</span>
+  <span class="t">13:45</span>
   <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">익선동 → 동대문</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">광장시장 → 동대문</strong></div>
     
-    <p class="note">종로3가역에서 1호선으로 동대문역까지 가요. 전시장까지 걸어서 10분쯤이에요.</p>
+    <p class="note">종로5가역에서 1호선으로 동대문역까지 한 정거장 가요. 전시장까지 걸어서 10분쯤이에요.</p>
+    
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">16:00</span>
+  <span class="t">14:15</span>
   <div class="s">
     <div class="l1"><span class="kind">전시</span><strong class="nm">DDP 웨인 티보 전</strong><a class="map" href="https://map.naver.com/p/entry/place/18063223?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–20:00 · 입장 마감 19:00</p>
-    <p class="note">케이크와 파이 같은 디저트를 그린 것으로 유명한 미국 화가의 회고전이에요(작품 105점, 2027/2/21까지). 먹는 걸 좋아하는 두 분께 잘 맞아요. 티켓은 현대카드 DIVE 앱·NOL티켓·카카오톡 예약하기에서 사요.</p>
+    <p class="note">케이크와 파이 같은 디저트를 그린 것으로 유명한 미국 화가의 회고전이에요(작품 105점, 2027/2/21까지). 먹는 걸 좋아하는 두 분께 잘 맞아요. 1시간 반쯤 봐요. 티켓은 현대카드 DIVE 앱·NOL티켓·카카오톡 예약하기에서 사요.</p>
     <p class="warn">관람료는 예매처에서 확인하세요.</p>
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">15:50</span>
+  <div class="s">
+    <div class="l1"><span class="kind">이동</span><strong class="nm">DDP → 혜화</strong></div>
+    
+    <p class="note">동대문역사문화공원역에서 4호선을 타고 두 정거장 가서 혜화역 2번 출구로 나와요. 극장까지 걸어서 6분쯤이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-do">
+  <span class="t">16:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">공연</span><strong class="nm">참여형 연극 〈히든퍼즐〉</strong><a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
+    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
+    <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
+    <p class="alt"><b>멜로에 차질로 바꾸면</b> 17:30 회차(나인진홀 2관)를 잡으세요. 전시를 16:00까지 보고, 저녁은 19:15쯤 먹어요. 숙소 도착은 22:00쯤이에요.</p>
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">18:00</span>
+  <div class="s">
+    <div class="l1"><span class="kind">이동</span><strong class="nm">혜화 → 동대문</strong></div>
+    
+    <p class="note">4호선으로 동대문역까지 한 정거장 가요. 9번 출구에서 식당까지 걸어서 5분쯤이에요.</p>
+    
+    
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">18:15</span>
+  <span class="t">18:30</span>
   <div class="s">
     <div class="l1"><span class="kind">저녁</span><strong class="nm">진옥화할매원조닭한마리</strong><a class="map" href="https://map.naver.com/p/entry/place/11619295?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:30–01:00 · 마지막 주문 23:30</p>
     <p class="note">닭한마리에 칼국수 사리를 넣어 먹는 동대문 명물이에요.</p>
     <p class="warn">저녁엔 줄이 길어요. 미리 가서 이름을 올려 두세요.</p>
+    
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">19:45</span>
+  <span class="t">20:00</span>
   <div class="s">
     <div class="l1"><span class="kind">귀가</span><strong class="nm">동대문역 → 원당역</strong></div>
     
-    <p class="note">1호선으로 종로3가역까지 가서 3호선으로 갈아타요. 숙소 도착 약 21:00.</p>
+    <p class="note">1호선으로 종로3가역까지 가서 3호선으로 갈아타요. 숙소 도착 약 21:15.</p>
+    
     
   </div>
 </li>
     </ol>
-    <p class="dtip">비가 와도 시장과 전시장은 지붕 아래라서 괜찮아요.</p>
+    <p class="dtip">비가 와도 시장과 전시장, 극장이 모두 지붕 아래라서 괜찮아요. 연극을 넣느라 익선동 카페(청수당)는 뺐어요.</p>
   </section>
 <section class="day">
     <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">삼청동수제비 · 국립현대미술관</span></h4>
@@ -1550,6 +1818,7 @@ footer a{color:var(--muted)}
     
     <p class="note">짐을 맡기고 원당역에서 3호선 직통, 안국역에서 내려요. 약 40분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1558,6 +1827,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">삼청동수제비</strong><a class="map" href="https://map.naver.com/p/entry/place/11569605?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:00–20:00</p>
     <p class="note">수제비 맛집이에요. 비 오는 날 잘 맞아요. 안국역에서 걸어서 15분쯤이에요.</p>
+    
     
   </div>
 </li>
@@ -1568,6 +1838,7 @@ footer a{color:var(--muted)}
     <p class="hrs">월 10:00–18:00</p>
     <p class="note">《올해의 작가상 2026》(2,000원, 12/6까지) 등을 봐요. 전시마다 요금이 달라요(통합권 10,000원). 2시간 잡아요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1577,6 +1848,7 @@ footer a{color:var(--muted)}
     <p class="hrs">08:30–22:00(공휴일 동일)</p>
     <p class="note">삼청동수제비 옆 골목 카페예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -1585,6 +1857,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">안국역 → 원당역</strong></div>
     
     <p class="note">3호선 직통이에요. 숙소 도착 약 17:00, 짐을 찾아 귀가해요.</p>
+    
     
   </div>
 </li>
@@ -1602,13 +1875,13 @@ footer a{color:var(--muted)}
     <span class="head">
       <span class="sr">제시 7. </span><span class="ttl">남산 · 낙산 야경</span>
       <span class="hook">서울에서 가장 예쁜 야경 두 곳</span>
-      <span class="tri"><span class="dr"><b>토</b><span>충무로 · 시청 · 남산</span></span><span class="dr"><b>일</b><span>혜화 · 낙산</span></span><span class="dr"><b>월</b><span>동대문 · 종로</span></span></span>
+      <span class="tri"><span class="dr"><b>토</b><span>충무로 · 시청 · 남산</span></span><span class="dr"><b>일</b><span>혜화 · 낙산<i class="pl">연극</i></span></span><span class="dr"><b>월</b><span>동대문 · 종로</span></span></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">날씨가 가장 좋은 토요일에 남산 노을을 넣었어요. 일요일엔 낙산 성곽 야경이에요. 비 오는 월요일은 실내 전시예요.</p>
-    <ul class="picks"><li>N서울타워</li><li>낙산공원 성곽 야경</li><li>DDP 웨인 티보 전</li></ul>
+    <p class="why">날씨가 가장 좋은 토요일에 남산 노을을 넣었어요. 일요일엔 대학로에서 참여형 연극을 보고 낙산 성곽 야경으로 이어가요. 비 오는 월요일은 실내 전시예요.</p>
+    <ul class="picks"><li>N서울타워</li><li>낙산공원 성곽 야경</li><li>DDP 웨인 티보 전</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">필동면옥 · 시립미술관 · 남산 야경</span></h4>
     <p class="dm">편도 약 50분 · 흐림 11~21℃ · 노포 냉면, 무료 미술관, 그리고 해 질 녘 남산 전망대</p>
@@ -1620,6 +1893,7 @@ footer a{color:var(--muted)}
     
     <p class="note">원당역에서 3호선 직통, 충무로역에서 내려요. 숙소에서 약 50분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1628,6 +1902,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">필동면옥</strong><a class="map" href="https://map.naver.com/p/entry/place/11678838?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:00–19:50 · 브레이크 15:00–17:00 · 일요일 휴무</p>
     <p class="note">평양냉면이에요. 곰탕이 당기면 하동관 명동본점(07:00–16:00, 일요일 휴무)도 가까워요.</p>
+    
     
   </div>
 </li>
@@ -1638,6 +1913,7 @@ footer a{color:var(--muted)}
     
     <p class="note">3호선 을지로3가역에서 2호선으로 시청역까지 가요(약 20분).</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -1646,6 +1922,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">전시</span><strong class="nm">서울시립미술관</strong><a class="map" href="https://map.naver.com/p/entry/place/12125053?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–19:00 · 입장은 종료 1시간 전까지 · 무료</p>
     <p class="note">《유영국: 산은 내 안에 있다》를 10/25까지 해요. 덕수궁 옆에 있어요.</p>
+    
     
   </div>
 </li>
@@ -1656,6 +1933,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–22:50</p>
     <p class="note">명동에서 후기가 많은 카페예요(7천 건 이상). 시청역에서 명동까지 지하철과 걸어서 15분쯤 걸려요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -1665,6 +1943,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–23:00 · 연중무휴</p>
     <p class="note">명동역 3번 출구에서 걸어서 10~15분(오르막)이에요. 왕복 약 1.5만 원/인.</p>
     <p class="warn">비바람이 세면 운행이 멈출 수 있어요.</p>
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -1673,6 +1952,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">전망</span><strong class="nm">N서울타워 전망대</strong><a class="map" href="https://map.naver.com/p/entry/place/11662870?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–23:00 · 매표 마감 30분 전</p>
     <p class="note">일몰이 18:12예요. 노을에서 야경으로 바뀌는 걸 봐요. 입장료는 약 2.6~2.9만 원/인이에요(공식 사이트 확인).</p>
+    
     
   </div>
 </li>
@@ -1683,6 +1963,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:30–21:00 · 브레이크 없음 · 마지막 주문 20:30</p>
     <p class="note">칼국수와 만두예요. 돈가스가 당기면 남산 케이블카 승강장 쪽 남산산채집(20:00까지 주문)도 있어요.</p>
     <p class="warn">늘 줄이 있어요. 20:00 전에 도착하세요.</p>
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -1692,14 +1973,15 @@ footer a{color:var(--muted)}
     
     <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 22:00.</p>
     
+    
   </div>
 </li>
     </ol>
     <p class="dtip">토요일이 날씨가 가장 좋아요. 전망대는 구름이 끼어도 야경은 볼 만해요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">대학로 · 낙산 야경</span></h4>
-    <p class="dm">편도 약 65분 · 이슬비 가능 13~24℃ · 인도 커리, 오래된 카페, 그리고 서울 성곽 야경</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">대학로 · 참여형 연극 · 낙산 야경</span></h4>
+    <p class="dm">편도 약 65분 · 이슬비 가능 13~24℃ · 인도 커리, 오래된 카페, 참여형 연극, 그리고 서울 성곽 야경</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
@@ -1707,6 +1989,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
     <p class="note">3호선 충무로역에서 4호선으로 갈아타고 혜화역에서 내려요. 숙소에서 약 65분.</p>
+    
     
   </div>
 </li>
@@ -1717,6 +2000,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:00–21:25 · 브레이크 15:00–16:00 · 마지막 주문 20:45</p>
     <p class="note">인도 음식점이에요. 후기가 1만 5천 건이 넘어요. 갓잇 대학로점(멕시칸, 11:00–21:30)도 있어요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1726,15 +2010,17 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–23:00</p>
     <p class="note">대학로의 오래된 카페예요. 후기가 3천 건이 넘어요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
   <span class="t">14:30</span>
   <div class="s">
-    <div class="l1"><span class="kind">공연</span><strong class="nm">대학로 소극장 공연</strong><a class="map" href="https://map.naver.com/p/search/%EB%8C%80%ED%95%99%EB%A1%9C%20%EC%86%8C%EA%B7%B9%EC%9E%A5" target="_blank" rel="noopener">지도</a></div>
-    
-    <p class="note">커플이 보기 좋은 로맨틱 코미디 연극이 많아요. 1시간 반쯤 걸려요.</p>
-    <p class="warn">선택이에요. 예매 앱에서 오후 공연을 골라 미리 예매하세요.</p>
+    <div class="l1"><span class="kind">공연</span><strong class="nm">참여형 연극 〈히든퍼즐〉</strong><a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
+    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 학림에서 걸어서 3분쯤이에요. 끝나고 남는 시간엔 마로니에공원이나 근처 카페에서 쉬어요.</p>
+    <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
+    <p class="alt"><b>멜로에 차질로 바꾸면</b> 15:30 회차(나인진홀 2관)를 잡으세요. 학림에서 45분 더 쉬고, 공연이 끝나는 16:55에 곧바로 낙산으로 가요. 낙산 도착은 17:20쯤이에요.</p>
   </div>
 </li>
 <li class="stop k-move">
@@ -1743,6 +2029,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">혜화 → 낙산공원</strong></div>
     
     <p class="note">혜화역 2번 출구에서 걸어서 15~20분(오르막)이에요.</p>
+    
     
   </div>
 </li>
@@ -1753,6 +2040,7 @@ footer a{color:var(--muted)}
     <p class="hrs">24시간</p>
     <p class="note">일몰이 18:12예요. 성곽 너머로 남산타워와 도심이 보이고 해가 지면 성곽에 조명이 켜져요. 이 날의 하이라이트예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1762,6 +2050,7 @@ footer a{color:var(--muted)}
     <p class="hrs">17:00–00:30</p>
     <p class="note">한식 술집이에요. 갓잇 대학로점(LO 20:30)으로 바꿔도 돼요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -1770,6 +2059,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">혜화역 → 원당역</strong></div>
     
     <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 22:15.</p>
+    
     
   </div>
 </li>
@@ -1787,6 +2077,7 @@ footer a{color:var(--muted)}
     
     <p class="note">짐을 맡기고 원당역에서 3호선, 종로3가역에서 내려요. 약 45분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1795,6 +2086,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">원조순희네빈대떡</strong><a class="map" href="https://map.naver.com/p/entry/place/11619260?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–21:00 · 마지막 주문 20:30</p>
     <p class="note">광장시장 대표 빈대떡집이에요.</p>
+    
     
   </div>
 </li>
@@ -1805,6 +2097,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–21:30 · 마지막 주문 21:00</p>
     <p class="note">육회를 먹어요. 시장은 지붕이 있어서 비가 와도 괜찮아요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -1813,6 +2106,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">종로5가 → 동대문</strong></div>
     
     <p class="note">1호선으로 동대문역까지 가요. 전시장까지 걸어서 10분쯤이에요.</p>
+    
     
   </div>
 </li>
@@ -1823,6 +2117,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–20:00 · 입장 마감 19:00</p>
     <p class="note">케이크와 파이 같은 디저트를 그린 화가의 회고전이에요. 1.5시간 잡아요.</p>
     <p class="warn">관람료는 예매처(현대카드 DIVE 앱·NOL티켓·카카오톡 예약하기)에서 확인하세요.</p>
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -1831,6 +2126,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">동대문역 → 원당역</strong></div>
     
     <p class="note">1호선으로 종로3가역까지 가서 3호선으로 갈아타요. 숙소 도착 약 16:45, 짐을 찾아 귀가해요.</p>
+    
     
   </div>
 </li>
@@ -1845,13 +2141,13 @@ footer a{color:var(--muted)}
     <span class="head">
       <span class="sr">제시 8. </span><span class="ttl">노을과 야간 미술관</span>
       <span class="hook">토요일 밤 무료 미술관, 일요일 남산 노을</span>
-      <span class="tri"><span class="dr"><b>토</b><span>안국 · 서촌</span></span><span class="dr"><b>일</b><span>을지로 · 시청 · 남산</span></span><span class="dr"><b>월</b><span>혜화</span></span></span>
+      <span class="tri"><span class="dr"><b>토</b><span>안국 · 서촌</span></span><span class="dr"><b>일</b><span>을지로 · 시청 · 남산</span></span><span class="dr"><b>월</b><span>혜화<i class="pl">연극</i></span></span></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">토요일 밤 6시부터는 국립현대미술관이 무료예요. 일요일엔 남산에서 노을을 보고, 월요일엔 실내 공연으로 마무리해요.</p>
-    <ul class="picks"><li>국립현대미술관 야간 무료</li><li>N서울타워</li><li>대학로 공연</li></ul>
+    <p class="why">토요일 밤 6시부터는 국립현대미술관이 무료예요. 일요일엔 남산에서 노을을 보고, 월요일엔 대학로에서 참여형 연극으로 마무리해요.</p>
+    <ul class="picks"><li>국립현대미술관 야간 무료</li><li>N서울타워</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">삼청 · 서촌 미식 + 공예박물관 + MMCA 야간</span></h4>
     <p class="dm">편도 약 40분 · 흐림 11~21℃ · 먹고 전시 보고, 토요일 밤엔 국립현대미술관이 무료</p>
@@ -1863,6 +2159,7 @@ footer a{color:var(--muted)}
     
     <p class="note">원당역에서 3호선 직통, 안국역에서 내려요. 숙소에서 약 40분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1871,6 +2168,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">삼청동수제비</strong><a class="map" href="https://map.naver.com/p/entry/place/11569605?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:00–20:00</p>
     <p class="note">수제비 맛집이에요. 후기가 1만 건이 넘어요. 안국역에서 걸어서 15분쯤(오르막)이에요.</p>
+    
     
   </div>
 </li>
@@ -1881,6 +2179,7 @@ footer a{color:var(--muted)}
     <p class="hrs">08:30–22:00(공휴일 동일)</p>
     <p class="note">삼청동수제비 바로 옆 골목 카페예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -1889,6 +2188,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">전시</span><strong class="nm">서울공예박물관</strong><a class="map" href="https://map.naver.com/p/entry/place/1922603121?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–18:00 · 월요일 휴관</p>
     <p class="note">안국역에서 걸어서 5분쯤이에요. 공예 전시를 1~1.5시간 봐요. 전시마다 요금이 달라요.</p>
+    
     
   </div>
 </li>
@@ -1899,6 +2199,7 @@ footer a{color:var(--muted)}
     
     <p class="note">3호선으로 한 정거장이에요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1907,6 +2208,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">간식</span><strong class="nm">서촌 금상고로케</strong><a class="map" href="https://map.naver.com/p/entry/place/37996721?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:00–20:00 · 마지막 주문 19:30</p>
     <p class="note">고로케 가게예요. 후기가 2만 4천 건이 넘어요.</p>
+    
     
   </div>
 </li>
@@ -1917,6 +2219,7 @@ footer a{color:var(--muted)}
     <p class="hrs">08:00–21:00</p>
     <p class="note">서촌 카페예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1926,6 +2229,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–22:00 · 마지막 주문 21:00</p>
     <p class="note">서촌의 삼계탕 노포예요.</p>
     <p class="warn">웨이팅이 길지만 회전이 빨라요.</p>
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -1935,6 +2239,7 @@ footer a{color:var(--muted)}
     <p class="hrs">토 10:00–21:00 · 18:00~21:00 무료</p>
     <p class="note">토요일과 수요일 밤 6시부터 9시까지 무료예요. 《올해의 작가상 2026》 같은 전시를 봐요(전시는 미술관 누리집에서 확인). 경복궁역에서 안국역으로 한 정거장 가요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -1943,6 +2248,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">안국역 → 원당역</strong></div>
     
     <p class="note">3호선 직통이에요. 숙소 도착 약 22:00.</p>
+    
     
   </div>
 </li>
@@ -1960,6 +2266,7 @@ footer a{color:var(--muted)}
     
     <p class="note">3호선 을지로3가역에서 2호선으로 갈아타고 을지로4가역에서 내려요. 숙소에서 약 55분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1969,6 +2276,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:30–21:00 · 마지막 주문 20:20 · 월요일 휴무</p>
     <p class="note">평양냉면 노포예요.</p>
     <p class="warn">월요일엔 쉬어서 일요일에 넣었어요. 점심엔 줄이 길어요.</p>
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -1977,6 +2285,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">을지로4가 → 시청</strong></div>
     
     <p class="note">2호선으로 시청역까지 가요(약 10분).</p>
+    
     
   </div>
 </li>
@@ -1987,6 +2296,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–19:00 · 입장은 종료 1시간 전까지 · 무료</p>
     <p class="note">《유영국: 산은 내 안에 있다》를 10/25까지 해요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -1995,6 +2305,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">카페</span><strong class="nm">더 스팟 패뷸러스</strong><a class="map" href="https://map.naver.com/p/entry/place/181633326?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–22:50</p>
     <p class="note">명동에서 후기가 많은 카페예요(7천 건 이상).</p>
+    
     
   </div>
 </li>
@@ -2005,6 +2316,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–23:00 · 연중무휴</p>
     <p class="note">명동역 3번 출구에서 걸어서 10~15분(오르막)이에요. 왕복 약 1.5만 원/인.</p>
     <p class="warn">비바람이 세면 운행이 멈출 수 있어요. 비가 오면 이 오후는 카페를 한 곳 더 가세요.</p>
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -2013,6 +2325,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">전망</span><strong class="nm">N서울타워 전망대</strong><a class="map" href="https://map.naver.com/p/entry/place/11662870?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–23:00 · 매표 마감 30분 전</p>
     <p class="note">일몰이 18:11이에요. 노을에서 야경으로 바뀌는 걸 봐요.</p>
+    
     
   </div>
 </li>
@@ -2023,6 +2336,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:30–21:00 · 마지막 주문 20:30</p>
     <p class="note">칼국수와 만두예요.</p>
     <p class="warn">늘 줄이 있어요. 20:00 전에 도착하세요.</p>
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -2032,14 +2346,15 @@ footer a{color:var(--muted)}
     
     <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 22:00.</p>
     
+    
   </div>
 </li>
     </ol>
     <p class="dtip">일요일은 이슬비 예보가 있어요. 비가 오면 전망대 대신 미술관과 카페 위주로 돌리세요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">대학로 카페 · 공연 · 인도 커리</span></h4>
-    <p class="dm">편도 약 65분 · 비 15~21℃ · 비 오는 날 실내에서 공연 한 편</p>
+    <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">대학로 카페 · 참여형 연극 · 인도 커리</span></h4>
+    <p class="dm">편도 약 65분 · 비 15~21℃ · 비 오는 날 실내에서 참여형 연극 한 편</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
@@ -2047,6 +2362,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">체크아웃 후 출발</strong></div>
     
     <p class="note">짐을 맡기고 3호선 충무로역에서 4호선으로 갈아타 혜화역에서 내려요. 약 65분.</p>
+    
     
   </div>
 </li>
@@ -2057,6 +2373,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:00–21:25 · 브레이크 15:00–16:00</p>
     <p class="note">인도 음식점이에요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -2066,15 +2383,17 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–23:00</p>
     <p class="note">대학로의 오래된 카페예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
   <span class="t">14:30</span>
   <div class="s">
-    <div class="l1"><span class="kind">공연</span><strong class="nm">대학로 소극장 공연</strong><a class="map" href="https://map.naver.com/p/search/%EB%8C%80%ED%95%99%EB%A1%9C%20%EC%86%8C%EA%B7%B9%EC%9E%A5" target="_blank" rel="noopener">지도</a></div>
-    
-    <p class="note">비 오는 날엔 실내 공연이 잘 맞아요. 1시간 반쯤 걸려요.</p>
-    <p class="warn">선택이에요. 예매 앱에서 오후 공연을 미리 예매하세요.</p>
+    <div class="l1"><span class="kind">공연</span><strong class="nm">참여형 연극 〈히든퍼즐〉</strong><a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
+    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 학림에서 걸어서 3분쯤이에요. 10/5는 대체공휴일이라 특별 회차표로 3번 열려요.</p>
+    <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
+    <p class="alt"><b>멜로에 차질로 바꾸면</b> 15:30 회차(나인진홀 2관)를 잡으세요. 학림에서 한 시간 더 쉬고, 공연이 끝나는 16:55에 귀가해요. 숙소 도착은 18:15쯤이에요.</p>
   </div>
 </li>
 <li class="stop k-move">
@@ -2083,6 +2402,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">혜화역 → 원당역</strong></div>
     
     <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 17:45, 짐을 찾아 귀가해요.</p>
+    
     
   </div>
 </li>
@@ -2098,15 +2418,15 @@ footer a{color:var(--muted)}
   <summary>
     <span class="num" aria-hidden="true">9</span>
     <span class="head">
-      <span class="sr">제시 9. </span><span class="ttl">방탈출 · 공연</span>
-      <span class="hook">홍대 방탈출, 낙산 야경, 미술관</span>
-      <span class="tri"><span class="dr"><b>토</b><span>홍대 · 합정</span></span><span class="dr"><b>일</b><span>혜화 · 낙산</span></span><span class="dr"><b>월</b><span>안국 · 삼청</span></span></span>
+      <span class="sr">제시 9. </span><span class="ttl">방탈출 · 참여형 연극</span>
+      <span class="hook">홍대 방탈출, 참여형 연극, 낙산 야경, 미술관</span>
+      <span class="tri"><span class="dr"><b>토</b><span>홍대 · 합정</span></span><span class="dr"><b>일</b><span>혜화 · 낙산<i class="pl">연극</i></span></span><span class="dr"><b>월</b><span>안국 · 삼청</span></span></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">같이 문제를 푸는 방탈출로 시작해서 일요일엔 공연과 낙산 야경으로 이어져요. 월요일엔 삼청동에서 수제비와 미술관이에요.</p>
-    <ul class="picks"><li>방탈출</li><li>대학로 공연</li><li>낙산 야경</li><li>국립현대미술관</li></ul>
+    <p class="why">같이 문제를 푸는 방탈출로 시작해서 일요일엔 참여형 연극과 낙산 야경으로 이어져요. 월요일엔 삼청동에서 수제비와 미술관이에요.</p>
+    <ul class="picks"><li>방탈출</li><li>참여형 연극</li><li>낙산 야경</li><li>국립현대미술관</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">홍대 방탈출 · 초밥 · 카페</span></h4>
     <p class="dm">편도 약 50분 · 흐림 11~21℃ · 같이 문제를 풀고, 초밥과 디저트로 마무리</p>
@@ -2118,6 +2438,7 @@ footer a{color:var(--muted)}
     
     <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 홍대입구역에서 내려요. 숙소에서 약 50분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -2126,6 +2447,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">오차야 연남점</strong><a class="map" href="https://map.naver.com/p/entry/place/2062107099?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:30–20:30 · 마지막 주문 19:50</p>
     <p class="note">일식당이에요. 연남동 골목에 있어요.</p>
+    
     
   </div>
 </li>
@@ -2136,6 +2458,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:00–24:00 · 22시 이후 이용은 21시 전에 예약</p>
     <p class="note">방탈출 카페예요. 후기가 1만 건이 넘어요. 1시간쯤 걸려요.</p>
     <p class="warn">네이버 예약이 필요해요. 연휴엔 시간대가 빨리 차요.</p>
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -2144,6 +2467,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">카페</span><strong class="nm">아벨롭 홍대본점</strong><a class="map" href="https://map.naver.com/p/entry/place/1503644539?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:00–21:00 · 브런치 마지막 주문 19:00</p>
     <p class="note">카페 겸 브런치 가게예요. 후기가 4천 건 가까이 돼요.</p>
+    
     
   </div>
 </li>
@@ -2154,6 +2478,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:30–22:00 · 마지막 주문 21:30</p>
     <p class="note">초밥집이에요. 후기가 5천 건이 넘어요. 일요일은 15:00–16:30 브레이크가 있어요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -2163,14 +2488,15 @@ footer a{color:var(--muted)}
     
     <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 20:30.</p>
     
+    
   </div>
 </li>
     </ol>
     <p class="dtip">방탈출은 예약부터 잡고 나머지를 맞추세요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">대학로 · 낙산 야경</span></h4>
-    <p class="dm">편도 약 65분 · 이슬비 가능 13~24℃ · 인도 커리, 오래된 카페, 그리고 서울 성곽 야경</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">대학로 · 참여형 연극 · 낙산 야경</span></h4>
+    <p class="dm">편도 약 65분 · 이슬비 가능 13~24℃ · 인도 커리, 오래된 카페, 참여형 연극, 그리고 서울 성곽 야경</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
@@ -2178,6 +2504,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
     <p class="note">3호선 충무로역에서 4호선으로 갈아타고 혜화역에서 내려요. 숙소에서 약 65분.</p>
+    
     
   </div>
 </li>
@@ -2188,6 +2515,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:00–21:25 · 브레이크 15:00–16:00 · 마지막 주문 20:45</p>
     <p class="note">인도 음식점이에요. 후기가 1만 5천 건이 넘어요. 갓잇 대학로점(멕시칸, 11:00–21:30)도 있어요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -2197,15 +2525,17 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–23:00</p>
     <p class="note">대학로의 오래된 카페예요. 후기가 3천 건이 넘어요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
   <span class="t">14:30</span>
   <div class="s">
-    <div class="l1"><span class="kind">공연</span><strong class="nm">대학로 소극장 공연</strong><a class="map" href="https://map.naver.com/p/search/%EB%8C%80%ED%95%99%EB%A1%9C%20%EC%86%8C%EA%B7%B9%EC%9E%A5" target="_blank" rel="noopener">지도</a></div>
-    
-    <p class="note">커플이 보기 좋은 로맨틱 코미디 연극이 많아요. 1시간 반쯤 걸려요.</p>
-    <p class="warn">선택이에요. 예매 앱에서 오후 공연을 골라 미리 예매하세요.</p>
+    <div class="l1"><span class="kind">공연</span><strong class="nm">참여형 연극 〈히든퍼즐〉</strong><a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
+    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 학림에서 걸어서 3분쯤이에요. 끝나고 남는 시간엔 마로니에공원이나 근처 카페에서 쉬어요.</p>
+    <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
+    <p class="alt"><b>멜로에 차질로 바꾸면</b> 15:30 회차(나인진홀 2관)를 잡으세요. 학림에서 45분 더 쉬고, 공연이 끝나는 16:55에 곧바로 낙산으로 가요. 낙산 도착은 17:20쯤이에요.</p>
   </div>
 </li>
 <li class="stop k-move">
@@ -2214,6 +2544,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">혜화 → 낙산공원</strong></div>
     
     <p class="note">혜화역 2번 출구에서 걸어서 15~20분(오르막)이에요.</p>
+    
     
   </div>
 </li>
@@ -2224,6 +2555,7 @@ footer a{color:var(--muted)}
     <p class="hrs">24시간</p>
     <p class="note">일몰이 18:12예요. 성곽 너머로 남산타워와 도심이 보이고 해가 지면 성곽에 조명이 켜져요. 이 날의 하이라이트예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -2233,6 +2565,7 @@ footer a{color:var(--muted)}
     <p class="hrs">17:00–00:30</p>
     <p class="note">한식 술집이에요. 갓잇 대학로점(LO 20:30)으로 바꿔도 돼요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -2241,6 +2574,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">혜화역 → 원당역</strong></div>
     
     <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 22:15.</p>
+    
     
   </div>
 </li>
@@ -2258,6 +2592,7 @@ footer a{color:var(--muted)}
     
     <p class="note">짐을 맡기고 원당역에서 3호선 직통, 안국역에서 내려요. 약 40분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -2266,6 +2601,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">삼청동수제비</strong><a class="map" href="https://map.naver.com/p/entry/place/11569605?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:00–20:00</p>
     <p class="note">수제비 맛집이에요. 비 오는 날 잘 맞아요. 안국역에서 걸어서 15분쯤이에요.</p>
+    
     
   </div>
 </li>
@@ -2276,6 +2612,7 @@ footer a{color:var(--muted)}
     <p class="hrs">월 10:00–18:00</p>
     <p class="note">《올해의 작가상 2026》(2,000원, 12/6까지) 등을 봐요. 전시마다 요금이 달라요(통합권 10,000원). 2시간 잡아요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -2285,6 +2622,7 @@ footer a{color:var(--muted)}
     <p class="hrs">08:30–22:00(공휴일 동일)</p>
     <p class="note">삼청동수제비 옆 골목 카페예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -2293,6 +2631,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">안국역 → 원당역</strong></div>
     
     <p class="note">3호선 직통이에요. 숙소 도착 약 17:00, 짐을 찾아 귀가해요.</p>
+    
     
   </div>
 </li>
@@ -2307,13 +2646,13 @@ footer a{color:var(--muted)}
     <span class="head">
       <span class="sr">제시 10. </span><span class="ttl">올라운드 균형형</span>
       <span class="hook">야경, 미술관, 체험을 하루씩 골고루</span>
-      <span class="tri"><span class="dr"><b>토</b><span>충무로 · 시청 · 남산</span></span><span class="dr"><b>일</b><span>안국 · 서촌</span></span><span class="dr"><b>월</b><span>홍대 · 연남</span></span></span>
+      <span class="tri"><span class="dr"><b>토</b><span>충무로 · 시청 · 남산</span></span><span class="dr"><b>일</b><span>안국 · 대학로 · 서촌<i class="pl">연극</i></span></span><span class="dr"><b>월</b><span>홍대 · 연남</span></span></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">토요일 야경, 일요일 미술관과 서촌 먹거리, 월요일 실내 체험이에요. 어느 하나 빠지기 싫을 때 고르세요.</p>
-    <ul class="picks"><li>N서울타워</li><li>국립현대미술관</li><li>방탈출</li></ul>
+    <p class="why">토요일 야경, 일요일 미술관과 참여형 연극과 서촌 저녁, 월요일 실내 체험이에요. 어느 하나 빠지기 싫을 때 고르세요.</p>
+    <ul class="picks"><li>N서울타워</li><li>국립현대미술관</li><li>방탈출</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">필동면옥 · 시립미술관 · 남산 야경</span></h4>
     <p class="dm">편도 약 50분 · 흐림 11~21℃ · 노포 냉면, 무료 미술관, 그리고 해 질 녘 남산 전망대</p>
@@ -2325,6 +2664,7 @@ footer a{color:var(--muted)}
     
     <p class="note">원당역에서 3호선 직통, 충무로역에서 내려요. 숙소에서 약 50분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -2333,6 +2673,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">필동면옥</strong><a class="map" href="https://map.naver.com/p/entry/place/11678838?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:00–19:50 · 브레이크 15:00–17:00 · 일요일 휴무</p>
     <p class="note">평양냉면이에요. 곰탕이 당기면 하동관 명동본점(07:00–16:00, 일요일 휴무)도 가까워요.</p>
+    
     
   </div>
 </li>
@@ -2343,6 +2684,7 @@ footer a{color:var(--muted)}
     
     <p class="note">3호선 을지로3가역에서 2호선으로 시청역까지 가요(약 20분).</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -2351,6 +2693,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">전시</span><strong class="nm">서울시립미술관</strong><a class="map" href="https://map.naver.com/p/entry/place/12125053?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–19:00 · 입장은 종료 1시간 전까지 · 무료</p>
     <p class="note">《유영국: 산은 내 안에 있다》를 10/25까지 해요. 덕수궁 옆에 있어요.</p>
+    
     
   </div>
 </li>
@@ -2361,6 +2704,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–22:50</p>
     <p class="note">명동에서 후기가 많은 카페예요(7천 건 이상). 시청역에서 명동까지 지하철과 걸어서 15분쯤 걸려요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -2370,6 +2714,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–23:00 · 연중무휴</p>
     <p class="note">명동역 3번 출구에서 걸어서 10~15분(오르막)이에요. 왕복 약 1.5만 원/인.</p>
     <p class="warn">비바람이 세면 운행이 멈출 수 있어요.</p>
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -2378,6 +2723,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">전망</span><strong class="nm">N서울타워 전망대</strong><a class="map" href="https://map.naver.com/p/entry/place/11662870?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–23:00 · 매표 마감 30분 전</p>
     <p class="note">일몰이 18:12예요. 노을에서 야경으로 바뀌는 걸 봐요. 입장료는 약 2.6~2.9만 원/인이에요(공식 사이트 확인).</p>
+    
     
   </div>
 </li>
@@ -2388,6 +2734,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:30–21:00 · 브레이크 없음 · 마지막 주문 20:30</p>
     <p class="note">칼국수와 만두예요. 돈가스가 당기면 남산 케이블카 승강장 쪽 남산산채집(20:00까지 주문)도 있어요.</p>
     <p class="warn">늘 줄이 있어요. 20:00 전에 도착하세요.</p>
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -2397,14 +2744,15 @@ footer a{color:var(--muted)}
     
     <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 22:00.</p>
     
+    
   </div>
 </li>
     </ol>
     <p class="dtip">토요일이 날씨가 가장 좋아요. 전망대는 구름이 끼어도 야경은 볼 만해요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">삼청 · 서촌 미식 + 국립현대미술관</span></h4>
-    <p class="dm">편도 약 40분 · 이슬비 가능 13~24℃ · 수제비로 시작해 미술관 오후, 저녁은 삼계탕</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">삼청 · 국립현대미술관 · 참여형 연극 · 서촌 삼계탕</span></h4>
+    <p class="dm">편도 약 40분 · 이슬비 가능 13~24℃ · 수제비와 미술관, 오후엔 참여형 연극, 저녁은 서촌 삼계탕</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
@@ -2412,6 +2760,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
     <p class="note">원당역에서 3호선 직통, 안국역에서 내려요. 숙소에서 약 40분.</p>
+    
     
   </div>
 </li>
@@ -2422,6 +2771,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:00–20:00</p>
     <p class="note">수제비 맛집이에요. 안국역에서 걸어서 15분쯤(오르막)이에요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-do">
@@ -2431,6 +2781,7 @@ footer a{color:var(--muted)}
     <p class="hrs">10:00–18:00</p>
     <p class="note">《올해의 작가상 2026》(2,000원, 12/6까지) 등을 봐요. 전시마다 요금이 달라요(유료 전시가 3개 이상이면 통합권 10,000원). 2시간쯤 잡아요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -2438,48 +2789,63 @@ footer a{color:var(--muted)}
   <div class="s">
     <div class="l1"><span class="kind">카페</span><strong class="nm">도토리가든 안국점</strong><a class="map" href="https://map.naver.com/p/entry/place/1198045151?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">08:00–23:00</p>
-    <p class="note">안국역 근처 카페예요. 포스톤즈 삼청(08:30–22:00)도 가까워요.</p>
+    <p class="note">안국역 근처 카페예요. 40분쯤 쉬어요. 포스톤즈 삼청(08:30–22:00)도 가까워요.</p>
+    
     
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">16:00</span>
+  <span class="t">15:40</span>
   <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">안국 → 경복궁역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">안국 → 혜화</strong></div>
     
-    <p class="note">3호선으로 한 정거장이에요.</p>
+    <p class="note">안국역에서 3호선으로 충무로역까지 가서 4호선으로 갈아타고 혜화역 2번 출구로 나와요(약 30분). 극장까지 걸어서 6분쯤이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-do">
+  <span class="t">16:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">공연</span><strong class="nm">참여형 연극 〈히든퍼즐〉</strong><a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
+    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요.</p>
+    <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
+    <p class="alt"><b>멜로에 차질로 바꾸면</b> 17:30 회차(나인진홀 2관)를 잡으세요. 안국 카페에서 한 시간 더 쉬고 16:35에 출발해요. 삼계탕은 19:40쯤 먹고, 숙소 도착은 21:50쯤이에요.</p>
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">18:00</span>
+  <div class="s">
+    <div class="l1"><span class="kind">이동</span><strong class="nm">혜화 → 경복궁역</strong></div>
+    
+    <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타고 경복궁역에서 내려요(약 30분).</p>
+    
     
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">16:15</span>
-  <div class="s">
-    <div class="l1"><span class="kind">간식</span><strong class="nm">서촌 금상고로케</strong><a class="map" href="https://map.naver.com/p/entry/place/37996721?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">11:00–20:00 · 마지막 주문 19:30</p>
-    <p class="note">고로케 가게예요. 효자베이커리(08:00–19:40, 월요일 휴무)도 서촌에 있어요.</p>
-    
-  </div>
-</li>
-<li class="stop k-food">
-  <span class="t">17:45</span>
+  <span class="t">18:45</span>
   <div class="s">
     <div class="l1"><span class="kind">저녁</span><strong class="nm">토속촌삼계탕</strong><a class="map" href="https://map.naver.com/p/entry/place/35597924?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:00–22:00 · 마지막 주문 21:00</p>
     <p class="note">서촌의 삼계탕 노포예요.</p>
-    <p class="warn">웨이팅이 길지만 회전이 빨라요.</p>
+    <p class="warn">웨이팅이 길지만 회전이 빨라요. 도착하자마자 이름부터 올리세요.</p>
+    
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">19:30</span>
+  <span class="t">20:15</span>
   <div class="s">
     <div class="l1"><span class="kind">귀가</span><strong class="nm">경복궁역 → 원당역</strong></div>
     
-    <p class="note">3호선 직통이에요. 숙소 도착 약 20:20.</p>
+    <p class="note">3호선 직통이에요. 숙소 도착 약 21:05.</p>
+    
     
   </div>
 </li>
     </ol>
-    <p class="dtip">비 예보가 있어도 이동이 짧고 실내 위주라서 부담이 적어요.</p>
+    <p class="dtip">비가 와도 실내 위주라서 괜찮아요. 연극 뒤에 서촌에서 저녁을 먹느라 금상고로케(간식)는 뺐어요.</p>
   </section>
 <section class="day">
     <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">홍대 방탈출 · 연남 점심</span></h4>
@@ -2492,6 +2858,7 @@ footer a{color:var(--muted)}
     
     <p class="note">짐을 맡기고 원당역에서 대곡역, 경의중앙선으로 홍대입구역까지 가요. 약 50분.</p>
     
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -2500,6 +2867,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">식사</span><strong class="nm">오차야 연남점</strong><a class="map" href="https://map.naver.com/p/entry/place/2062107099?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:30–20:30 · 마지막 주문 19:50</p>
     <p class="note">일식당이에요.</p>
+    
     
   </div>
 </li>
@@ -2510,6 +2878,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:00–24:00</p>
     <p class="note">방탈출 카페예요. 1시간쯤 걸려요.</p>
     <p class="warn">네이버 예약이 필요해요.</p>
+    
   </div>
 </li>
 <li class="stop k-food">
@@ -2519,6 +2888,7 @@ footer a{color:var(--muted)}
     <p class="hrs">11:00–21:00</p>
     <p class="note">카페 겸 브런치 가게예요.</p>
     
+    
   </div>
 </li>
 <li class="stop k-move">
@@ -2527,6 +2897,7 @@ footer a{color:var(--muted)}
     <div class="l1"><span class="kind">귀가</span><strong class="nm">홍대입구역 → 원당역</strong></div>
     
     <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 17:15, 짐을 찾아 귀가해요.</p>
+    
     
   </div>
 </li>
@@ -2539,7 +2910,7 @@ footer a{color:var(--muted)}
 </main>
 
 <footer class="wrap">
-  <p>영업시간과 휴무는 9월 30일에 네이버 지도와 각 기관 누리집에서 확인한 값이에요. 연휴에 바뀔 수 있으니 출발 전에 지도 앱에서 한 번 더 확인하세요. 입장료는 대략값이에요.</p>
+  <p>영업시간과 휴무는 9월 30일에 네이버 지도와 각 기관 누리집에서 확인한 값이에요. 연휴에 바뀔 수 있으니 출발 전에 지도 앱에서 한 번 더 확인하세요. 입장료는 대략값이에요. 연극 회차와 가격은 같은 날 예스24 공연 안내에서 옮겼어요.</p>
   <ul>
 <li><a href="https://map.naver.com" target="_blank" rel="noopener">매장 영업시간: 네이버 지도(2026-09-30 확인)</a></li>
 <li><a href="https://www.mmca.go.kr/seoul/viewingInfo/information.do" target="_blank" rel="noopener">국립현대미술관 서울관 관람 안내</a></li>
@@ -2552,6 +2923,12 @@ footer a{color:var(--muted)}
 <li><a href="https://mediahub.seoul.go.kr/archives/2009189" target="_blank" rel="noopener">낙산공원 야경 안내(서울시)</a></li>
 <li><a href="https://www.vegannews.co.kr/news/article.html?no=389153" target="_blank" rel="noopener">개천절 대체공휴일 (10/5)</a></li>
 <li><a href="https://open-meteo.com" target="_blank" rel="noopener">날씨: Open-Meteo 예보(2026-09-30)</a></li>
+<li><a href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">히든퍼즐 회차·가격: 예스24(2026-09-30)</a></li>
+<li><a href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">멜로에 차질 회차·가격: 예스24(2026-09-30)</a></li>
+<li><a href="https://www.gukjenews.com/news/articleView.html?idxno=3679874" target="_blank" rel="noopener">히든퍼즐 관객 참여 방식(국제뉴스)</a></li>
+<li><a href="https://www.nc.press/news/articleView.html?idxno=627149" target="_blank" rel="noopener">멜로에 차질·히든퍼즐 소개(뉴스컬처, 2026-09-24)</a></li>
+<li><a href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">컬쳐씨어터 위치·가격표(네이버 지도)</a></li>
+<li><a href="https://map.naver.com/p/entry/place/1697675120?placePath=%2Fhome" target="_blank" rel="noopener">나인진홀 2관 위치(네이버 지도)</a></li>
   </ul>
 </footer>
 <script>
