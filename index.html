@@ -163,6 +163,9 @@ a.map{font-size:12px;font-weight:700;line-height:1;padding:5px 8px;border-radius
 .req i.off s{text-decoration:line-through}
 .miss{margin:8px 0 0;padding:8px 11px;border-radius:10px;border:1px dashed var(--line);color:var(--muted);font-size:13.5px}
 .mt{font-size:11px;font-weight:700;line-height:1;padding:4px 7px;border-radius:6px;background:var(--c);color:var(--on)}
+.mt.opt{background:transparent;color:var(--ci);border:1px solid var(--c)}
+.mustl small a{color:var(--accent);font-weight:700}
+.chii .play dl>div{grid-template-columns:70px minmax(0,1fr)}
 .mustl{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
 .mustl li{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;padding:11px 14px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
 .mustl b{align-self:start;display:grid;place-items:center;min-height:26px;border-radius:8px;background:var(--accent);color:var(--on);font-size:12.5px;line-height:1.2;padding:4px 6px;text-align:center}
@@ -225,7 +228,7 @@ footer a{color:var(--muted)}
 <header class="hero wrap">
   <p class="eyebrow">10/3 (토) – 10/5 (월) · 2박 3일 · 뚜벅이</p>
   <h1>서울 3일 코스 13</h1>
-  <p class="lede">제시 하나를 고르면 토·일·월 일정이 통째로 나와요. 아침엔 숙소에서 출발하고, 저녁엔 숙소로 돌아와요. 1~10번에는 국립중앙박물관, 체험형 연극, 노포 먹방, 미식 먹방, 치이카와를 모두 넣었어요. 하나라도 빠진 코스는 11번부터 뒤로 뺐어요.</p>
+  <p class="lede">제시 하나를 고르면 토·일·월 일정이 통째로 나와요. 아침엔 숙소에서 출발하고, 저녁엔 숙소로 돌아와요. 1~10번에는 국립중앙박물관, 체험형 연극, 노포 먹방, 미식 먹방, 치이카와를 모두 넣었어요. 치이카와는 줄 서지 않고 볼 수 있는 극장판과 굿즈샵으로 채웠어요. 하나라도 빠진 코스는 11번부터 뒤로 뺐어요.</p>
   <dl class="stay">
     <div><dt>숙소</dt><dd>호텔 라엘르 고양일산 본점<a class="map" href="https://map.naver.com/p/entry/place/1442275496?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><small>경기 고양시 덕양구 고양시청로 30-14</small></dd></div>
     <div><dt>가까운 역</dt><dd>3호선 원당역<small>서울 도심까지 3호선 직통 30~55분</small></dd></div>
@@ -235,14 +238,72 @@ footer a{color:var(--muted)}
 <main class="wrap">
   <section class="sec" id="must" aria-labelledby="mu-h">
     <h2 id="mu-h">꼭 넣은 5가지</h2>
-    <p class="sub">1~10번 코스에는 아래 5가지가 모두 들어 있어요. 일정에서는 해당하는 가게마다 "국중박·연극·노포·미식·치이카와" 표시가 붙어 있어요.</p>
+    <p class="sub">1~10번 코스에는 아래 5가지가 모두 들어 있어요. 일정에서는 해당하는 가게마다 "국중박·연극·노포·미식·치이카와" 표시가 붙어 있고, "줄 확인" 표시는 5가지에 세지 않는 덤이에요.</p>
     <ul class="mustl">
       <li><b>국중박</b><p>국립중앙박물관 특별전 〈우리들의 밥상〉(~10/25)과 상설전<small>토 09:30–21:00, 일·월 09:30–17:30(특별전 입장 마감 16:50). 특별전은 성인 5,000원, 7~24세 3,000원이고 티켓링크·네이버에서 예매해요.</small></p></li>
       <li><b>연극</b><p>대학로 체험형(관객참여) 연극 한 편<small>기본은 히든퍼즐이고, 코스마다 8편 중 다른 연극으로 바꿀 수 있어요.</small></p></li>
       <li><b>노포</b><p>오래된 식당·시장 가게에서 한 끼<small>광장시장 빈대떡, 진옥화할매 닭한마리, 필동면옥, 토속촌 삼계탕을 노포로 봤어요.</small></p></li>
       <li><b>미식</b><p>요즘 이름난 식당에서 한 끼<small>용리단길 에프더블유브이를 기본으로, 연남·한남·홍대의 식당도 들어 있어요.</small></p></li>
-      <li><b>치이카와</b><p>용산 아이파크몰 3층 치이카와샵<small>줄이 매우 길어서(9월엔 3시간 넘게 기다린 사례가 있고 현장 웨이팅이 일찍 마감되기도 해요) 개점 10:30에 맞춰 가요. 안 되면 같은 건물 CGV에서 극장판 〈치이카와: 인어 섬의 비밀〉(9/30 개봉, 99분)을 봐요.</small></p></li>
+      <li><b>치이카와</b><p>줄 안 서고 볼 수 있는 곳을 코스마다 나눠 넣었어요<small>예매해서 보는 극장판 〈치이카와: 인어 섬의 비밀〉(CGV 용산아이파크몰·CGV 연남)과 성수 나가노마켓 굿즈샵이에요. 용산 공식 치이카와샵은 신상이 들어온 날 줄이 수천 명이라, 줄이 짧을 때만 들르는 덤으로 바꿨어요. <a href="#chii">자세히 보기</a></small></p></li>
     </ul>
+  </section>
+
+  <section class="sec" id="chii" aria-labelledby="ch-h">
+    <h2 id="ch-h">치이카와, 줄 안 서고 보는 곳</h2>
+    <p class="sub">용산 공식 치이카와샵은 신상이 들어온 날 수천 명이 줄을 서요. 그래서 줄 없이 갈 수 있는 곳을 코스마다 나눠 넣었어요. 가챠(뽑기)는 뺐어요.</p>
+    <div class="plays chii">
+    <details class="play main" open>
+      <summary><span class="bd">줄 없음</span><span class="pt"><strong>극장판 〈치이카와: 인어 섬의 비밀〉</strong><small>9/30 개봉 · 99분 · 전체관람가</small></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="pb">
+        <dl>
+          <div><dt>방식</dt><dd>좌석을 예매해서 가요. 자막판과 한국어 더빙판이 모두 상영돼요. CGV 먼작귀 팝콘통(29,000원)은 지정 극장 현장에서만 팔고 오픈런이 있었다고 해서 코스에 넣지 않았어요.</dd></div>
+          <div><dt>특전</dt><dd>10/3~10/6 CGV·메가박스, 10/3~10/9 롯데시네마가 참마커 피규어(8종 중 랜덤)를 줘요. CGV는 상영이 끝난 뒤 현장에서 선착순으로, 1인 최대 4개씩이에요. 물량이 떨어지면 기간 안에도 끝나요.</dd></div>
+          <div><dt>극장</dt><dd>용산아이파크몰 CGV(용산역과 이어져 있고 나무위키 기준 6층 티켓박스·7층 상영관)와 CGV 연남(홍대입구역 가까이, 양화로 186 LC타워 7~10층)을 코스에 넣었어요.</dd></div>
+          <div><dt>못 본 것</dt><dd>상영 시간표와 남은 좌석은 확인하지 못했어요. CGV 앱에서 예매하고 일정을 그 시간에 맞춰요.</dd></div>
+          <div><dt>코스</dt><dd>1·2·4·6·8번(용산) · 10번(연남)</dd></div>
+        </dl>
+        <a class="bk" href="https://www.cgv.co.kr/" target="_blank" rel="noopener">CGV에서 예매하기</a>
+      </div>
+    </details>
+    <details class="play">
+      <summary><span class="bd">굿즈샵</span><span class="pt"><strong>나가노마켓 서울스토어 (성수)</strong><small>성동구 연무장길 97 · 11:00–20:00</small></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="pb">
+        <dl>
+          <div><dt>방식</dt><dd>일본 작가 나가노의 캐릭터 굿즈샵이에요. 보도자료는 농담곰·치이카와 등을 판다고 소개했어요. 치이카와 상품이 얼마나 있는지는 못 봤어요. 인형뽑기(1인 최대 3회)는 하지 않아도 돼요.</dd></div>
+          <div><dt>줄</dt><dd>상설 매장의 입장·대기 방식은 확인하지 못했어요. 지난해 8월 성수 팝업은 네이버 사전예약으로 들어갔어요.</dd></div>
+          <div><dt>영업</dt><dd>2026-02-13 개점 소식까지만 확인했어요. 엣집(1/19)은 상설 매장이라고, 여행픽(2/2)은 팝업 형식이라고 적어서 지금도 여는지 확신할 수 없어요. 10/3·10/5 공휴일 영업도 못 봤어요. 공식 계정(@naganomkt_seoul)을 보고 가세요.</dd></div>
+          <div><dt>위치</dt><dd>성수역에서 걸어서 10분쯤으로 어림했어요(직접 재지는 못했어요). 같은 연무장길에 소문난성수감자탕(45번지)이 있어요.</dd></div>
+          <div><dt>코스</dt><dd>3·5·7·9번(일요일)</dd></div>
+        </dl>
+        <a class="bk" href="https://map.naver.com/p/search/%EB%82%98%EA%B0%80%EB%85%B8%EB%A7%88%EC%BC%93%20%EC%84%9C%EC%9A%B8%EC%8A%A4%ED%86%A0%EC%96%B4%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener">지도에서 찾기</a>
+      </div>
+    </details>
+    <details class="play">
+      <summary><span class="bd">줄 확인형</span><span class="pt"><strong>치이카와샵 용산 (공식)</strong><small>아이파크몰 3층 도파민스테이션 · 10:30–22:00</small></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="pb">
+        <dl>
+          <div><dt>길었던 날</dt><dd>9/19(토) 오후 2시에 대기번호가 1160번대였고 5시가 넘어서야 입장했대요(이투데이, 9/22). 한복 마스코트 입고에 극장판 개봉을 앞둔 때였어요. 엑스포츠뉴스(9/30)에는 밤샘 오픈런과 현장 웨이팅 조기 마감이 나오고, 기사 제목에 “7시간 대기”가 있어요.</dd></div>
+          <div><dt>평소</dt><dd>입고가 없는 날은 줄이 짧고 평일 오전은 한적하다는 후기 요약이 있어요. 원문이 막혀서 요약으로만 봤어요. 현장 입장 첫날(3/13)은 입장까지 2시간쯤 걸렸다는 후기도 있어요.</dd></div>
+          <div><dt>입장</dt><dd>현장 웨이팅 방식이에요. 3/12까지는 네이버 예약자만 들어갔고, 그 뒤 현장 웨이팅으로 바꾼다고 공지했어요.</dd></div>
+          <div><dt>이번 주말</dt><dd>극장판 개봉 첫 주이고 3일 연휴예요. 샵은 영화 관람권을 가져오면 1만 원 이상 구매 시 종이 선글라스를 주는 협업을 10/6까지 해요. 10월 입고 일정은 못 찾았어요. 공식 소식의 마지막은 9/23 극장판 굿즈 입고예요.</dd></div>
+          <div><dt>쓰는 법</dt><dd>개점 10:30에 맞춰 가서 대기가 30분을 넘길 것 같으면 건너뛰어요. 전날 공식 인스타그램(@chiikawashop_kr)에서 입고 공지를 보세요.</dd></div>
+          <div><dt>코스</dt><dd>10번(아침 일정) · 1·2·4·6·8번(영화 뒤 덤)</dd></div>
+        </dl>
+        <a class="bk" href="https://www.popcondplay.com/ip/news/7" target="_blank" rel="noopener">공식 소식 보기</a>
+      </div>
+    </details>
+    <details class="play">
+      <summary><span class="bd">미확인</span><span class="pt"><strong>아트박스 · 핫트랙스</strong><small>치이카와(먼작귀) 상품을 파는 문구·캐릭터 매장</small></span><span class="chev" aria-hidden="true"></span></summary>
+      <div class="pb">
+        <dl>
+          <div><dt>확인한 것</dt><dd>상품 페이지에는 치이카와(먼작귀) 가방고리와 스티커 미니북(아트박스), 콜렉트북 세트(핫트랙스)가 올라 있어요.</dd></div>
+          <div><dt>못 본 것</dt><dd>어느 매장에 재고가 있는지는 못 봤어요. 그래서 코스에는 넣지 않았고, 지나가다 보이면 들러 보는 정도로만 적었어요.</dd></div>
+          
+        </dl>
+        <a class="bk" href="https://www.poom.co.kr/goods/initDetailGoods.action?goods_no=G24020900918" target="_blank" rel="noopener">아트박스 상품 페이지</a>
+      </div>
+    </details>
+    </div>
   </section>
 
   <section class="sec" id="play" aria-labelledby="pl-h">
@@ -374,9 +435,9 @@ footer a{color:var(--muted)}
   <section class="sec" aria-labelledby="rl-h">
     <h2 id="rl-h">이렇게 짰어요</h2>
     <dl class="rules">
-      <div><dt>뺀 것</dt><dd>경복궁, 청계천, 걷기만 하는 코스. 백화점·쇼핑몰은 용산 아이파크몰의 캐릭터샵만 넣었어요.</dd></div>
+      <div><dt>뺀 것</dt><dd>경복궁, 청계천, 걷기만 하는 코스. 백화점·쇼핑몰 구경과 가챠(뽑기)도 뺐어요. 쇼핑은 캐릭터 굿즈샵만 넣었어요.</dd></div>
       <div><dt>넣은 것</dt><dd>꼭 넣은 5가지, 그리고 토요일엔 먹방·전시·야경·체험·귀여운 가게 중 취향대로</dd></div>
-      <div><dt>일요일</dt><dd>1~10번의 일요일은 소나기 예보라 실내인 용산 하루예요. 치이카와샵 개점에 맞춰 9시 반에 출발해요.</dd></div>
+      <div><dt>일요일</dt><dd>1~10번의 일요일은 소나기 예보라 실내 위주예요. 국립중앙박물관과 용리단길 식당은 모두 넣고, 코스마다 극장판(용산), 성수 굿즈샵과 감자탕, 토토로 중 하나를 붙였어요.</dd></div>
       <div><dt>거리</dt><dd>숙소에서 편도 60분 안쪽만 골랐어요(대학로만 65분).</dd></div>
       <div><dt>토요일</dt><dd>체크인 전이면 짐을 프런트에 맡기고 출발해요.</dd></div>
       <div><dt>월요일</dt><dd>체크아웃 날이라 오후 일찍 숙소로 돌아와 짐을 찾는 반나절 일정이에요. 바로 귀가하면 마지막 이동만 빼세요.</dd></div>
@@ -434,16 +495,16 @@ footer a{color:var(--muted)}
     <span class="num" aria-hidden="true">1</span>
     <span class="head">
       <span class="sr">제시 1. </span><span class="ttl">시장 · 노포 먹방<em class="old">예전 1번</em></span>
-      <span class="hook">광장시장과 닭한마리로 노포를 먹고, 일요일엔 용산에서 미식과 치이카와</span>
+      <span class="hook">광장시장과 닭한마리로 노포를 먹고, 일요일엔 박물관과 극장판 치이카와를 봐요</span>
       <span class="tri"><span class="dr"><b>토</b><span>종로 · 동대문 · 대학로<i class="pl">연극</i></span></span><span class="dr"><b>일</b><span>용산</span></span><span class="dr"><b>월</b><span>광화문 · 서촌</span></span></span>
       <span class="req"><i class="on">국중박</i><i class="on">연극</i><i class="on">노포</i><i class="on">미식</i><i class="on">치이카와</i></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">토요일엔 광장시장에서 노포 세 곳을 돌고 대학로에서 참여형 연극을 본 뒤 닭한마리로 마무리해요. 일요일엔 아침에 용산에서 치이카와샵부터 들르고, 용리단길 미식 점심과 국립중앙박물관 특별전을 이어요. 비가 오는 월요일엔 무료인 서울역사박물관을 보고 토속촌 삼계탕을 먹어요.</p>
+    <p class="why">토요일엔 광장시장에서 노포 세 곳을 돌고 DDP 전시와 대학로 참여형 연극을 본 뒤 닭한마리로 마무리해요. 일요일엔 용산에서 국립중앙박물관 특별전을 보고 용리단길에서 점심을 먹은 뒤, 줄 서지 않게 예매해 둔 극장판 치이카와를 봐요. 비가 오는 월요일엔 무료인 서울역사박물관을 보고 토속촌 삼계탕을 먹어요.</p>
     
-    <ul class="picks"><li>광장시장 노포</li><li>닭한마리</li><li>참여형 연극</li><li>용리단길 미식</li><li>치이카와샵</li><li>국립중앙박물관</li></ul>
+    <ul class="picks"><li>광장시장 노포</li><li>닭한마리</li><li>참여형 연극</li><li>국립중앙박물관</li><li>용리단길 미식</li><li>극장판 치이카와</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">광장시장 · DDP 전시 · 참여형 연극 · 닭한마리</span></h4>
     <p class="dm">편도 약 45분 · 흐림 11~20℃ · 시장에서 세 곳을 먹고, 디저트 화가의 전시를 보고, 참여형 연극을 본 뒤 닭한마리로 마무리</p>
@@ -566,51 +627,21 @@ footer a{color:var(--muted)}
     <p class="dtip">비가 와도 시장과 전시장, 극장이 모두 지붕 아래라서 괜찮아요. 연극을 넣느라 익선동 카페(청수당)는 뺐어요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">치이카와샵 · 용리단길 미식 · 국립중앙박물관</span></h4>
-    <p class="dm">편도 약 55분 · 소나기 가능 15~26℃ · 개점에 맞춰 치이카와샵부터 가고, 용리단길에서 점심, 오후엔 국립중앙박물관 특별전을 봐요</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">국립중앙박물관 · 용리단길 미식 · 극장판 치이카와</span></h4>
+    <p class="dm">편도 약 60분 · 소나기 가능 15~26℃ · 오전엔 박물관 특별전, 점심은 용리단길, 오후엔 줄 서지 않게 예매해서 극장판 치이카와를 봐요</p>
     <ol class="tl">
 <li class="stop k-move">
-  <span class="t">09:30</span>
+  <span class="t">10:30</span>
   <div class="s">
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
-    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 용산역에서 내려요. 숙소에서 약 55분이에요. 치이카와샵이 10:30에 열어서 평소보다 일찍 출발해요.</p>
+    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 이촌역에서 내려요. 숙소에서 약 60분이에요. 이촌역에서 박물관까지는 지하 통로로 이어져요.</p>
     
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">10:30</span>
-  <div class="s">
-    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">치이카와샵 용산 아이파크몰점</strong><a class="map" href="https://map.naver.com/p/search/%EC%B9%98%EC%9D%B4%EC%B9%B4%EC%99%80%EC%83%B5%20%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0%20%EC%9A%A9%EC%82%B0" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:30–22:00</p>
-    <p class="note">아이파크몰 리빙파크 3층 도파민스테이션에 있는 치이카와 공식 스토어예요. 용산역에서 아이파크몰로 이어져요. 줄이 너무 길거나 마감되면 같은 건물 CGV 용산아이파크몰에서 극장판 〈치이카와: 인어 섬의 비밀〉(9/30 개봉, 99분, 전체관람가, 한국어 더빙판 있음)을 봐요. 상영 시간은 CGV 앱에서 확인하세요.</p>
-    <p class="warn">9/19(토)엔 오후 2시에 대기번호가 1160번대였고 5시가 넘어서야 입장했다는 기사가 있어요. 수천 명이 몰려 현장 웨이팅이 일찍 마감되기도 했어요. 지금의 입장·호출 방식과 마감 시각은 확인하지 못했어요. 도착하는 대로 대기 등록부터 하세요.</p>
-    
-  </div>
-</li>
-<li class="stop k-food">
-  <span class="t">12:30</span>
-  <div class="s">
-    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
-    <p class="note">신용산역 쪽 용리단길 양식당이에요. 아이파크몰에서 걸어서 이동해요(10분 안팎으로 잡았고 직접 재지는 못했어요). 마다밀(양식, 10:30–21:30)도 근처예요.</p>
-    
-    
-  </div>
-</li>
-<li class="stop k-move">
-  <span class="t">14:00</span>
-  <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 이촌</strong></div>
-    
-    <p class="note">4호선으로 신용산역에서 이촌역까지 한 정거장이에요. 지하 통로로 박물관과 이어져요.</p>
-    
-    
-  </div>
-</li>
-<li class="stop k-do">
-  <span class="t">14:15</span>
+  <span class="t">11:30</span>
   <div class="s">
     <div class="l1"><span class="kind">전시</span><span class="mt">국중박</span><strong class="nm">국립중앙박물관 특별전 〈우리들의 밥상〉</strong><a class="map" href="https://map.naver.com/p/entry/place/11620570?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">일 09:30–17:30 · 특별전 입장 마감 16:50</p>
@@ -620,17 +651,57 @@ footer a{color:var(--muted)}
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">17:00</span>
+  <span class="t">13:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">귀가</span><strong class="nm">이촌역 → 원당역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">이촌 → 신용산</strong></div>
     
-    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:05.</p>
+    <p class="note">4호선으로 이촌역에서 신용산역까지 한 정거장이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-food">
+  <span class="t">13:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
+    <p class="note">이촌역에서 4호선으로 한 정거장, 신용산역 쪽 용리단길 양식당이에요. 마다밀(양식, 10:30–21:30)도 근처예요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">14:50</span>
+  <div class="s">
+    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 용산역</strong></div>
+    
+    <p class="note">걸어서 용산역과 이어진 아이파크몰로 가요. 15분쯤으로 어림했고 직접 재지는 못했어요. 6층 CGV 티켓박스로 가요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-do">
+  <span class="t">15:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">영화</span><span class="mt">치이카와</span><strong class="nm">극장판 〈치이카와: 인어 섬의 비밀〉 · CGV 용산아이파크몰</strong><a class="map" href="https://map.naver.com/p/search/CGV%20%EC%9A%A9%EC%82%B0%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0" target="_blank" rel="noopener">지도</a><a class="map book" href="https://www.cgv.co.kr/" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">99분 · 전체관람가 · 자막판·한국어 더빙판</p>
+    <p class="note">아이파크몰 6층에 티켓박스가 있고 상영관은 7층이에요(나무위키 기준). 용산역과 바로 이어져요. 예매해 두면 줄은 서지 않아요. 영화가 끝나고 3층 치이카와샵(10:30–22:00) 줄이 짧으면 들러요. 샵은 영화 관람권을 보여주고 1만 원 이상 사면 종이 선글라스를 주는 협업을 10/6까지 해요.</p>
+    <p class="warn">상영 시간표는 확인하지 못했어요. CGV 앱에서 15:30 전후에 시작하는 회차를 미리 예매하고, 시간이 다르면 점심과 영화 순서를 바꿔요. 관람 특전으로 10/3~10/6 CGV·메가박스, 10/3~10/9 롯데시네마가 참마커 피규어(8종 중 랜덤)를 줘요. CGV는 상영이 끝난 뒤 현장에서 선착순으로, 1인 최대 4개씩이고 물량이 떨어지면 기간 안에도 끝나요.</p>
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">17:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">귀가</span><strong class="nm">용산역 → 원당역</strong></div>
+    
+    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:30.</p>
     
     
   </div>
 </li>
     </ol>
-    <p class="dtip">치이카와샵 줄이 길면 대기 번호를 받고 국립중앙박물관을 먼저 봐도 돼요(호출 방식은 확인하지 못했어요). 소나기가 와도 전부 실내예요. 박물관은 17:30에 닫아요.</p>
+    <p class="dtip">상영 시간표를 먼저 보고 점심과 영화 순서를 바꿔도 돼요. 박물관은 17:30에 닫고 특별전 입장은 16:50까지예요. 소나기가 와도 박물관, 식당, 극장이 모두 실내예요.</p>
   </section>
 <section class="day">
     <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">서울역사박물관 · 토속촌 삼계탕</span></h4>
@@ -703,9 +774,9 @@ footer a{color:var(--muted)}
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">토요일엔 삼청동 수제비와 서촌 삼계탕을 먹고 밤에는 국립현대미술관(토요일 무료)을 봐요. 일요일엔 용산에서 치이카와샵을 들르고 한국인의 밥상을 다룬 국립중앙박물관 특별전을 봐요. 월요일엔 광장시장에서 노포 점심을 먹고 대학로에서 참여형 연극을 봐요.</p>
+    <p class="why">토요일엔 삼청동 수제비와 서촌 삼계탕을 먹고 밤에는 국립현대미술관(토요일 무료)을 봐요. 일요일엔 한국인의 밥상을 다룬 국립중앙박물관 특별전을 보고, 오후엔 예매해 둔 극장판 치이카와를 봐요. 월요일엔 광장시장에서 노포 점심을 먹고 대학로에서 참여형 연극을 봐요.</p>
     
-    <ul class="picks"><li>수제비 · 삼계탕 노포</li><li>국립현대미술관 야간 무료</li><li>국립중앙박물관 밥상전</li><li>용리단길 미식</li><li>치이카와샵</li><li>광장시장 노포</li><li>참여형 연극</li></ul>
+    <ul class="picks"><li>수제비 · 삼계탕 노포</li><li>국립현대미술관 야간 무료</li><li>국립중앙박물관 밥상전</li><li>용리단길 미식</li><li>극장판 치이카와</li><li>광장시장 노포</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">삼청 · 서촌 미식 + 공예박물관 + MMCA 야간</span></h4>
     <p class="dm">편도 약 40분 · 흐림 11~20℃ · 먹고 전시 보고, 토요일 밤엔 국립현대미술관이 무료</p>
@@ -814,51 +885,21 @@ footer a{color:var(--muted)}
     <p class="dtip">야간 무료는 토요일만이에요. 전시마다 줄이 생길 수 있으니 19시 전에 가세요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">치이카와샵 · 용리단길 미식 · 국립중앙박물관</span></h4>
-    <p class="dm">편도 약 55분 · 소나기 가능 15~26℃ · 개점에 맞춰 치이카와샵부터 가고, 용리단길에서 점심, 오후엔 국립중앙박물관 특별전을 봐요</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">국립중앙박물관 · 용리단길 미식 · 극장판 치이카와</span></h4>
+    <p class="dm">편도 약 60분 · 소나기 가능 15~26℃ · 오전엔 박물관 특별전, 점심은 용리단길, 오후엔 줄 서지 않게 예매해서 극장판 치이카와를 봐요</p>
     <ol class="tl">
 <li class="stop k-move">
-  <span class="t">09:30</span>
+  <span class="t">10:30</span>
   <div class="s">
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
-    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 용산역에서 내려요. 숙소에서 약 55분이에요. 치이카와샵이 10:30에 열어서 평소보다 일찍 출발해요.</p>
+    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 이촌역에서 내려요. 숙소에서 약 60분이에요. 이촌역에서 박물관까지는 지하 통로로 이어져요.</p>
     
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">10:30</span>
-  <div class="s">
-    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">치이카와샵 용산 아이파크몰점</strong><a class="map" href="https://map.naver.com/p/search/%EC%B9%98%EC%9D%B4%EC%B9%B4%EC%99%80%EC%83%B5%20%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0%20%EC%9A%A9%EC%82%B0" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:30–22:00</p>
-    <p class="note">아이파크몰 리빙파크 3층 도파민스테이션에 있는 치이카와 공식 스토어예요. 용산역에서 아이파크몰로 이어져요. 줄이 너무 길거나 마감되면 같은 건물 CGV 용산아이파크몰에서 극장판 〈치이카와: 인어 섬의 비밀〉(9/30 개봉, 99분, 전체관람가, 한국어 더빙판 있음)을 봐요. 상영 시간은 CGV 앱에서 확인하세요.</p>
-    <p class="warn">9/19(토)엔 오후 2시에 대기번호가 1160번대였고 5시가 넘어서야 입장했다는 기사가 있어요. 수천 명이 몰려 현장 웨이팅이 일찍 마감되기도 했어요. 지금의 입장·호출 방식과 마감 시각은 확인하지 못했어요. 도착하는 대로 대기 등록부터 하세요.</p>
-    
-  </div>
-</li>
-<li class="stop k-food">
-  <span class="t">12:30</span>
-  <div class="s">
-    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
-    <p class="note">신용산역 쪽 용리단길 양식당이에요. 아이파크몰에서 걸어서 이동해요(10분 안팎으로 잡았고 직접 재지는 못했어요). 마다밀(양식, 10:30–21:30)도 근처예요.</p>
-    
-    
-  </div>
-</li>
-<li class="stop k-move">
-  <span class="t">14:00</span>
-  <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 이촌</strong></div>
-    
-    <p class="note">4호선으로 신용산역에서 이촌역까지 한 정거장이에요. 지하 통로로 박물관과 이어져요.</p>
-    
-    
-  </div>
-</li>
-<li class="stop k-do">
-  <span class="t">14:15</span>
+  <span class="t">11:30</span>
   <div class="s">
     <div class="l1"><span class="kind">전시</span><span class="mt">국중박</span><strong class="nm">국립중앙박물관 특별전 〈우리들의 밥상〉</strong><a class="map" href="https://map.naver.com/p/entry/place/11620570?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">일 09:30–17:30 · 특별전 입장 마감 16:50</p>
@@ -868,17 +909,57 @@ footer a{color:var(--muted)}
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">17:00</span>
+  <span class="t">13:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">귀가</span><strong class="nm">이촌역 → 원당역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">이촌 → 신용산</strong></div>
     
-    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:05.</p>
+    <p class="note">4호선으로 이촌역에서 신용산역까지 한 정거장이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-food">
+  <span class="t">13:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
+    <p class="note">이촌역에서 4호선으로 한 정거장, 신용산역 쪽 용리단길 양식당이에요. 마다밀(양식, 10:30–21:30)도 근처예요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">14:50</span>
+  <div class="s">
+    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 용산역</strong></div>
+    
+    <p class="note">걸어서 용산역과 이어진 아이파크몰로 가요. 15분쯤으로 어림했고 직접 재지는 못했어요. 6층 CGV 티켓박스로 가요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-do">
+  <span class="t">15:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">영화</span><span class="mt">치이카와</span><strong class="nm">극장판 〈치이카와: 인어 섬의 비밀〉 · CGV 용산아이파크몰</strong><a class="map" href="https://map.naver.com/p/search/CGV%20%EC%9A%A9%EC%82%B0%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0" target="_blank" rel="noopener">지도</a><a class="map book" href="https://www.cgv.co.kr/" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">99분 · 전체관람가 · 자막판·한국어 더빙판</p>
+    <p class="note">아이파크몰 6층에 티켓박스가 있고 상영관은 7층이에요(나무위키 기준). 용산역과 바로 이어져요. 예매해 두면 줄은 서지 않아요. 영화가 끝나고 3층 치이카와샵(10:30–22:00) 줄이 짧으면 들러요. 샵은 영화 관람권을 보여주고 1만 원 이상 사면 종이 선글라스를 주는 협업을 10/6까지 해요.</p>
+    <p class="warn">상영 시간표는 확인하지 못했어요. CGV 앱에서 15:30 전후에 시작하는 회차를 미리 예매하고, 시간이 다르면 점심과 영화 순서를 바꿔요. 관람 특전으로 10/3~10/6 CGV·메가박스, 10/3~10/9 롯데시네마가 참마커 피규어(8종 중 랜덤)를 줘요. CGV는 상영이 끝난 뒤 현장에서 선착순으로, 1인 최대 4개씩이고 물량이 떨어지면 기간 안에도 끝나요.</p>
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">17:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">귀가</span><strong class="nm">용산역 → 원당역</strong></div>
+    
+    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:30.</p>
     
     
   </div>
 </li>
     </ol>
-    <p class="dtip">치이카와샵 줄이 길면 대기 번호를 받고 국립중앙박물관을 먼저 봐도 돼요(호출 방식은 확인하지 못했어요). 소나기가 와도 전부 실내예요. 박물관은 17:30에 닫아요.</p>
+    <p class="dtip">상영 시간표를 먼저 보고 점심과 영화 순서를 바꿔도 돼요. 박물관은 17:30에 닫고 특별전 입장은 16:50까지예요. 소나기가 와도 박물관, 식당, 극장이 모두 실내예요.</p>
   </section>
 <section class="day">
     <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">광장시장 노포 · 참여형 연극</span></h4>
@@ -968,16 +1049,16 @@ footer a{color:var(--muted)}
     <span class="num" aria-hidden="true">3</span>
     <span class="head">
       <span class="sr">제시 3. </span><span class="ttl">핫플 미식<em class="old">예전 2번</em></span>
-      <span class="hook">연남 · 망원과 용리단길로 유행하는 곳을 먹고, 월요일엔 삼계탕 노포로 균형을 맞춰요</span>
-      <span class="tri"><span class="dr"><b>토</b><span>연남 · 망원 · 합정</span></span><span class="dr"><b>일</b><span>용산</span></span><span class="dr"><b>월</b><span>서촌 · 혜화<i class="pl">연극</i></span></span></span>
+      <span class="hook">연남 · 망원과 성수, 용리단길로 유행하는 곳을 먹고 굿즈샵도 들러요</span>
+      <span class="tri"><span class="dr"><b>토</b><span>연남 · 망원 · 합정</span></span><span class="dr"><b>일</b><span>성수 · 용산</span></span><span class="dr"><b>월</b><span>혜화<i class="pl">연극</i></span></span></span>
       <span class="req"><i class="on">국중박</i><i class="on">연극</i><i class="on">노포</i><i class="on">미식</i><i class="on">치이카와</i></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">날씨가 좋은 토요일엔 연남·망원에서 먹는 데 집중해요. 일요일엔 용산에서 치이카와샵, 용리단길 미식 점심, 국립중앙박물관 특별전을 이어서 해요. 비가 오는 월요일엔 서촌 토속촌 노포에서 삼계탕을 먹고 대학로에서 참여형 연극을 봐요.</p>
+    <p class="why">날씨가 좋은 토요일엔 연남·망원에서 먹는 데 집중해요. 일요일엔 성수에서 나가노마켓 굿즈샵과 노포 감자탕을 즐기고, 오후엔 용산으로 가서 국립중앙박물관 특별전을 본 뒤 용리단길에서 저녁을 먹어요. 비 오는 월요일엔 대학로에서 인도 커리와 카페, 참여형 연극이에요.</p>
     
-    <ul class="picks"><li>망원시장</li><li>연남 미식</li><li>용리단길 미식</li><li>치이카와샵</li><li>국립중앙박물관</li><li>삼계탕 노포</li><li>참여형 연극</li></ul>
+    <ul class="picks"><li>망원시장</li><li>연남 미식</li><li>성수 나가노마켓</li><li>성수 노포 감자탕</li><li>국립중앙박물관</li><li>용리단길 미식</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">연남 · 망원 먹방</span></h4>
     <p class="dm">편도 약 50분 · 흐림 11~20℃ · 일식 점심, 망원시장 간식, 국밥 저녁</p>
@@ -1066,51 +1147,51 @@ footer a{color:var(--muted)}
     <p class="dtip">가게마다 브레이크타임이 달라서 시간표대로 움직이는 게 좋아요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">치이카와샵 · 용리단길 미식 · 국립중앙박물관</span></h4>
-    <p class="dm">편도 약 55분 · 소나기 가능 15~26℃ · 개점에 맞춰 치이카와샵부터 가고, 용리단길에서 점심, 오후엔 국립중앙박물관 특별전을 봐요</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">성수 나가노마켓 · 노포 감자탕 · 국립중앙박물관 · 용리단길 저녁</span></h4>
+    <p class="dm">편도 약 70분 · 소나기 가능 15~26℃ · 낮엔 성수에서 굿즈샵과 노포 감자탕, 오후엔 박물관 특별전, 저녁은 용리단길에서 먹어요</p>
     <ol class="tl">
 <li class="stop k-move">
-  <span class="t">09:30</span>
+  <span class="t">10:30</span>
   <div class="s">
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
-    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 용산역에서 내려요. 숙소에서 약 55분이에요. 치이카와샵이 10:30에 열어서 평소보다 일찍 출발해요.</p>
+    <p class="note">원당역에서 3호선으로 을지로3가역까지 가서 2호선으로 갈아타고 성수역에서 내려요. 숙소에서 약 70분으로 어림했어요(직접 재지는 못했어요).</p>
     
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">10:30</span>
+  <span class="t">11:50</span>
   <div class="s">
-    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">치이카와샵 용산 아이파크몰점</strong><a class="map" href="https://map.naver.com/p/search/%EC%B9%98%EC%9D%B4%EC%B9%B4%EC%99%80%EC%83%B5%20%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0%20%EC%9A%A9%EC%82%B0" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:30–22:00</p>
-    <p class="note">아이파크몰 리빙파크 3층 도파민스테이션에 있는 치이카와 공식 스토어예요. 용산역에서 아이파크몰로 이어져요. 줄이 너무 길거나 마감되면 같은 건물 CGV 용산아이파크몰에서 극장판 〈치이카와: 인어 섬의 비밀〉(9/30 개봉, 99분, 전체관람가, 한국어 더빙판 있음)을 봐요. 상영 시간은 CGV 앱에서 확인하세요.</p>
-    <p class="warn">9/19(토)엔 오후 2시에 대기번호가 1160번대였고 5시가 넘어서야 입장했다는 기사가 있어요. 수천 명이 몰려 현장 웨이팅이 일찍 마감되기도 했어요. 지금의 입장·호출 방식과 마감 시각은 확인하지 못했어요. 도착하는 대로 대기 등록부터 하세요.</p>
+    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">나가노마켓 서울스토어</strong><a class="map" href="https://map.naver.com/p/search/%EB%82%98%EA%B0%80%EB%85%B8%EB%A7%88%EC%BC%93%20%EC%84%9C%EC%9A%B8%EC%8A%A4%ED%86%A0%EC%96%B4%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–20:00</p>
+    <p class="note">일본 작가 나가노의 캐릭터 굿즈샵이에요(성동구 연무장길 97). 보도자료는 농담곰·치이카와 등을 판다고 소개했는데 치이카와 상품이 얼마나 있는지는 못 봤어요. 성수역에서 걸어서 10분쯤으로 어림했어요(직접 재지는 못했어요). 인형뽑기는 하지 않아도 돼요.</p>
+    <p class="warn">2026-02-13 개점 소식까지만 확인했어요(엣집은 상설 매장, 여행픽은 팝업 형식이라고 적어서 지금도 여는지 확신할 수 없어요). 공휴일 영업과 줄도 못 봤어요. 공식 계정(@naganomkt_seoul)을 보고 가세요. 닫았거나 줄이 길면 아래 팁의 순서로 바꿔요.</p>
     
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">12:30</span>
+  <span class="t">13:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
-    <p class="note">신용산역 쪽 용리단길 양식당이에요. 아이파크몰에서 걸어서 이동해요(10분 안팎으로 잡았고 직접 재지는 못했어요). 마다밀(양식, 10:30–21:30)도 근처예요.</p>
-    
+    <div class="l1"><span class="kind">식사</span><span class="mt">노포</span><strong class="nm">소문난성수감자탕</strong><a class="map" href="https://map.naver.com/p/search/%EC%86%8C%EB%AC%B8%EB%82%9C%EC%84%B1%EC%88%98%EA%B0%90%EC%9E%90%ED%83%95%20%EC%97%B0%EB%AC%B4%EC%9E%A5%EA%B8%B8%2045" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">24시간 · 연중무휴</p>
+    <p class="note">40년 넘게 성수를 지킨 감자탕 노포로 소개돼요. 본관과 별관이 있어요. 둘이면 감자탕 소(32,000원)나 감자국 두 그릇(12,000원, 우거지 13,000원)이 맞아요. 성수역 4번 출구에서 걸어서 3~4분이에요.</p>
+    <p class="warn">식사 시간엔 웨이팅이 생길 수 있어요. 주말 오후 2시쯤 3분 기다리고 별관으로 들어갔다는 후기가 있어요(다이닝코드).</p>
     
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">14:00</span>
+  <span class="t">14:10</span>
   <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 이촌</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">성수 → 이촌</strong></div>
     
-    <p class="note">4호선으로 신용산역에서 이촌역까지 한 정거장이에요. 지하 통로로 박물관과 이어져요.</p>
+    <p class="note">성수역에서 2호선 외선순환(왕십리 방면)을 타고 세 정거장 가서 왕십리역에서 경의중앙선 문산 방면으로 갈아타고 이촌역에서 내려요. 40분쯤으로 어림했어요.</p>
     
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">14:15</span>
+  <span class="t">14:55</span>
   <div class="s">
     <div class="l1"><span class="kind">전시</span><span class="mt">국중박</span><strong class="nm">국립중앙박물관 특별전 〈우리들의 밥상〉</strong><a class="map" href="https://map.naver.com/p/entry/place/11620570?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">일 09:30–17:30 · 특별전 입장 마감 16:50</p>
@@ -1120,58 +1201,68 @@ footer a{color:var(--muted)}
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">17:00</span>
+  <span class="t">16:40</span>
   <div class="s">
-    <div class="l1"><span class="kind">귀가</span><strong class="nm">이촌역 → 원당역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">이촌 → 신용산</strong></div>
     
-    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:05.</p>
+    <p class="note">4호선으로 이촌역에서 신용산역까지 한 정거장이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-food">
+  <span class="t">17:15</span>
+  <div class="s">
+    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
+    <p class="note">이촌역에서 4호선으로 한 정거장, 신용산역 쪽 용리단길 양식당이에요. 마다밀(양식, 10:30–21:30)도 근처예요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">19:00</span>
+  <div class="s">
+    <div class="l1"><span class="kind">귀가</span><strong class="nm">신용산역 → 원당역</strong></div>
+    
+    <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 20:15.</p>
     
     
   </div>
 </li>
     </ol>
-    <p class="dtip">치이카와샵 줄이 길면 대기 번호를 받고 국립중앙박물관을 먼저 봐도 돼요(호출 방식은 확인하지 못했어요). 소나기가 와도 전부 실내예요. 박물관은 17:30에 닫아요.</p>
+    <p class="dtip">나가노마켓이 닫았거나 줄이 길면 감자탕(12:00) → 박물관(13:45) → 극장판(16:15 전후, CGV 용산아이파크몰) → 용리단길 저녁(18:15) 순서로 바꿔요. 극장판은 CGV 앱에서 시간을 확인하고 예매하세요. 박물관은 17:30에 닫고 특별전 입장은 16:50까지라 15시 안에 들어가야 여유 있어요. 성수에서 걷는 구간은 연무장길 한 줄이에요. 소나기 예보가 있으니 우산을 챙기세요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">토속촌 삼계탕 노포 · 참여형 연극</span></h4>
-    <p class="dm">편도 약 40분 · 비 13~19℃ · 서촌의 삼계탕 노포에서 점심을 먹고 대학로로 넘어가 참여형 연극을 봐요</p>
+    <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">대학로 카페 · 참여형 연극 · 인도 커리</span></h4>
+    <p class="dm">편도 약 65분 · 비 13~19℃ · 비 오는 날 실내에서 참여형 연극 한 편</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
   <div class="s">
     <div class="l1"><span class="kind">이동</span><strong class="nm">체크아웃 후 출발</strong></div>
     
-    <p class="note">짐을 맡기고 원당역에서 3호선 직통, 경복궁역에서 내려요. 약 40분.</p>
+    <p class="note">짐을 맡기고 3호선 충무로역에서 4호선으로 갈아타 혜화역에서 내려요. 약 65분.</p>
     
     
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">11:20</span>
+  <span class="t">11:45</span>
   <div class="s">
-    <div class="l1"><span class="kind">식사</span><span class="mt">노포</span><strong class="nm">토속촌삼계탕</strong><a class="map" href="https://map.naver.com/p/entry/place/35597924?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:00–22:00 · 마지막 주문 21:00</p>
-    <p class="note">서촌의 삼계탕 노포예요.</p>
-    <p class="warn">점심엔 웨이팅이 길어요. 도착하자마자 이름부터 올리세요. 대체공휴일(10/5) 영업 시간은 확인하지 못했어요.</p>
+    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">페르시안궁전</strong><a class="map" href="https://map.naver.com/p/entry/place/11710271?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–21:25 · 브레이크 15:00–16:00</p>
+    <p class="note">인도 음식점이에요.</p>
+    
     
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">12:45</span>
+  <span class="t">13:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">카페</span><strong class="nm">이도림 세종대왕 생가터 서촌 본점</strong><a class="map" href="https://map.naver.com/p/entry/place/1335290092?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">08:00–21:00</p>
-    <p class="note">서촌 카페예요. 40분쯤 쉬어요.</p>
-    
-    
-  </div>
-</li>
-<li class="stop k-move">
-  <span class="t">13:30</span>
-  <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">경복궁역 → 혜화</strong></div>
-    
-    <p class="note">경복궁역에서 3호선으로 충무로역까지 가서 4호선으로 갈아타고 혜화역 2번 출구로 나와요(약 30분). 극장까지 걸어서 6분쯤이에요.</p>
+    <div class="l1"><span class="kind">카페</span><strong class="nm">학림</strong><a class="map" href="https://map.naver.com/p/entry/place/11716359?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">10:00–23:00</p>
+    <p class="note">대학로의 오래된 카페예요.</p>
     
     
   </div>
@@ -1181,12 +1272,12 @@ footer a{color:var(--muted)}
   <div class="s">
     <div class="l1"><span class="kind">공연</span><span class="mt">연극</span><strong class="nm">참여형 연극 〈히든퍼즐〉</strong><a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예매</a></div>
     <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
-    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요. 10/5는 대체공휴일이라 특별 회차표로 3번 열려요.</p>
+    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 학림에서 걸어서 3분쯤이에요. 10/5는 대체공휴일이라 특별 회차표로 3번 열려요.</p>
     <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
     <details class="alts">
-      <summary>다른 참여형 연극으로 바꾸면 (7편)</summary>
-      <ul><li><div class="an"><div class="ai"><strong>사내연애 보고서</strong><span>제나아트홀 · 100분</span></div><a class="map book" href="https://timeticket.co.kr/product/5465" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:30~16:10</b> 숙소 도착 약 17:35</span></li><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:10~15:40</b> 숙소 도착 약 17:05</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:10~16:55</b> 숙소 도착 약 18:20</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~16:55</b> 숙소 도착 약 18:20</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~17:00</b> 숙소 도착 약 18:25</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~16:45</b> 숙소 도착 약 18:10</span></li><li><div class="an"><div class="ai"><strong>쉬어매드니스</strong><span>콘텐츠박스 · 110분</span></div><a class="map book" href="https://timeticket.co.kr/product/4404" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:00~17:50</b> 숙소 도착 약 19:15</span></li></ul>
-      <p class="fx">토속촌 대기가 길어지면 카페를 줄이거나 16:30 회차로 미뤄요.</p>
+      <summary>다른 참여형 연극으로 바꾸면 (6편)</summary>
+      <ul><li><div class="an"><div class="ai"><strong>사내연애 보고서</strong><span>제나아트홀 · 100분</span></div><a class="map book" href="https://timeticket.co.kr/product/5465" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:30~16:10</b> 숙소 도착 약 17:35</span></li><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:10~15:40</b> 숙소 도착 약 17:05</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:10~16:55</b> 숙소 도착 약 18:20</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>13:40~14:55</b> 숙소 도착 약 16:20</span><span class="ar"><b>15:30~16:45</b> 숙소 도착 약 18:10</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>13:30~14:55</b> 숙소 도착 약 16:20</span><span class="ar"><b>15:30~16:55</b> 숙소 도착 약 18:20</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~17:00</b> 숙소 도착 약 18:25</span></li></ul>
+      <p class="fx">학림에서 쉬는 시간을 늘리거나 줄여서 맞추세요. 13:30 회차면 학림을 공연 뒤로 옮겨요. 이 날 이 시간대에 맞는 회차가 없는 쉬어매드니스는 뺐어요.</p>
     </details>
   </div>
 </li>
@@ -1217,9 +1308,9 @@ footer a{color:var(--muted)}
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">토요일엔 옛날 빵집 태극당에서 시작해 신당동 즉석떡볶이, 익선동 디저트 카페, 만두전골까지 간식과 분식을 이어서 먹어요. 일요일엔 용산에서 치이카와샵을 들르고 용리단길 점심과 국립중앙박물관 특별전을 봐요. 비 오는 월요일엔 토속촌 삼계탕 노포와 대학로 참여형 연극이에요.</p>
+    <p class="why">토요일엔 옛날 빵집 태극당에서 시작해 신당동 즉석떡볶이, 익선동 디저트 카페, 만두전골까지 간식과 분식을 이어서 먹어요. 일요일엔 용산에서 국립중앙박물관 특별전을 보고 용리단길에서 점심을 먹은 뒤 극장판 치이카와를 봐요. 비 오는 월요일엔 토속촌 삼계탕 노포와 대학로 참여형 연극이에요.</p>
     
-    <ul class="picks"><li>태극당</li><li>신당동 떡볶이</li><li>만두전골</li><li>용리단길 미식</li><li>치이카와샵</li><li>국립중앙박물관</li><li>삼계탕 노포</li><li>참여형 연극</li></ul>
+    <ul class="picks"><li>태극당</li><li>신당동 떡볶이</li><li>만두전골</li><li>국립중앙박물관</li><li>용리단길 미식</li><li>극장판 치이카와</li><li>삼계탕 노포</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">태극당 · 신당동 떡볶이 · 익선동 디저트 · 만두전골</span></h4>
     <p class="dm">편도 약 50분 · 흐림 11~20℃ · 옛날 빵집, 즉석떡볶이, 귀여운 디저트, 만두전골로 하루를 먹어요</p>
@@ -1308,51 +1399,21 @@ footer a{color:var(--muted)}
     <p class="dtip">가게마다 쉬는 시간이 달라서 순서대로 움직이는 게 좋아요. 신당동은 떡볶이집이 여러 곳이라 줄이 길면 옮겨도 돼요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">치이카와샵 · 용리단길 미식 · 국립중앙박물관</span></h4>
-    <p class="dm">편도 약 55분 · 소나기 가능 15~26℃ · 개점에 맞춰 치이카와샵부터 가고, 용리단길에서 점심, 오후엔 국립중앙박물관 특별전을 봐요</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">국립중앙박물관 · 용리단길 미식 · 극장판 치이카와</span></h4>
+    <p class="dm">편도 약 60분 · 소나기 가능 15~26℃ · 오전엔 박물관 특별전, 점심은 용리단길, 오후엔 줄 서지 않게 예매해서 극장판 치이카와를 봐요</p>
     <ol class="tl">
 <li class="stop k-move">
-  <span class="t">09:30</span>
+  <span class="t">10:30</span>
   <div class="s">
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
-    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 용산역에서 내려요. 숙소에서 약 55분이에요. 치이카와샵이 10:30에 열어서 평소보다 일찍 출발해요.</p>
+    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 이촌역에서 내려요. 숙소에서 약 60분이에요. 이촌역에서 박물관까지는 지하 통로로 이어져요.</p>
     
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">10:30</span>
-  <div class="s">
-    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">치이카와샵 용산 아이파크몰점</strong><a class="map" href="https://map.naver.com/p/search/%EC%B9%98%EC%9D%B4%EC%B9%B4%EC%99%80%EC%83%B5%20%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0%20%EC%9A%A9%EC%82%B0" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:30–22:00</p>
-    <p class="note">아이파크몰 리빙파크 3층 도파민스테이션에 있는 치이카와 공식 스토어예요. 용산역에서 아이파크몰로 이어져요. 줄이 너무 길거나 마감되면 같은 건물 CGV 용산아이파크몰에서 극장판 〈치이카와: 인어 섬의 비밀〉(9/30 개봉, 99분, 전체관람가, 한국어 더빙판 있음)을 봐요. 상영 시간은 CGV 앱에서 확인하세요.</p>
-    <p class="warn">9/19(토)엔 오후 2시에 대기번호가 1160번대였고 5시가 넘어서야 입장했다는 기사가 있어요. 수천 명이 몰려 현장 웨이팅이 일찍 마감되기도 했어요. 지금의 입장·호출 방식과 마감 시각은 확인하지 못했어요. 도착하는 대로 대기 등록부터 하세요.</p>
-    
-  </div>
-</li>
-<li class="stop k-food">
-  <span class="t">12:30</span>
-  <div class="s">
-    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
-    <p class="note">신용산역 쪽 용리단길 양식당이에요. 아이파크몰에서 걸어서 이동해요(10분 안팎으로 잡았고 직접 재지는 못했어요). 마다밀(양식, 10:30–21:30)도 근처예요.</p>
-    
-    
-  </div>
-</li>
-<li class="stop k-move">
-  <span class="t">14:00</span>
-  <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 이촌</strong></div>
-    
-    <p class="note">4호선으로 신용산역에서 이촌역까지 한 정거장이에요. 지하 통로로 박물관과 이어져요.</p>
-    
-    
-  </div>
-</li>
-<li class="stop k-do">
-  <span class="t">14:15</span>
+  <span class="t">11:30</span>
   <div class="s">
     <div class="l1"><span class="kind">전시</span><span class="mt">국중박</span><strong class="nm">국립중앙박물관 특별전 〈우리들의 밥상〉</strong><a class="map" href="https://map.naver.com/p/entry/place/11620570?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">일 09:30–17:30 · 특별전 입장 마감 16:50</p>
@@ -1362,17 +1423,57 @@ footer a{color:var(--muted)}
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">17:00</span>
+  <span class="t">13:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">귀가</span><strong class="nm">이촌역 → 원당역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">이촌 → 신용산</strong></div>
     
-    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:05.</p>
+    <p class="note">4호선으로 이촌역에서 신용산역까지 한 정거장이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-food">
+  <span class="t">13:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
+    <p class="note">이촌역에서 4호선으로 한 정거장, 신용산역 쪽 용리단길 양식당이에요. 마다밀(양식, 10:30–21:30)도 근처예요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">14:50</span>
+  <div class="s">
+    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 용산역</strong></div>
+    
+    <p class="note">걸어서 용산역과 이어진 아이파크몰로 가요. 15분쯤으로 어림했고 직접 재지는 못했어요. 6층 CGV 티켓박스로 가요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-do">
+  <span class="t">15:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">영화</span><span class="mt">치이카와</span><strong class="nm">극장판 〈치이카와: 인어 섬의 비밀〉 · CGV 용산아이파크몰</strong><a class="map" href="https://map.naver.com/p/search/CGV%20%EC%9A%A9%EC%82%B0%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0" target="_blank" rel="noopener">지도</a><a class="map book" href="https://www.cgv.co.kr/" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">99분 · 전체관람가 · 자막판·한국어 더빙판</p>
+    <p class="note">아이파크몰 6층에 티켓박스가 있고 상영관은 7층이에요(나무위키 기준). 용산역과 바로 이어져요. 예매해 두면 줄은 서지 않아요. 영화가 끝나고 3층 치이카와샵(10:30–22:00) 줄이 짧으면 들러요. 샵은 영화 관람권을 보여주고 1만 원 이상 사면 종이 선글라스를 주는 협업을 10/6까지 해요.</p>
+    <p class="warn">상영 시간표는 확인하지 못했어요. CGV 앱에서 15:30 전후에 시작하는 회차를 미리 예매하고, 시간이 다르면 점심과 영화 순서를 바꿔요. 관람 특전으로 10/3~10/6 CGV·메가박스, 10/3~10/9 롯데시네마가 참마커 피규어(8종 중 랜덤)를 줘요. CGV는 상영이 끝난 뒤 현장에서 선착순으로, 1인 최대 4개씩이고 물량이 떨어지면 기간 안에도 끝나요.</p>
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">17:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">귀가</span><strong class="nm">용산역 → 원당역</strong></div>
+    
+    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:30.</p>
     
     
   </div>
 </li>
     </ol>
-    <p class="dtip">치이카와샵 줄이 길면 대기 번호를 받고 국립중앙박물관을 먼저 봐도 돼요(호출 방식은 확인하지 못했어요). 소나기가 와도 전부 실내예요. 박물관은 17:30에 닫아요.</p>
+    <p class="dtip">상영 시간표를 먼저 보고 점심과 영화 순서를 바꿔도 돼요. 박물관은 17:30에 닫고 특별전 입장은 16:50까지예요. 소나기가 와도 박물관, 식당, 극장이 모두 실내예요.</p>
   </section>
 <section class="day">
     <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">토속촌 삼계탕 노포 · 참여형 연극</span></h4>
@@ -1452,16 +1553,16 @@ footer a{color:var(--muted)}
     <span class="num" aria-hidden="true">5</span>
     <span class="head">
       <span class="sr">제시 5. </span><span class="ttl">서촌 · 통인시장 먹방<em class="old">새 코스</em></span>
-      <span class="hook">서촌 빵집과 엽전 도시락, 연극을 토요일에 넣고 일요일 용산, 월요일 역사박물관과 삼계탕</span>
-      <span class="tri"><span class="dr"><b>토</b><span>서촌 · 대학로<i class="pl">연극</i></span></span><span class="dr"><b>일</b><span>용산</span></span><span class="dr"><b>월</b><span>광화문 · 서촌</span></span></span>
+      <span class="hook">서촌 빵집과 엽전 도시락, 연극을 토요일에 넣고 일요일 성수 굿즈샵과 박물관, 월요일 DDP와 광장시장</span>
+      <span class="tri"><span class="dr"><b>토</b><span>서촌 · 대학로<i class="pl">연극</i></span></span><span class="dr"><b>일</b><span>성수 · 용산</span></span><span class="dr"><b>월</b><span>동대문 · 종로</span></span></span>
       <span class="req"><i class="on">국중박</i><i class="on">연극</i><i class="on">노포</i><i class="on">미식</i><i class="on">치이카와</i></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">토요일엔 서촌 효자베이커리와 통인시장 엽전 도시락으로 점심을 먹고 오후에 대학로에서 참여형 연극을 봐요. 일요일엔 용산에서 치이카와샵과 용리단길 미식 점심, 국립중앙박물관 특별전이에요. 비 오는 월요일엔 서울역사박물관(무료)을 보고 토속촌 삼계탕을 먹어요.</p>
+    <p class="why">토요일엔 서촌 효자베이커리와 통인시장 엽전 도시락으로 점심을 먹고 오후에 대학로에서 참여형 연극을 봐요. 일요일엔 성수에서 나가노마켓 굿즈샵과 노포 감자탕을 즐기고 용산에서 국립중앙박물관 특별전과 용리단길 저녁을 이어요. 비 오는 월요일엔 DDP 웨인 티보 전을 보고 광장시장에서 노포 점심을 먹어요.</p>
     
-    <ul class="picks"><li>효자베이커리</li><li>통인시장 엽전도시락</li><li>참여형 연극</li><li>용리단길 미식</li><li>치이카와샵</li><li>국립중앙박물관</li><li>삼계탕 노포</li></ul>
+    <ul class="picks"><li>효자베이커리</li><li>통인시장 엽전도시락</li><li>참여형 연극</li><li>성수 나가노마켓</li><li>성수 노포 감자탕</li><li>국립중앙박물관</li><li>용리단길 미식</li><li>광장시장 노포</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">효자베이커리 · 통인시장 엽전도시락 · 참여형 연극 · 인도 커리</span></h4>
     <p class="dm">편도 약 40분 · 흐림 11~20℃ · 서촌에서 빵과 엽전 도시락을 먹고, 오후엔 참여형 연극, 저녁은 인도 커리</p>
@@ -1554,51 +1655,51 @@ footer a{color:var(--muted)}
     <p class="dtip">통인시장은 매달 셋째 일요일(10/18)에 쉬어서 이번 주말엔 열어요. 효자베이커리는 월요일에 쉬어서 토요일에 넣었어요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">치이카와샵 · 용리단길 미식 · 국립중앙박물관</span></h4>
-    <p class="dm">편도 약 55분 · 소나기 가능 15~26℃ · 개점에 맞춰 치이카와샵부터 가고, 용리단길에서 점심, 오후엔 국립중앙박물관 특별전을 봐요</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">성수 나가노마켓 · 노포 감자탕 · 국립중앙박물관 · 용리단길 저녁</span></h4>
+    <p class="dm">편도 약 70분 · 소나기 가능 15~26℃ · 낮엔 성수에서 굿즈샵과 노포 감자탕, 오후엔 박물관 특별전, 저녁은 용리단길에서 먹어요</p>
     <ol class="tl">
 <li class="stop k-move">
-  <span class="t">09:30</span>
+  <span class="t">10:30</span>
   <div class="s">
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
-    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 용산역에서 내려요. 숙소에서 약 55분이에요. 치이카와샵이 10:30에 열어서 평소보다 일찍 출발해요.</p>
+    <p class="note">원당역에서 3호선으로 을지로3가역까지 가서 2호선으로 갈아타고 성수역에서 내려요. 숙소에서 약 70분으로 어림했어요(직접 재지는 못했어요).</p>
     
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">10:30</span>
+  <span class="t">11:50</span>
   <div class="s">
-    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">치이카와샵 용산 아이파크몰점</strong><a class="map" href="https://map.naver.com/p/search/%EC%B9%98%EC%9D%B4%EC%B9%B4%EC%99%80%EC%83%B5%20%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0%20%EC%9A%A9%EC%82%B0" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:30–22:00</p>
-    <p class="note">아이파크몰 리빙파크 3층 도파민스테이션에 있는 치이카와 공식 스토어예요. 용산역에서 아이파크몰로 이어져요. 줄이 너무 길거나 마감되면 같은 건물 CGV 용산아이파크몰에서 극장판 〈치이카와: 인어 섬의 비밀〉(9/30 개봉, 99분, 전체관람가, 한국어 더빙판 있음)을 봐요. 상영 시간은 CGV 앱에서 확인하세요.</p>
-    <p class="warn">9/19(토)엔 오후 2시에 대기번호가 1160번대였고 5시가 넘어서야 입장했다는 기사가 있어요. 수천 명이 몰려 현장 웨이팅이 일찍 마감되기도 했어요. 지금의 입장·호출 방식과 마감 시각은 확인하지 못했어요. 도착하는 대로 대기 등록부터 하세요.</p>
+    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">나가노마켓 서울스토어</strong><a class="map" href="https://map.naver.com/p/search/%EB%82%98%EA%B0%80%EB%85%B8%EB%A7%88%EC%BC%93%20%EC%84%9C%EC%9A%B8%EC%8A%A4%ED%86%A0%EC%96%B4%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–20:00</p>
+    <p class="note">일본 작가 나가노의 캐릭터 굿즈샵이에요(성동구 연무장길 97). 보도자료는 농담곰·치이카와 등을 판다고 소개했는데 치이카와 상품이 얼마나 있는지는 못 봤어요. 성수역에서 걸어서 10분쯤으로 어림했어요(직접 재지는 못했어요). 인형뽑기는 하지 않아도 돼요.</p>
+    <p class="warn">2026-02-13 개점 소식까지만 확인했어요(엣집은 상설 매장, 여행픽은 팝업 형식이라고 적어서 지금도 여는지 확신할 수 없어요). 공휴일 영업과 줄도 못 봤어요. 공식 계정(@naganomkt_seoul)을 보고 가세요. 닫았거나 줄이 길면 아래 팁의 순서로 바꿔요.</p>
     
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">12:30</span>
+  <span class="t">13:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
-    <p class="note">신용산역 쪽 용리단길 양식당이에요. 아이파크몰에서 걸어서 이동해요(10분 안팎으로 잡았고 직접 재지는 못했어요). 마다밀(양식, 10:30–21:30)도 근처예요.</p>
-    
+    <div class="l1"><span class="kind">식사</span><span class="mt">노포</span><strong class="nm">소문난성수감자탕</strong><a class="map" href="https://map.naver.com/p/search/%EC%86%8C%EB%AC%B8%EB%82%9C%EC%84%B1%EC%88%98%EA%B0%90%EC%9E%90%ED%83%95%20%EC%97%B0%EB%AC%B4%EC%9E%A5%EA%B8%B8%2045" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">24시간 · 연중무휴</p>
+    <p class="note">40년 넘게 성수를 지킨 감자탕 노포로 소개돼요. 본관과 별관이 있어요. 둘이면 감자탕 소(32,000원)나 감자국 두 그릇(12,000원, 우거지 13,000원)이 맞아요. 성수역 4번 출구에서 걸어서 3~4분이에요.</p>
+    <p class="warn">식사 시간엔 웨이팅이 생길 수 있어요. 주말 오후 2시쯤 3분 기다리고 별관으로 들어갔다는 후기가 있어요(다이닝코드).</p>
     
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">14:00</span>
+  <span class="t">14:10</span>
   <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 이촌</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">성수 → 이촌</strong></div>
     
-    <p class="note">4호선으로 신용산역에서 이촌역까지 한 정거장이에요. 지하 통로로 박물관과 이어져요.</p>
+    <p class="note">성수역에서 2호선 외선순환(왕십리 방면)을 타고 세 정거장 가서 왕십리역에서 경의중앙선 문산 방면으로 갈아타고 이촌역에서 내려요. 40분쯤으로 어림했어요.</p>
     
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">14:15</span>
+  <span class="t">14:55</span>
   <div class="s">
     <div class="l1"><span class="kind">전시</span><span class="mt">국중박</span><strong class="nm">국립중앙박물관 특별전 〈우리들의 밥상〉</strong><a class="map" href="https://map.naver.com/p/entry/place/11620570?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">일 09:30–17:30 · 특별전 입장 마감 16:50</p>
@@ -1608,68 +1709,98 @@ footer a{color:var(--muted)}
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">17:00</span>
+  <span class="t">16:40</span>
   <div class="s">
-    <div class="l1"><span class="kind">귀가</span><strong class="nm">이촌역 → 원당역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">이촌 → 신용산</strong></div>
     
-    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:05.</p>
+    <p class="note">4호선으로 이촌역에서 신용산역까지 한 정거장이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-food">
+  <span class="t">17:15</span>
+  <div class="s">
+    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
+    <p class="note">이촌역에서 4호선으로 한 정거장, 신용산역 쪽 용리단길 양식당이에요. 마다밀(양식, 10:30–21:30)도 근처예요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">19:00</span>
+  <div class="s">
+    <div class="l1"><span class="kind">귀가</span><strong class="nm">신용산역 → 원당역</strong></div>
+    
+    <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 20:15.</p>
     
     
   </div>
 </li>
     </ol>
-    <p class="dtip">치이카와샵 줄이 길면 대기 번호를 받고 국립중앙박물관을 먼저 봐도 돼요(호출 방식은 확인하지 못했어요). 소나기가 와도 전부 실내예요. 박물관은 17:30에 닫아요.</p>
+    <p class="dtip">나가노마켓이 닫았거나 줄이 길면 감자탕(12:00) → 박물관(13:45) → 극장판(16:15 전후, CGV 용산아이파크몰) → 용리단길 저녁(18:15) 순서로 바꿔요. 극장판은 CGV 앱에서 시간을 확인하고 예매하세요. 박물관은 17:30에 닫고 특별전 입장은 16:50까지라 15시 안에 들어가야 여유 있어요. 성수에서 걷는 구간은 연무장길 한 줄이에요. 소나기 예보가 있으니 우산을 챙기세요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">서울역사박물관 · 토속촌 삼계탕</span></h4>
-    <p class="dm">편도 약 55분 · 비 13~19℃ · 무료 박물관을 보고 삼계탕으로 점심</p>
+    <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">DDP 웨인 티보 전 · 광장시장</span></h4>
+    <p class="dm">편도 약 45분 · 비 13~19℃ · 디저트 화가의 전시와 시장 점심</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
   <div class="s">
     <div class="l1"><span class="kind">이동</span><strong class="nm">체크아웃 후 출발</strong></div>
     
-    <p class="note">짐을 맡기고 3호선 종로3가역에서 5호선으로 갈아타 광화문역에서 내려요. 약 55분.</p>
+    <p class="note">짐을 맡기고 원당역에서 3호선, 종로3가역에서 내려요. 약 45분.</p>
     
-    
-  </div>
-</li>
-<li class="stop k-do">
-  <span class="t">11:30</span>
-  <div class="s">
-    <div class="l1"><span class="kind">전시</span><strong class="nm">서울역사박물관</strong><a class="map" href="https://map.naver.com/p/entry/place/11784657?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">월요일이 공휴일이라 개관 · 무료</p>
-    <p class="note">서울의 역사를 모형과 유물로 봐요. 1~1.5시간 잡아요. 광화문역에서 걸어서 10분쯤이에요.</p>
-    <p class="warn">운영 시간은 방문 전에 확인하세요. 네이버에는 09:00–21:00으로 나와요.</p>
     
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">13:30</span>
+  <span class="t">11:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">식사</span><span class="mt">노포</span><strong class="nm">토속촌삼계탕</strong><a class="map" href="https://map.naver.com/p/entry/place/35597924?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:00–22:00 · 마지막 주문 21:00</p>
-    <p class="note">서촌의 삼계탕 노포예요.</p>
-    <p class="warn">점심엔 웨이팅이 길어요. 택시로 5분쯤 걸려요.</p>
+    <div class="l1"><span class="kind">식사</span><span class="mt">노포</span><strong class="nm">원조순희네빈대떡</strong><a class="map" href="https://map.naver.com/p/entry/place/11619260?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">10:00–21:00 · 마지막 주문 20:30</p>
+    <p class="note">광장시장 대표 빈대떡집이에요.</p>
+    
     
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">15:00</span>
+  <span class="t">12:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">카페</span><strong class="nm">이도림 세종대왕 생가터 서촌 본점</strong><a class="map" href="https://map.naver.com/p/entry/place/1335290092?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">08:00–21:00</p>
-    <p class="note">서촌 카페예요.</p>
+    <div class="l1"><span class="kind">식사</span><strong class="nm">부촌육회 본점</strong><a class="map" href="https://map.naver.com/p/entry/place/36428555?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">10:00–21:30 · 마지막 주문 21:00</p>
+    <p class="note">육회를 먹어요. 시장은 지붕이 있어서 비가 와도 괜찮아요.</p>
     
     
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">16:00</span>
+  <span class="t">13:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">귀가</span><strong class="nm">경복궁역 → 원당역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">종로5가 → 동대문</strong></div>
     
-    <p class="note">3호선 직통이에요. 숙소 도착 약 16:45, 짐을 찾아 귀가해요.</p>
+    <p class="note">1호선으로 동대문역까지 가요. 전시장까지 걸어서 10분쯤이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-do">
+  <span class="t">13:45</span>
+  <div class="s">
+    <div class="l1"><span class="kind">전시</span><strong class="nm">DDP 웨인 티보 전</strong><a class="map" href="https://map.naver.com/p/entry/place/18063223?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">10:00–20:00 · 입장 마감 19:00</p>
+    <p class="note">케이크와 파이 같은 디저트를 그린 화가의 회고전이에요. 1.5시간 잡아요.</p>
+    <p class="warn">관람료는 예매처(현대카드 DIVE 앱·NOL티켓·카카오톡 예약하기)에서 확인하세요.</p>
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">15:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">귀가</span><strong class="nm">동대문역 → 원당역</strong></div>
+    
+    <p class="note">1호선으로 종로3가역까지 가서 3호선으로 갈아타요. 숙소 도착 약 16:45, 짐을 찾아 귀가해요.</p>
     
     
   </div>
@@ -1684,16 +1815,16 @@ footer a{color:var(--muted)}
     <span class="num" aria-hidden="true">6</span>
     <span class="head">
       <span class="sr">제시 6. </span><span class="ttl">리움 · 국립중앙박물관 전시 데이트<em class="old">예전 4번</em></span>
-      <span class="hook">한남 리움에서 시작해 일요일엔 국립중앙박물관, 월요일엔 광장시장 노포와 연극</span>
+      <span class="hook">한남 리움에서 시작해 일요일엔 국립중앙박물관과 극장판 치이카와, 월요일엔 광장시장 노포와 연극</span>
       <span class="tri"><span class="dr"><b>토</b><span>한남</span></span><span class="dr"><b>일</b><span>용산</span></span><span class="dr"><b>월</b><span>종로 · 혜화<i class="pl">연극</i></span></span></span>
       <span class="req"><i class="on">국중박</i><i class="on">연극</i><i class="on">노포</i><i class="on">미식</i><i class="on">치이카와</i></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">비가 오지 않는 토요일엔 한남에서 리움미술관 기획전을 보고 저녁을 먹어요. 일요일엔 용산에서 치이카와샵을 들르고 용리단길 점심과 국립중앙박물관 특별전을 봐요. 월요일엔 광장시장 노포 점심 뒤에 대학로에서 참여형 연극이에요. 리움 상설전은 미리 예약해야 해요.</p>
+    <p class="why">비가 오지 않는 토요일엔 한남에서 리움미술관 기획전을 보고 저녁을 먹어요. 일요일엔 용산에서 국립중앙박물관 특별전을 보고 용리단길 점심 뒤에 극장판 치이카와를 봐요. 월요일엔 광장시장 노포 점심 뒤에 대학로에서 참여형 연극이에요. 리움 상설전은 미리 예약해야 해요.</p>
     
-    <ul class="picks"><li>리움미술관</li><li>국립중앙박물관</li><li>치이카와샵</li><li>용리단길 미식</li><li>광장시장 노포</li><li>참여형 연극</li></ul>
+    <ul class="picks"><li>리움미술관</li><li>국립중앙박물관</li><li>용리단길 미식</li><li>극장판 치이카와</li><li>광장시장 노포</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">리움미술관 · 한남 다이닝</span></h4>
     <p class="dm">편도 약 60분 · 흐림 11~20℃ · 미술관을 천천히 보고 한남동에서 저녁</p>
@@ -1772,51 +1903,21 @@ footer a{color:var(--muted)}
     <p class="dtip">월요일엔 리움이 쉬어요. 토·일요일에만 넣으세요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">치이카와샵 · 용리단길 미식 · 국립중앙박물관</span></h4>
-    <p class="dm">편도 약 55분 · 소나기 가능 15~26℃ · 개점에 맞춰 치이카와샵부터 가고, 용리단길에서 점심, 오후엔 국립중앙박물관 특별전을 봐요</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">국립중앙박물관 · 용리단길 미식 · 극장판 치이카와</span></h4>
+    <p class="dm">편도 약 60분 · 소나기 가능 15~26℃ · 오전엔 박물관 특별전, 점심은 용리단길, 오후엔 줄 서지 않게 예매해서 극장판 치이카와를 봐요</p>
     <ol class="tl">
 <li class="stop k-move">
-  <span class="t">09:30</span>
+  <span class="t">10:30</span>
   <div class="s">
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
-    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 용산역에서 내려요. 숙소에서 약 55분이에요. 치이카와샵이 10:30에 열어서 평소보다 일찍 출발해요.</p>
+    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 이촌역에서 내려요. 숙소에서 약 60분이에요. 이촌역에서 박물관까지는 지하 통로로 이어져요.</p>
     
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">10:30</span>
-  <div class="s">
-    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">치이카와샵 용산 아이파크몰점</strong><a class="map" href="https://map.naver.com/p/search/%EC%B9%98%EC%9D%B4%EC%B9%B4%EC%99%80%EC%83%B5%20%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0%20%EC%9A%A9%EC%82%B0" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:30–22:00</p>
-    <p class="note">아이파크몰 리빙파크 3층 도파민스테이션에 있는 치이카와 공식 스토어예요. 용산역에서 아이파크몰로 이어져요. 줄이 너무 길거나 마감되면 같은 건물 CGV 용산아이파크몰에서 극장판 〈치이카와: 인어 섬의 비밀〉(9/30 개봉, 99분, 전체관람가, 한국어 더빙판 있음)을 봐요. 상영 시간은 CGV 앱에서 확인하세요.</p>
-    <p class="warn">9/19(토)엔 오후 2시에 대기번호가 1160번대였고 5시가 넘어서야 입장했다는 기사가 있어요. 수천 명이 몰려 현장 웨이팅이 일찍 마감되기도 했어요. 지금의 입장·호출 방식과 마감 시각은 확인하지 못했어요. 도착하는 대로 대기 등록부터 하세요.</p>
-    
-  </div>
-</li>
-<li class="stop k-food">
-  <span class="t">12:30</span>
-  <div class="s">
-    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
-    <p class="note">신용산역 쪽 용리단길 양식당이에요. 아이파크몰에서 걸어서 이동해요(10분 안팎으로 잡았고 직접 재지는 못했어요). 마다밀(양식, 10:30–21:30)도 근처예요.</p>
-    
-    
-  </div>
-</li>
-<li class="stop k-move">
-  <span class="t">14:00</span>
-  <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 이촌</strong></div>
-    
-    <p class="note">4호선으로 신용산역에서 이촌역까지 한 정거장이에요. 지하 통로로 박물관과 이어져요.</p>
-    
-    
-  </div>
-</li>
-<li class="stop k-do">
-  <span class="t">14:15</span>
+  <span class="t">11:30</span>
   <div class="s">
     <div class="l1"><span class="kind">전시</span><span class="mt">국중박</span><strong class="nm">국립중앙박물관 특별전 〈우리들의 밥상〉</strong><a class="map" href="https://map.naver.com/p/entry/place/11620570?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">일 09:30–17:30 · 특별전 입장 마감 16:50</p>
@@ -1826,17 +1927,57 @@ footer a{color:var(--muted)}
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">17:00</span>
+  <span class="t">13:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">귀가</span><strong class="nm">이촌역 → 원당역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">이촌 → 신용산</strong></div>
     
-    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:05.</p>
+    <p class="note">4호선으로 이촌역에서 신용산역까지 한 정거장이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-food">
+  <span class="t">13:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
+    <p class="note">이촌역에서 4호선으로 한 정거장, 신용산역 쪽 용리단길 양식당이에요. 마다밀(양식, 10:30–21:30)도 근처예요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">14:50</span>
+  <div class="s">
+    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 용산역</strong></div>
+    
+    <p class="note">걸어서 용산역과 이어진 아이파크몰로 가요. 15분쯤으로 어림했고 직접 재지는 못했어요. 6층 CGV 티켓박스로 가요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-do">
+  <span class="t">15:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">영화</span><span class="mt">치이카와</span><strong class="nm">극장판 〈치이카와: 인어 섬의 비밀〉 · CGV 용산아이파크몰</strong><a class="map" href="https://map.naver.com/p/search/CGV%20%EC%9A%A9%EC%82%B0%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0" target="_blank" rel="noopener">지도</a><a class="map book" href="https://www.cgv.co.kr/" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">99분 · 전체관람가 · 자막판·한국어 더빙판</p>
+    <p class="note">아이파크몰 6층에 티켓박스가 있고 상영관은 7층이에요(나무위키 기준). 용산역과 바로 이어져요. 예매해 두면 줄은 서지 않아요. 영화가 끝나고 3층 치이카와샵(10:30–22:00) 줄이 짧으면 들러요. 샵은 영화 관람권을 보여주고 1만 원 이상 사면 종이 선글라스를 주는 협업을 10/6까지 해요.</p>
+    <p class="warn">상영 시간표는 확인하지 못했어요. CGV 앱에서 15:30 전후에 시작하는 회차를 미리 예매하고, 시간이 다르면 점심과 영화 순서를 바꿔요. 관람 특전으로 10/3~10/6 CGV·메가박스, 10/3~10/9 롯데시네마가 참마커 피규어(8종 중 랜덤)를 줘요. CGV는 상영이 끝난 뒤 현장에서 선착순으로, 1인 최대 4개씩이고 물량이 떨어지면 기간 안에도 끝나요.</p>
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">17:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">귀가</span><strong class="nm">용산역 → 원당역</strong></div>
+    
+    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:30.</p>
     
     
   </div>
 </li>
     </ol>
-    <p class="dtip">치이카와샵 줄이 길면 대기 번호를 받고 국립중앙박물관을 먼저 봐도 돼요(호출 방식은 확인하지 못했어요). 소나기가 와도 전부 실내예요. 박물관은 17:30에 닫아요.</p>
+    <p class="dtip">상영 시간표를 먼저 보고 점심과 영화 순서를 바꿔도 돼요. 박물관은 17:30에 닫고 특별전 입장은 16:50까지예요. 소나기가 와도 박물관, 식당, 극장이 모두 실내예요.</p>
   </section>
 <section class="day">
     <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">광장시장 노포 · 참여형 연극</span></h4>
@@ -1926,16 +2067,16 @@ footer a{color:var(--muted)}
     <span class="num" aria-hidden="true">7</span>
     <span class="head">
       <span class="sr">제시 7. </span><span class="ttl">공예 · 전통<em class="old">예전 6번</em></span>
-      <span class="hook">인사동 · 안국에서 공예와 전통차를 즐기고 일요일 용산, 월요일 광장시장과 연극</span>
-      <span class="tri"><span class="dr"><b>토</b><span>안국 · 인사동</span></span><span class="dr"><b>일</b><span>용산</span></span><span class="dr"><b>월</b><span>종로 · 혜화<i class="pl">연극</i></span></span></span>
+      <span class="hook">인사동 · 안국에서 공예와 전통차를 즐기고 일요일 성수와 용산, 월요일 광장시장과 연극</span>
+      <span class="tri"><span class="dr"><b>토</b><span>안국 · 인사동</span></span><span class="dr"><b>일</b><span>성수 · 용산</span></span><span class="dr"><b>월</b><span>종로 · 혜화<i class="pl">연극</i></span></span></span>
       <span class="req"><i class="on">국중박</i><i class="on">연극</i><i class="on">노포</i><i class="on">미식</i><i class="on">치이카와</i></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">공예박물관은 월요일에 쉬어서 이동이 짧은 토요일에 넣고 전통차와 한식 저녁을 곁들여요. 일요일엔 용산에서 치이카와샵, 용리단길 미식 점심, 국립중앙박물관 특별전이에요. 월요일엔 광장시장 노포 점심과 대학로 참여형 연극이에요.</p>
+    <p class="why">공예박물관은 월요일에 쉬어서 이동이 짧은 토요일에 넣고 전통차와 한식 저녁을 곁들여요. 일요일엔 성수 나가노마켓과 노포 감자탕으로 시작해서 용산 국립중앙박물관 특별전과 용리단길 저녁으로 이어요. 월요일엔 광장시장 노포 점심과 대학로 참여형 연극이에요.</p>
     
-    <ul class="picks"><li>서울공예박물관</li><li>인사동 전통차</li><li>용리단길 미식</li><li>치이카와샵</li><li>국립중앙박물관</li><li>광장시장 노포</li><li>참여형 연극</li></ul>
+    <ul class="picks"><li>서울공예박물관</li><li>인사동 전통차</li><li>성수 나가노마켓</li><li>성수 노포 감자탕</li><li>국립중앙박물관</li><li>용리단길 미식</li><li>광장시장 노포</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">인사동 · 안국 전통 먹방</span></h4>
     <p class="dm">편도 약 40분 · 흐림 11~20℃ · 일식 점심, 공예 전시, 전통차, 한식 저녁</p>
@@ -2014,51 +2155,51 @@ footer a{color:var(--muted)}
     <p class="dtip">이동이 짧아서 도착일이나 늦게 출발하는 날에 잘 맞아요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">치이카와샵 · 용리단길 미식 · 국립중앙박물관</span></h4>
-    <p class="dm">편도 약 55분 · 소나기 가능 15~26℃ · 개점에 맞춰 치이카와샵부터 가고, 용리단길에서 점심, 오후엔 국립중앙박물관 특별전을 봐요</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">성수 나가노마켓 · 노포 감자탕 · 국립중앙박물관 · 용리단길 저녁</span></h4>
+    <p class="dm">편도 약 70분 · 소나기 가능 15~26℃ · 낮엔 성수에서 굿즈샵과 노포 감자탕, 오후엔 박물관 특별전, 저녁은 용리단길에서 먹어요</p>
     <ol class="tl">
 <li class="stop k-move">
-  <span class="t">09:30</span>
+  <span class="t">10:30</span>
   <div class="s">
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
-    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 용산역에서 내려요. 숙소에서 약 55분이에요. 치이카와샵이 10:30에 열어서 평소보다 일찍 출발해요.</p>
+    <p class="note">원당역에서 3호선으로 을지로3가역까지 가서 2호선으로 갈아타고 성수역에서 내려요. 숙소에서 약 70분으로 어림했어요(직접 재지는 못했어요).</p>
     
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">10:30</span>
+  <span class="t">11:50</span>
   <div class="s">
-    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">치이카와샵 용산 아이파크몰점</strong><a class="map" href="https://map.naver.com/p/search/%EC%B9%98%EC%9D%B4%EC%B9%B4%EC%99%80%EC%83%B5%20%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0%20%EC%9A%A9%EC%82%B0" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:30–22:00</p>
-    <p class="note">아이파크몰 리빙파크 3층 도파민스테이션에 있는 치이카와 공식 스토어예요. 용산역에서 아이파크몰로 이어져요. 줄이 너무 길거나 마감되면 같은 건물 CGV 용산아이파크몰에서 극장판 〈치이카와: 인어 섬의 비밀〉(9/30 개봉, 99분, 전체관람가, 한국어 더빙판 있음)을 봐요. 상영 시간은 CGV 앱에서 확인하세요.</p>
-    <p class="warn">9/19(토)엔 오후 2시에 대기번호가 1160번대였고 5시가 넘어서야 입장했다는 기사가 있어요. 수천 명이 몰려 현장 웨이팅이 일찍 마감되기도 했어요. 지금의 입장·호출 방식과 마감 시각은 확인하지 못했어요. 도착하는 대로 대기 등록부터 하세요.</p>
+    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">나가노마켓 서울스토어</strong><a class="map" href="https://map.naver.com/p/search/%EB%82%98%EA%B0%80%EB%85%B8%EB%A7%88%EC%BC%93%20%EC%84%9C%EC%9A%B8%EC%8A%A4%ED%86%A0%EC%96%B4%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–20:00</p>
+    <p class="note">일본 작가 나가노의 캐릭터 굿즈샵이에요(성동구 연무장길 97). 보도자료는 농담곰·치이카와 등을 판다고 소개했는데 치이카와 상품이 얼마나 있는지는 못 봤어요. 성수역에서 걸어서 10분쯤으로 어림했어요(직접 재지는 못했어요). 인형뽑기는 하지 않아도 돼요.</p>
+    <p class="warn">2026-02-13 개점 소식까지만 확인했어요(엣집은 상설 매장, 여행픽은 팝업 형식이라고 적어서 지금도 여는지 확신할 수 없어요). 공휴일 영업과 줄도 못 봤어요. 공식 계정(@naganomkt_seoul)을 보고 가세요. 닫았거나 줄이 길면 아래 팁의 순서로 바꿔요.</p>
     
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">12:30</span>
+  <span class="t">13:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
-    <p class="note">신용산역 쪽 용리단길 양식당이에요. 아이파크몰에서 걸어서 이동해요(10분 안팎으로 잡았고 직접 재지는 못했어요). 마다밀(양식, 10:30–21:30)도 근처예요.</p>
-    
+    <div class="l1"><span class="kind">식사</span><span class="mt">노포</span><strong class="nm">소문난성수감자탕</strong><a class="map" href="https://map.naver.com/p/search/%EC%86%8C%EB%AC%B8%EB%82%9C%EC%84%B1%EC%88%98%EA%B0%90%EC%9E%90%ED%83%95%20%EC%97%B0%EB%AC%B4%EC%9E%A5%EA%B8%B8%2045" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">24시간 · 연중무휴</p>
+    <p class="note">40년 넘게 성수를 지킨 감자탕 노포로 소개돼요. 본관과 별관이 있어요. 둘이면 감자탕 소(32,000원)나 감자국 두 그릇(12,000원, 우거지 13,000원)이 맞아요. 성수역 4번 출구에서 걸어서 3~4분이에요.</p>
+    <p class="warn">식사 시간엔 웨이팅이 생길 수 있어요. 주말 오후 2시쯤 3분 기다리고 별관으로 들어갔다는 후기가 있어요(다이닝코드).</p>
     
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">14:00</span>
+  <span class="t">14:10</span>
   <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 이촌</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">성수 → 이촌</strong></div>
     
-    <p class="note">4호선으로 신용산역에서 이촌역까지 한 정거장이에요. 지하 통로로 박물관과 이어져요.</p>
+    <p class="note">성수역에서 2호선 외선순환(왕십리 방면)을 타고 세 정거장 가서 왕십리역에서 경의중앙선 문산 방면으로 갈아타고 이촌역에서 내려요. 40분쯤으로 어림했어요.</p>
     
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">14:15</span>
+  <span class="t">14:55</span>
   <div class="s">
     <div class="l1"><span class="kind">전시</span><span class="mt">국중박</span><strong class="nm">국립중앙박물관 특별전 〈우리들의 밥상〉</strong><a class="map" href="https://map.naver.com/p/entry/place/11620570?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">일 09:30–17:30 · 특별전 입장 마감 16:50</p>
@@ -2068,17 +2209,37 @@ footer a{color:var(--muted)}
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">17:00</span>
+  <span class="t">16:40</span>
   <div class="s">
-    <div class="l1"><span class="kind">귀가</span><strong class="nm">이촌역 → 원당역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">이촌 → 신용산</strong></div>
     
-    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:05.</p>
+    <p class="note">4호선으로 이촌역에서 신용산역까지 한 정거장이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-food">
+  <span class="t">17:15</span>
+  <div class="s">
+    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
+    <p class="note">이촌역에서 4호선으로 한 정거장, 신용산역 쪽 용리단길 양식당이에요. 마다밀(양식, 10:30–21:30)도 근처예요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">19:00</span>
+  <div class="s">
+    <div class="l1"><span class="kind">귀가</span><strong class="nm">신용산역 → 원당역</strong></div>
+    
+    <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 20:15.</p>
     
     
   </div>
 </li>
     </ol>
-    <p class="dtip">치이카와샵 줄이 길면 대기 번호를 받고 국립중앙박물관을 먼저 봐도 돼요(호출 방식은 확인하지 못했어요). 소나기가 와도 전부 실내예요. 박물관은 17:30에 닫아요.</p>
+    <p class="dtip">나가노마켓이 닫았거나 줄이 길면 감자탕(12:00) → 박물관(13:45) → 극장판(16:15 전후, CGV 용산아이파크몰) → 용리단길 저녁(18:15) 순서로 바꿔요. 극장판은 CGV 앱에서 시간을 확인하고 예매하세요. 박물관은 17:30에 닫고 특별전 입장은 16:50까지라 15시 안에 들어가야 여유 있어요. 성수에서 걷는 구간은 연무장길 한 줄이에요. 소나기 예보가 있으니 우산을 챙기세요.</p>
   </section>
 <section class="day">
     <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">광장시장 노포 · 참여형 연극</span></h4>
@@ -2175,9 +2336,9 @@ footer a{color:var(--muted)}
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">날씨가 가장 좋은 토요일에 필동면옥 노포 점심과 서울시립미술관, 남산 노을을 넣었어요. 소나기 예보가 있는 일요일엔 실내인 용산에서 치이카와샵, 용리단길 미식 점심, 국립중앙박물관을 돌아요. 비 오는 월요일엔 대학로에서 참여형 연극이에요.</p>
+    <p class="why">날씨가 가장 좋은 토요일에 필동면옥 노포 점심과 서울시립미술관, 남산 노을을 넣었어요. 소나기 예보가 있는 일요일엔 실내인 용산에서 국립중앙박물관 특별전, 용리단길 점심, 극장판 치이카와를 봐요. 비 오는 월요일엔 대학로에서 참여형 연극이에요.</p>
     
-    <ul class="picks"><li>필동면옥 노포</li><li>남산 노을</li><li>용리단길 미식</li><li>치이카와샵</li><li>국립중앙박물관</li><li>참여형 연극</li></ul>
+    <ul class="picks"><li>필동면옥 노포</li><li>남산 노을</li><li>국립중앙박물관</li><li>용리단길 미식</li><li>극장판 치이카와</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">필동면옥 · 시립미술관 · 남산 야경</span></h4>
     <p class="dm">편도 약 50분 · 흐림 11~20℃ · 노포 냉면, 무료 미술관, 그리고 해 질 녘 남산 전망대</p>
@@ -2276,51 +2437,21 @@ footer a{color:var(--muted)}
     <p class="dtip">토요일이 날씨가 가장 좋아요. 전망대는 구름이 끼어도 야경은 볼 만해요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">치이카와샵 · 용리단길 미식 · 국립중앙박물관</span></h4>
-    <p class="dm">편도 약 55분 · 소나기 가능 15~26℃ · 개점에 맞춰 치이카와샵부터 가고, 용리단길에서 점심, 오후엔 국립중앙박물관 특별전을 봐요</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">국립중앙박물관 · 용리단길 미식 · 극장판 치이카와</span></h4>
+    <p class="dm">편도 약 60분 · 소나기 가능 15~26℃ · 오전엔 박물관 특별전, 점심은 용리단길, 오후엔 줄 서지 않게 예매해서 극장판 치이카와를 봐요</p>
     <ol class="tl">
 <li class="stop k-move">
-  <span class="t">09:30</span>
+  <span class="t">10:30</span>
   <div class="s">
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
-    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 용산역에서 내려요. 숙소에서 약 55분이에요. 치이카와샵이 10:30에 열어서 평소보다 일찍 출발해요.</p>
+    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 이촌역에서 내려요. 숙소에서 약 60분이에요. 이촌역에서 박물관까지는 지하 통로로 이어져요.</p>
     
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">10:30</span>
-  <div class="s">
-    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">치이카와샵 용산 아이파크몰점</strong><a class="map" href="https://map.naver.com/p/search/%EC%B9%98%EC%9D%B4%EC%B9%B4%EC%99%80%EC%83%B5%20%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0%20%EC%9A%A9%EC%82%B0" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:30–22:00</p>
-    <p class="note">아이파크몰 리빙파크 3층 도파민스테이션에 있는 치이카와 공식 스토어예요. 용산역에서 아이파크몰로 이어져요. 줄이 너무 길거나 마감되면 같은 건물 CGV 용산아이파크몰에서 극장판 〈치이카와: 인어 섬의 비밀〉(9/30 개봉, 99분, 전체관람가, 한국어 더빙판 있음)을 봐요. 상영 시간은 CGV 앱에서 확인하세요.</p>
-    <p class="warn">9/19(토)엔 오후 2시에 대기번호가 1160번대였고 5시가 넘어서야 입장했다는 기사가 있어요. 수천 명이 몰려 현장 웨이팅이 일찍 마감되기도 했어요. 지금의 입장·호출 방식과 마감 시각은 확인하지 못했어요. 도착하는 대로 대기 등록부터 하세요.</p>
-    
-  </div>
-</li>
-<li class="stop k-food">
-  <span class="t">12:30</span>
-  <div class="s">
-    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
-    <p class="note">신용산역 쪽 용리단길 양식당이에요. 아이파크몰에서 걸어서 이동해요(10분 안팎으로 잡았고 직접 재지는 못했어요). 마다밀(양식, 10:30–21:30)도 근처예요.</p>
-    
-    
-  </div>
-</li>
-<li class="stop k-move">
-  <span class="t">14:00</span>
-  <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 이촌</strong></div>
-    
-    <p class="note">4호선으로 신용산역에서 이촌역까지 한 정거장이에요. 지하 통로로 박물관과 이어져요.</p>
-    
-    
-  </div>
-</li>
-<li class="stop k-do">
-  <span class="t">14:15</span>
+  <span class="t">11:30</span>
   <div class="s">
     <div class="l1"><span class="kind">전시</span><span class="mt">국중박</span><strong class="nm">국립중앙박물관 특별전 〈우리들의 밥상〉</strong><a class="map" href="https://map.naver.com/p/entry/place/11620570?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">일 09:30–17:30 · 특별전 입장 마감 16:50</p>
@@ -2330,17 +2461,57 @@ footer a{color:var(--muted)}
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">17:00</span>
+  <span class="t">13:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">귀가</span><strong class="nm">이촌역 → 원당역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">이촌 → 신용산</strong></div>
     
-    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:05.</p>
+    <p class="note">4호선으로 이촌역에서 신용산역까지 한 정거장이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-food">
+  <span class="t">13:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
+    <p class="note">이촌역에서 4호선으로 한 정거장, 신용산역 쪽 용리단길 양식당이에요. 마다밀(양식, 10:30–21:30)도 근처예요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">14:50</span>
+  <div class="s">
+    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 용산역</strong></div>
+    
+    <p class="note">걸어서 용산역과 이어진 아이파크몰로 가요. 15분쯤으로 어림했고 직접 재지는 못했어요. 6층 CGV 티켓박스로 가요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-do">
+  <span class="t">15:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">영화</span><span class="mt">치이카와</span><strong class="nm">극장판 〈치이카와: 인어 섬의 비밀〉 · CGV 용산아이파크몰</strong><a class="map" href="https://map.naver.com/p/search/CGV%20%EC%9A%A9%EC%82%B0%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0" target="_blank" rel="noopener">지도</a><a class="map book" href="https://www.cgv.co.kr/" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">99분 · 전체관람가 · 자막판·한국어 더빙판</p>
+    <p class="note">아이파크몰 6층에 티켓박스가 있고 상영관은 7층이에요(나무위키 기준). 용산역과 바로 이어져요. 예매해 두면 줄은 서지 않아요. 영화가 끝나고 3층 치이카와샵(10:30–22:00) 줄이 짧으면 들러요. 샵은 영화 관람권을 보여주고 1만 원 이상 사면 종이 선글라스를 주는 협업을 10/6까지 해요.</p>
+    <p class="warn">상영 시간표는 확인하지 못했어요. CGV 앱에서 15:30 전후에 시작하는 회차를 미리 예매하고, 시간이 다르면 점심과 영화 순서를 바꿔요. 관람 특전으로 10/3~10/6 CGV·메가박스, 10/3~10/9 롯데시네마가 참마커 피규어(8종 중 랜덤)를 줘요. CGV는 상영이 끝난 뒤 현장에서 선착순으로, 1인 최대 4개씩이고 물량이 떨어지면 기간 안에도 끝나요.</p>
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">17:30</span>
+  <div class="s">
+    <div class="l1"><span class="kind">귀가</span><strong class="nm">용산역 → 원당역</strong></div>
+    
+    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:30.</p>
     
     
   </div>
 </li>
     </ol>
-    <p class="dtip">치이카와샵 줄이 길면 대기 번호를 받고 국립중앙박물관을 먼저 봐도 돼요(호출 방식은 확인하지 못했어요). 소나기가 와도 전부 실내예요. 박물관은 17:30에 닫아요.</p>
+    <p class="dtip">상영 시간표를 먼저 보고 점심과 영화 순서를 바꿔도 돼요. 박물관은 17:30에 닫고 특별전 입장은 16:50까지예요. 소나기가 와도 박물관, 식당, 극장이 모두 실내예요.</p>
   </section>
 <section class="day">
     <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">대학로 카페 · 참여형 연극 · 인도 커리</span></h4>
@@ -2410,16 +2581,16 @@ footer a{color:var(--muted)}
     <span class="num" aria-hidden="true">9</span>
     <span class="head">
       <span class="sr">제시 9. </span><span class="ttl">홍대 방탈출 · 체험<em class="old">예전 9번</em></span>
-      <span class="hook">같이 문제를 푸는 방탈출과 초밥으로 토요일을 보내고, 일요일 용산, 월요일 삼계탕과 연극</span>
-      <span class="tri"><span class="dr"><b>토</b><span>홍대 · 합정</span></span><span class="dr"><b>일</b><span>용산</span></span><span class="dr"><b>월</b><span>서촌 · 혜화<i class="pl">연극</i></span></span></span>
+      <span class="hook">같이 문제를 푸는 방탈출과 초밥으로 토요일을 보내고, 일요일 성수와 용산, 월요일 연극</span>
+      <span class="tri"><span class="dr"><b>토</b><span>홍대 · 합정</span></span><span class="dr"><b>일</b><span>성수 · 용산</span></span><span class="dr"><b>월</b><span>혜화<i class="pl">연극</i></span></span></span>
       <span class="req"><i class="on">국중박</i><i class="on">연극</i><i class="on">노포</i><i class="on">미식</i><i class="on">치이카와</i></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">토요일엔 홍대에서 방탈출과 초밥으로 같이 문제를 풀어요. 일요일엔 용산에서 치이카와샵과 용리단길 미식 점심, 국립중앙박물관 특별전이에요. 월요일엔 토속촌 삼계탕 노포와 대학로 참여형 연극이에요.</p>
+    <p class="why">토요일엔 홍대에서 방탈출과 초밥으로 같이 문제를 풀어요. 일요일엔 성수 나가노마켓과 노포 감자탕을 먹고, 용산에서 국립중앙박물관 특별전과 용리단길 저녁을 이어요. 비 오는 월요일엔 대학로에서 인도 커리, 학림, 참여형 연극이에요.</p>
     
-    <ul class="picks"><li>방탈출</li><li>초밥 미식</li><li>치이카와샵</li><li>국립중앙박물관</li><li>삼계탕 노포</li><li>참여형 연극</li></ul>
+    <ul class="picks"><li>방탈출</li><li>초밥 미식</li><li>성수 나가노마켓</li><li>성수 노포 감자탕</li><li>국립중앙박물관</li><li>용리단길 미식</li><li>참여형 연극</li></ul>
 <section class="day">
     <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">홍대 방탈출 · 초밥 · 카페</span></h4>
     <p class="dm">편도 약 50분 · 흐림 11~20℃ · 같이 문제를 풀고, 초밥과 디저트로 마무리</p>
@@ -2488,51 +2659,51 @@ footer a{color:var(--muted)}
     <p class="dtip">방탈출은 예약부터 잡고 나머지를 맞추세요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">치이카와샵 · 용리단길 미식 · 국립중앙박물관</span></h4>
-    <p class="dm">편도 약 55분 · 소나기 가능 15~26℃ · 개점에 맞춰 치이카와샵부터 가고, 용리단길에서 점심, 오후엔 국립중앙박물관 특별전을 봐요</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">성수 나가노마켓 · 노포 감자탕 · 국립중앙박물관 · 용리단길 저녁</span></h4>
+    <p class="dm">편도 약 70분 · 소나기 가능 15~26℃ · 낮엔 성수에서 굿즈샵과 노포 감자탕, 오후엔 박물관 특별전, 저녁은 용리단길에서 먹어요</p>
     <ol class="tl">
 <li class="stop k-move">
-  <span class="t">09:30</span>
+  <span class="t">10:30</span>
   <div class="s">
     <div class="l1"><span class="kind">이동</span><strong class="nm">숙소 출발</strong></div>
     
-    <p class="note">원당역에서 대곡역으로 가서 경의중앙선으로 갈아타고 용산역에서 내려요. 숙소에서 약 55분이에요. 치이카와샵이 10:30에 열어서 평소보다 일찍 출발해요.</p>
+    <p class="note">원당역에서 3호선으로 을지로3가역까지 가서 2호선으로 갈아타고 성수역에서 내려요. 숙소에서 약 70분으로 어림했어요(직접 재지는 못했어요).</p>
     
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">10:30</span>
+  <span class="t">11:50</span>
   <div class="s">
-    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">치이카와샵 용산 아이파크몰점</strong><a class="map" href="https://map.naver.com/p/search/%EC%B9%98%EC%9D%B4%EC%B9%B4%EC%99%80%EC%83%B5%20%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0%20%EC%9A%A9%EC%82%B0" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:30–22:00</p>
-    <p class="note">아이파크몰 리빙파크 3층 도파민스테이션에 있는 치이카와 공식 스토어예요. 용산역에서 아이파크몰로 이어져요. 줄이 너무 길거나 마감되면 같은 건물 CGV 용산아이파크몰에서 극장판 〈치이카와: 인어 섬의 비밀〉(9/30 개봉, 99분, 전체관람가, 한국어 더빙판 있음)을 봐요. 상영 시간은 CGV 앱에서 확인하세요.</p>
-    <p class="warn">9/19(토)엔 오후 2시에 대기번호가 1160번대였고 5시가 넘어서야 입장했다는 기사가 있어요. 수천 명이 몰려 현장 웨이팅이 일찍 마감되기도 했어요. 지금의 입장·호출 방식과 마감 시각은 확인하지 못했어요. 도착하는 대로 대기 등록부터 하세요.</p>
+    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">나가노마켓 서울스토어</strong><a class="map" href="https://map.naver.com/p/search/%EB%82%98%EA%B0%80%EB%85%B8%EB%A7%88%EC%BC%93%20%EC%84%9C%EC%9A%B8%EC%8A%A4%ED%86%A0%EC%96%B4%20%EC%84%B1%EC%88%98" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–20:00</p>
+    <p class="note">일본 작가 나가노의 캐릭터 굿즈샵이에요(성동구 연무장길 97). 보도자료는 농담곰·치이카와 등을 판다고 소개했는데 치이카와 상품이 얼마나 있는지는 못 봤어요. 성수역에서 걸어서 10분쯤으로 어림했어요(직접 재지는 못했어요). 인형뽑기는 하지 않아도 돼요.</p>
+    <p class="warn">2026-02-13 개점 소식까지만 확인했어요(엣집은 상설 매장, 여행픽은 팝업 형식이라고 적어서 지금도 여는지 확신할 수 없어요). 공휴일 영업과 줄도 못 봤어요. 공식 계정(@naganomkt_seoul)을 보고 가세요. 닫았거나 줄이 길면 아래 팁의 순서로 바꿔요.</p>
     
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">12:30</span>
+  <span class="t">13:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
-    <p class="note">신용산역 쪽 용리단길 양식당이에요. 아이파크몰에서 걸어서 이동해요(10분 안팎으로 잡았고 직접 재지는 못했어요). 마다밀(양식, 10:30–21:30)도 근처예요.</p>
-    
+    <div class="l1"><span class="kind">식사</span><span class="mt">노포</span><strong class="nm">소문난성수감자탕</strong><a class="map" href="https://map.naver.com/p/search/%EC%86%8C%EB%AC%B8%EB%82%9C%EC%84%B1%EC%88%98%EA%B0%90%EC%9E%90%ED%83%95%20%EC%97%B0%EB%AC%B4%EC%9E%A5%EA%B8%B8%2045" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">24시간 · 연중무휴</p>
+    <p class="note">40년 넘게 성수를 지킨 감자탕 노포로 소개돼요. 본관과 별관이 있어요. 둘이면 감자탕 소(32,000원)나 감자국 두 그릇(12,000원, 우거지 13,000원)이 맞아요. 성수역 4번 출구에서 걸어서 3~4분이에요.</p>
+    <p class="warn">식사 시간엔 웨이팅이 생길 수 있어요. 주말 오후 2시쯤 3분 기다리고 별관으로 들어갔다는 후기가 있어요(다이닝코드).</p>
     
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">14:00</span>
+  <span class="t">14:10</span>
   <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">신용산 → 이촌</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">성수 → 이촌</strong></div>
     
-    <p class="note">4호선으로 신용산역에서 이촌역까지 한 정거장이에요. 지하 통로로 박물관과 이어져요.</p>
+    <p class="note">성수역에서 2호선 외선순환(왕십리 방면)을 타고 세 정거장 가서 왕십리역에서 경의중앙선 문산 방면으로 갈아타고 이촌역에서 내려요. 40분쯤으로 어림했어요.</p>
     
     
   </div>
 </li>
 <li class="stop k-do">
-  <span class="t">14:15</span>
+  <span class="t">14:55</span>
   <div class="s">
     <div class="l1"><span class="kind">전시</span><span class="mt">국중박</span><strong class="nm">국립중앙박물관 특별전 〈우리들의 밥상〉</strong><a class="map" href="https://map.naver.com/p/entry/place/11620570?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">일 09:30–17:30 · 특별전 입장 마감 16:50</p>
@@ -2542,58 +2713,68 @@ footer a{color:var(--muted)}
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">17:00</span>
+  <span class="t">16:40</span>
   <div class="s">
-    <div class="l1"><span class="kind">귀가</span><strong class="nm">이촌역 → 원당역</strong></div>
+    <div class="l1"><span class="kind">이동</span><strong class="nm">이촌 → 신용산</strong></div>
     
-    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 18:05.</p>
+    <p class="note">4호선으로 이촌역에서 신용산역까지 한 정거장이에요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-food">
+  <span class="t">17:15</span>
+  <div class="s">
+    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">에프더블유브이 용산점</strong><a class="map" href="https://map.naver.com/p/entry/place/1240748899?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–22:00 · 마지막 주문 21:00</p>
+    <p class="note">이촌역에서 4호선으로 한 정거장, 신용산역 쪽 용리단길 양식당이에요. 마다밀(양식, 10:30–21:30)도 근처예요.</p>
+    
+    
+  </div>
+</li>
+<li class="stop k-move">
+  <span class="t">19:00</span>
+  <div class="s">
+    <div class="l1"><span class="kind">귀가</span><strong class="nm">신용산역 → 원당역</strong></div>
+    
+    <p class="note">4호선으로 충무로역까지 가서 3호선으로 갈아타요. 숙소 도착 약 20:15.</p>
     
     
   </div>
 </li>
     </ol>
-    <p class="dtip">치이카와샵 줄이 길면 대기 번호를 받고 국립중앙박물관을 먼저 봐도 돼요(호출 방식은 확인하지 못했어요). 소나기가 와도 전부 실내예요. 박물관은 17:30에 닫아요.</p>
+    <p class="dtip">나가노마켓이 닫았거나 줄이 길면 감자탕(12:00) → 박물관(13:45) → 극장판(16:15 전후, CGV 용산아이파크몰) → 용리단길 저녁(18:15) 순서로 바꿔요. 극장판은 CGV 앱에서 시간을 확인하고 예매하세요. 박물관은 17:30에 닫고 특별전 입장은 16:50까지라 15시 안에 들어가야 여유 있어요. 성수에서 걷는 구간은 연무장길 한 줄이에요. 소나기 예보가 있으니 우산을 챙기세요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">토속촌 삼계탕 노포 · 참여형 연극</span></h4>
-    <p class="dm">편도 약 40분 · 비 13~19℃ · 서촌의 삼계탕 노포에서 점심을 먹고 대학로로 넘어가 참여형 연극을 봐요</p>
+    <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">대학로 카페 · 참여형 연극 · 인도 커리</span></h4>
+    <p class="dm">편도 약 65분 · 비 13~19℃ · 비 오는 날 실내에서 참여형 연극 한 편</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
   <div class="s">
     <div class="l1"><span class="kind">이동</span><strong class="nm">체크아웃 후 출발</strong></div>
     
-    <p class="note">짐을 맡기고 원당역에서 3호선 직통, 경복궁역에서 내려요. 약 40분.</p>
+    <p class="note">짐을 맡기고 3호선 충무로역에서 4호선으로 갈아타 혜화역에서 내려요. 약 65분.</p>
     
     
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">11:20</span>
+  <span class="t">11:45</span>
   <div class="s">
-    <div class="l1"><span class="kind">식사</span><span class="mt">노포</span><strong class="nm">토속촌삼계탕</strong><a class="map" href="https://map.naver.com/p/entry/place/35597924?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">10:00–22:00 · 마지막 주문 21:00</p>
-    <p class="note">서촌의 삼계탕 노포예요.</p>
-    <p class="warn">점심엔 웨이팅이 길어요. 도착하자마자 이름부터 올리세요. 대체공휴일(10/5) 영업 시간은 확인하지 못했어요.</p>
+    <div class="l1"><span class="kind">식사</span><span class="mt">미식</span><strong class="nm">페르시안궁전</strong><a class="map" href="https://map.naver.com/p/entry/place/11710271?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">11:00–21:25 · 브레이크 15:00–16:00</p>
+    <p class="note">인도 음식점이에요.</p>
+    
     
   </div>
 </li>
 <li class="stop k-food">
-  <span class="t">12:45</span>
+  <span class="t">13:15</span>
   <div class="s">
-    <div class="l1"><span class="kind">카페</span><strong class="nm">이도림 세종대왕 생가터 서촌 본점</strong><a class="map" href="https://map.naver.com/p/entry/place/1335290092?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
-    <p class="hrs">08:00–21:00</p>
-    <p class="note">서촌 카페예요. 40분쯤 쉬어요.</p>
-    
-    
-  </div>
-</li>
-<li class="stop k-move">
-  <span class="t">13:30</span>
-  <div class="s">
-    <div class="l1"><span class="kind">이동</span><strong class="nm">경복궁역 → 혜화</strong></div>
-    
-    <p class="note">경복궁역에서 3호선으로 충무로역까지 가서 4호선으로 갈아타고 혜화역 2번 출구로 나와요(약 30분). 극장까지 걸어서 6분쯤이에요.</p>
+    <div class="l1"><span class="kind">카페</span><strong class="nm">학림</strong><a class="map" href="https://map.naver.com/p/entry/place/11716359?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
+    <p class="hrs">10:00–23:00</p>
+    <p class="note">대학로의 오래된 카페예요.</p>
     
     
   </div>
@@ -2603,12 +2784,12 @@ footer a{color:var(--muted)}
   <div class="s">
     <div class="l1"><span class="kind">공연</span><span class="mt">연극</span><strong class="nm">참여형 연극 〈히든퍼즐〉</strong><a class="map" href="https://map.naver.com/p/entry/place/1910206912?placePath=%2Fhome" target="_blank" rel="noopener">지도</a><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=58717" target="_blank" rel="noopener">예매</a></div>
     <p class="hrs">10/3(토)·10/4(일)·10/5(월) 모두 14:30 · 16:30 · 18:30 · 80분 · 중학생 이상</p>
-    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 혜화역 2번 출구에서 걸어서 6분쯤이에요. 10/5는 대체공휴일이라 특별 회차표로 3번 열려요.</p>
+    <p class="note">객석 전원이 극 중 CCTV가 돼서 단서를 따라가며 범인을 추리해요. 무대에 올라가지 않고, 관객의 선택에 따라 결말이 달라져요. 학림에서 걸어서 3분쯤이에요. 10/5는 대체공휴일이라 특별 회차표로 3번 열려요.</p>
     <p class="warn">예스24에서 미리 예매하세요(1인 16,900~19,900원 표시, 날짜별 가격은 예매 화면에서 확인). 티켓은 현장에서 받으니 공연 30분 전에는 도착하세요.</p>
     <details class="alts">
-      <summary>다른 참여형 연극으로 바꾸면 (7편)</summary>
-      <ul><li><div class="an"><div class="ai"><strong>사내연애 보고서</strong><span>제나아트홀 · 100분</span></div><a class="map book" href="https://timeticket.co.kr/product/5465" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:30~16:10</b> 숙소 도착 약 17:35</span></li><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:10~15:40</b> 숙소 도착 약 17:05</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:10~16:55</b> 숙소 도착 약 18:20</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~16:55</b> 숙소 도착 약 18:20</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~17:00</b> 숙소 도착 약 18:25</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~16:45</b> 숙소 도착 약 18:10</span></li><li><div class="an"><div class="ai"><strong>쉬어매드니스</strong><span>콘텐츠박스 · 110분</span></div><a class="map book" href="https://timeticket.co.kr/product/4404" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>16:00~17:50</b> 숙소 도착 약 19:15</span></li></ul>
-      <p class="fx">토속촌 대기가 길어지면 카페를 줄이거나 16:30 회차로 미뤄요.</p>
+      <summary>다른 참여형 연극으로 바꾸면 (6편)</summary>
+      <ul><li><div class="an"><div class="ai"><strong>사내연애 보고서</strong><span>제나아트홀 · 100분</span></div><a class="map book" href="https://timeticket.co.kr/product/5465" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:30~16:10</b> 숙소 도착 약 17:35</span></li><li><div class="an"><div class="ai"><strong>죽여주는 이야기</strong><span>지인시어터 · 90분</span></div><a class="map book" href="https://tickets.interpark.com/goods/26003518" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>14:10~15:40</b> 숙소 도착 약 17:05</span></li><li><div class="an"><div class="ai"><strong>한뼘사이</strong><span>라온아트홀 · 105분</span></div><a class="map book" href="https://timeticket.co.kr/product/3560" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:10~16:55</b> 숙소 도착 약 18:20</span></li><li><div class="an"><div class="ai"><strong>오 마이 갓</strong><span>오마이갓 전용관 · 75분</span></div><a class="map book" href="https://timeticket.co.kr/product/3121" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>13:40~14:55</b> 숙소 도착 약 16:20</span><span class="ar"><b>15:30~16:45</b> 숙소 도착 약 18:10</span></li><li><div class="an"><div class="ai"><strong>멜로에 차질</strong><span>나인진홀 2관 · 85분</span></div><a class="map book" href="https://ticket.yes24.com/New/Perf/Detail/Detail.aspx?IdPerf=59740" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>13:30~14:55</b> 숙소 도착 약 16:20</span><span class="ar"><b>15:30~16:55</b> 숙소 도착 약 18:20</span></li><li><div class="an"><div class="ai"><strong>마피아 게임</strong><span>아라아트홀 · 90분</span></div><a class="map book" href="https://timeticket.co.kr/product/6665" target="_blank" rel="noopener">예매</a></div><span class="ar"><b>15:30~17:00</b> 숙소 도착 약 18:25</span></li></ul>
+      <p class="fx">학림에서 쉬는 시간을 늘리거나 줄여서 맞추세요. 13:30 회차면 학림을 공연 뒤로 옮겨요. 이 날 이 시간대에 맞는 회차가 없는 쉬어매드니스는 뺐어요.</p>
     </details>
   </div>
 </li>
@@ -2632,19 +2813,19 @@ footer a{color:var(--muted)}
     <span class="num" aria-hidden="true">10</span>
     <span class="head">
       <span class="sr">제시 10. </span><span class="ttl">토토로 · 지브리 순례<em class="old">예전 13번</em></span>
-      <span class="hook">지브리 굿즈샵, 키키 카페, 치이카와샵, 도토리 카페까지 귀여운 곳만</span>
+      <span class="hook">지브리 굿즈샵, 키키 카페, 극장판 치이카와, 도토리 카페까지 귀여운 곳만</span>
       <span class="tri"><span class="dr"><b>토</b><span>연남 · 홍대</span></span><span class="dr"><b>일</b><span>용산</span></span><span class="dr"><b>월</b><span>서촌 · 혜화<i class="pl">연극</i></span></span></span>
       <span class="req"><i class="on">국중박</i><i class="on">연극</i><i class="on">노포</i><i class="on">미식</i><i class="on">치이카와</i></span>
     </span>
     <span class="chev" aria-hidden="true"></span>
   </summary>
   <div class="body">
-    <p class="why">동구리 공화국은 서울에서 찾지 못해서(일본 매장만 확인돼요) 스튜디오 지브리 공식 캐릭터샵인 도토리숲(용산)을 넣었어요. 토토로만 콘셉트로 한 카페는 찾지 못해서 지브리 감성 카페(도토리, 코리코)로 골랐어요. 토요일엔 연남·홍대에서 키키 카페와 캐릭터샵을, 일요일엔 용산에서 치이카와샵·도토리숲·국립중앙박물관·도토리 카페를 돌아요. 월요일엔 토속촌 삼계탕 노포와 대학로 참여형 연극이에요.</p>
+    <p class="why">동구리 공화국은 서울에서 찾지 못해서(일본 매장만 확인돼요) 스튜디오 지브리 공식 캐릭터샵인 도토리숲(용산)을 넣었어요. 토토로만 콘셉트로 한 카페는 찾지 못해서 지브리 감성 카페(도토리, 코리코)로 골랐어요. 토요일엔 연남·홍대에서 키키 카페와 캐릭터샵, 시나모롤 카페를 돌고 CGV 연남에서 극장판 치이카와를 봐요. 일요일엔 용산에서 도토리숲과 국립중앙박물관, 도토리 카페를 돌고, 아침에 치이카와샵 줄이 짧으면 들러요. 월요일엔 토속촌 삼계탕 노포와 대학로 참여형 연극이에요.</p>
     
-    <ul class="picks"><li>도토리숲(지브리 공식샵)</li><li>도토리 카페</li><li>코리코카페(키키)</li><li>치이카와샵</li><li>국립중앙박물관</li><li>용리단길 미식</li><li>삼계탕 노포</li><li>참여형 연극</li></ul>
+    <ul class="picks"><li>도토리숲(지브리 공식샵)</li><li>도토리 카페</li><li>코리코카페(키키)</li><li>극장판 치이카와</li><li>치이카와샵(줄 확인)</li><li>국립중앙박물관</li><li>용리단길 미식</li><li>삼계탕 노포</li><li>참여형 연극</li></ul>
 <section class="day">
-    <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">코리코카페 · 카카오프렌즈 · 시나모롤 카페</span></h4>
-    <p class="dm">편도 약 50분 · 흐림 11~20℃ · 마녀배달부 키키 카페에서 브런치를 먹고, 캐릭터샵과 산리오 카페를 돌아요</p>
+    <h4><span class="dl">토 <i>10/3</i></span><span class="dtt">코리코카페 · 카카오프렌즈 · 시나모롤 카페 · 극장판 치이카와</span></h4>
+    <p class="dm">편도 약 50분 · 흐림 11~20℃ · 마녀배달부 키키 카페에서 브런치를 먹고, 캐릭터샵과 산리오 카페를 돌고, 줄 없이 극장판 치이카와를 봐요</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">10:30</span>
@@ -2696,32 +2877,42 @@ footer a{color:var(--muted)}
     
   </div>
 </li>
+<li class="stop k-do">
+  <span class="t">16:15</span>
+  <div class="s">
+    <div class="l1"><span class="kind">영화</span><span class="mt">치이카와</span><strong class="nm">극장판 〈치이카와: 인어 섬의 비밀〉 · CGV 연남</strong><a class="map" href="https://map.naver.com/p/search/CGV%20%EC%97%B0%EB%82%A8" target="_blank" rel="noopener">지도</a><a class="map book" href="https://www.cgv.co.kr/" target="_blank" rel="noopener">예매</a></div>
+    <p class="hrs">99분 · 전체관람가 · 자막판·한국어 더빙판</p>
+    <p class="note">양화로 186 LC타워 7~10층에 있어요(나무위키 기준). 홍대입구역 가까이에 있고 AK플라자 홍대 옆이에요. 예매해 두면 줄은 서지 않아요. 99분이라 끝나면 18시쯤이에요.</p>
+    <p class="warn">상영 시간표는 확인하지 못했어요. CGV 앱에서 16시 전후에 시작하는 회차를 먼저 예매하고, 카페 대기가 길어지면 카페 시간을 줄여서 맞춰요. 관람 특전으로 10/3~10/6 CGV·메가박스, 10/3~10/9 롯데시네마가 참마커 피규어(8종 중 랜덤)를 줘요. CGV는 상영이 끝난 뒤 현장에서 선착순으로, 1인 최대 4개씩이고 물량이 떨어지면 기간 안에도 끝나요.</p>
+    
+  </div>
+</li>
 <li class="stop k-food">
-  <span class="t">17:15</span>
+  <span class="t">18:15</span>
   <div class="s">
     <div class="l1"><span class="kind">저녁</span><span class="mt">미식</span><strong class="nm">스시노칸도 홍대점</strong><a class="map" href="https://map.naver.com/p/entry/place/1873955788?placePath=%2Fhome" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">11:30–22:00 · 마지막 주문 21:30</p>
-    <p class="note">초밥집이에요. 후기가 5천 건이 넘어요. 카페 대기가 길어지면 이 시간을 늦춰요.</p>
+    <p class="note">초밥집이에요. 후기가 5천 건이 넘어요. 영화가 끝나면 걸어서 가요.</p>
     
     
   </div>
 </li>
 <li class="stop k-move">
-  <span class="t">18:45</span>
+  <span class="t">19:45</span>
   <div class="s">
     <div class="l1"><span class="kind">귀가</span><strong class="nm">홍대입구역 → 원당역</strong></div>
     
-    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 20:00.</p>
+    <p class="note">경의중앙선으로 대곡역까지 가서 3호선으로 갈아타요. 숙소 도착 약 21:00.</p>
     
     
   </div>
 </li>
     </ol>
-    <p class="dtip">카페 두 곳 모두 대기가 있을 수 있어요. 줄이 길면 카카오프렌즈 구경과 순서를 바꿔요.</p>
+    <p class="dtip">코리코카페와 시나모롤 카페는 대기가 있을 수 있어요. 극장판 시간을 먼저 예매하고, 카페 줄이 길면 카카오프렌즈 구경과 순서를 바꿔요.</p>
   </section>
 <section class="day">
-    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">치이카와샵 · 도토리숲 · 국립중앙박물관 · 도토리 카페</span></h4>
-    <p class="dm">편도 약 55분 · 소나기 가능 15~26℃ · 지브리 공식 굿즈샵과 치이카와샵, 박물관, 도토리 카페를 용산에서 하루에 돌아요</p>
+    <h4><span class="dl">일 <i>10/4</i></span><span class="dtt">도토리숲 · 치이카와샵 · 국립중앙박물관 · 도토리 카페</span></h4>
+    <p class="dm">편도 약 55분 · 소나기 가능 15~26℃ · 지브리 공식 굿즈샵과 박물관, 도토리 카페를 용산에서 하루에 돌고, 치이카와샵은 줄이 짧을 때만 들러요</p>
     <ol class="tl">
 <li class="stop k-move">
   <span class="t">09:30</span>
@@ -2736,10 +2927,10 @@ footer a{color:var(--muted)}
 <li class="stop k-do">
   <span class="t">10:30</span>
   <div class="s">
-    <div class="l1"><span class="kind">쇼핑</span><span class="mt">치이카와</span><strong class="nm">치이카와샵 용산 아이파크몰점</strong><a class="map" href="https://map.naver.com/p/search/%EC%B9%98%EC%9D%B4%EC%B9%B4%EC%99%80%EC%83%B5%20%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0%20%EC%9A%A9%EC%82%B0" target="_blank" rel="noopener">지도</a></div>
+    <div class="l1"><span class="kind">쇼핑</span><span class="mt opt">줄 확인</span><strong class="nm">치이카와샵 용산 아이파크몰점</strong><a class="map" href="https://map.naver.com/p/search/%EC%B9%98%EC%9D%B4%EC%B9%B4%EC%99%80%EC%83%B5%20%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0%20%EC%9A%A9%EC%82%B0" target="_blank" rel="noopener">지도</a></div>
     <p class="hrs">10:30–22:00</p>
-    <p class="note">아이파크몰 리빙파크 3층 도파민스테이션에 있는 치이카와 공식 스토어예요. 용산역에서 아이파크몰로 이어져요. 줄이 너무 길거나 마감되면 같은 건물 CGV 용산아이파크몰에서 극장판 〈치이카와: 인어 섬의 비밀〉(9/30 개봉, 99분, 전체관람가, 한국어 더빙판 있음)을 봐요. 상영 시간은 CGV 앱에서 확인하세요.</p>
-    <p class="warn">9/19(토)엔 오후 2시에 대기번호가 1160번대였고 5시가 넘어서야 입장했다는 기사가 있어요. 수천 명이 몰려 현장 웨이팅이 일찍 마감되기도 했어요. 지금의 입장·호출 방식과 마감 시각은 확인하지 못했어요. 도착하는 대로 대기 등록부터 하세요.</p>
+    <p class="note">아이파크몰 리빙파크 3층 도파민스테이션에 있는 치이카와 공식 스토어예요. 용산역에서 이어져요. 현장 웨이팅 방식이에요(2월 공지). 이 코스의 치이카와는 토요일 극장판으로 이미 채워서 여기는 덤이에요.</p>
+    <p class="warn">신상이 들어온 날엔 줄이 아주 길어요(9/19 토요일 오후 2시에 대기번호 1160번대, 17시 넘어 입장). 입고가 없는 날은 짧다는 후기가 있지만 이번 주말은 극장판 개봉 첫 주이고 3일 연휴라 장담할 수 없어요. 개점 직후에 가서 대기가 30분을 넘길 것 같으면 건너뛰고 6층 도토리숲으로 가요. 전날 공식 인스타그램(@chiikawashop_kr)에서 입고 공지를 확인하세요.</p>
     
   </div>
 </li>
@@ -2814,7 +3005,7 @@ footer a{color:var(--muted)}
   </div>
 </li>
     </ol>
-    <p class="dtip">치이카와샵 줄이 길어지면 도토리숲과 박물관 순서를 바꿔요. 박물관은 17:30에 닫고 특별전 입장은 16:50까지예요. 잠실 롯데월드몰 지하 1층(10:30–22:00)에도 도토리숲이 있지만 숙소에서 1시간 반쯤 걸릴 것 같아 뺐어요(어림한 값이에요).</p>
+    <p class="dtip">치이카와샵 줄이 30분을 넘길 것 같으면 건너뛰고 도토리숲부터 가요. 이 코스의 치이카와는 토요일 극장판으로 이미 채웠어요. 박물관은 17:30에 닫고 특별전 입장은 16:50까지예요. 잠실 롯데월드몰 지하 1층(10:30–22:00)에도 도토리숲이 있지만 숙소에서 1시간 반쯤 걸릴 것 같아 뺐어요(어림한 값이에요).</p>
   </section>
 <section class="day">
     <h4><span class="dl">월 <i>10/5</i></span><span class="dtt">토속촌 삼계탕 노포 · 참여형 연극</span></h4>
@@ -3632,7 +3823,7 @@ footer a{color:var(--muted)}
 </main>
 
 <footer class="wrap">
-  <p>영업시간과 휴무는 9월 30일에 네이버 지도와 각 기관 누리집에서 확인한 값이에요. 9월 30일 이후에 새로 넣은 곳(토토로·지브리, 신당·익선동·서촌 먹방, 용산 전시, 치이카와)은 네이버 지도가 보안 확인을 요구해서 다이닝코드와 각 공식 안내·기사에서 읽었어요(아래 출처 목록). 날씨는 10월 1일 예보예요. 연휴에 바뀔 수 있으니 출발 전에 지도 앱에서 한 번 더 확인하세요. 입장료는 대략값이에요. 연극 회차와 가격은 같은 날 예스24 공연 안내에서 옮겼어요.</p>
+  <p>영업시간과 휴무는 9월 30일에 네이버 지도와 각 기관 누리집에서 확인한 값이에요. 9월 30일 이후에 새로 넣은 곳(토토로·지브리, 신당·익선동·서촌 먹방, 용산 전시, 치이카와 관련 극장·굿즈샵, 성수 감자탕)은 네이버 지도가 보안 확인을 요구해서 다이닝코드와 각 공식 안내·기사에서 읽었어요(아래 출처 목록). 날씨는 10월 1일 예보예요. 연휴에 바뀔 수 있으니 출발 전에 지도 앱에서 한 번 더 확인하세요. 입장료는 대략값이에요. 연극 회차와 가격은 같은 날 예스24 공연 안내에서 옮겼어요.</p>
   <ul>
 <li><a href="https://map.naver.com" target="_blank" rel="noopener">매장 영업시간: 네이버 지도(2026-09-30 확인)</a></li>
 <li><a href="https://www.mmca.go.kr/seoul/viewingInfo/information.do" target="_blank" rel="noopener">국립현대미술관 서울관 관람 안내</a></li>
@@ -3675,13 +3866,31 @@ footer a{color:var(--muted)}
 <li><a href="https://www.diningcode.com/profile.php?rid=mavEW4Bj4Ldw" target="_blank" rel="noopener">종가만두 영업시간·브레이크·메뉴(다이닝코드)</a></li>
 <li><a href="https://www.diningcode.com/profile.php?rid=hlnzJ0LASJQc" target="_blank" rel="noopener">효자베이커리 10/1~10/6 영업일·메뉴(다이닝코드)</a></li>
 <li><a href="https://mediahub.seoul.go.kr/archives/2014553" target="_blank" rel="noopener">통인시장 엽전도시락 운영 안내(서울시 미디어허브, 2025-05-29)</a></li>
-<li><a href="https://v.daum.net/v/BNc6JWIkXx" target="_blank" rel="noopener">극장판 치이카와: 인어 섬의 비밀 국내 개봉 9/30(다음 뉴스)</a></li>
+<li><a href="https://v.daum.net/v/BNc6JWIkXx" target="_blank" rel="noopener">극장판 치이카와: 인어 섬의 비밀 국내 개봉 9/30, 자막·더빙 상영(다음 뉴스, 2026-09-17)</a></li>
 <li><a href="https://www.etoday.co.kr/news/view/2628749" target="_blank" rel="noopener">용산 치이카와샵 한복 마스코트 대기(이투데이)</a></li>
 <li><a href="https://www.xportsnews.com/article/2202541" target="_blank" rel="noopener">치이카와 용산 대기·현장 웨이팅 조기 마감(엑스포츠뉴스, 2026-09-30)</a></li>
 <li><a href="https://www.museum.go.kr/site/main/exhiSpecialTheme/view/mainVisual?exhiSpThemId=3529713" target="_blank" rel="noopener">국립중앙박물관 특별전 우리들의 밥상(시간·요금)</a></li>
 <li><a href="https://apma.amorepacific.com/visit/guide.do" target="_blank" rel="noopener">아모레퍼시픽미술관 관람 안내(운영·예약·오시는 길)</a></li>
 <li><a href="https://apma.amorepacific.com/contents/exhibition/4170868/view.do" target="_blank" rel="noopener">아모레퍼시픽미술관 Sol LeWitt: Open Structure</a></li>
 <li><a href="https://nol.yanolja.com/ticket/products/26010389" target="_blank" rel="noopener">그라운드시소 용산 브래드 월스 사진전(놀티켓)</a></li>
+<li><a href="https://www.ggilbo.com/news/articleView.html?idxno=1184527" target="_blank" rel="noopener">극장판 치이카와 1주차 주말 현장 특전·판매 상품(금강일보, 2026-09-30)</a></li>
+<li><a href="https://v.daum.net/v/7v6IL2OcL2" target="_blank" rel="noopener">극장판 치이카와 특전 굿즈 일정(다음 뉴스, 2026-09-24)</a></li>
+<li><a href="https://www.topstarnews.net/news/articleView.html?idxno=16228060" target="_blank" rel="noopener">CGV 먼작귀 팝콘통 판매 지점·방식(스타뉴스, 2026-09-29)</a></li>
+<li><a href="https://namu.wiki/w/CGV%20%EC%9A%A9%EC%82%B0%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC%EB%AA%B0" target="_blank" rel="noopener">CGV 용산아이파크몰 위치(나무위키)</a></li>
+<li><a href="https://namu.wiki/w/CGV%20%EC%97%B0%EB%82%A8" target="_blank" rel="noopener">CGV 연남 위치(나무위키)</a></li>
+<li><a href="https://x.com/DaewonMovie/status/2104345346960990688" target="_blank" rel="noopener">치이카와샵 용산 관람권 협업 이벤트 9/30~10/6(대원무비)</a></li>
+<li><a href="https://www.popcondplay.com/ip/news/7" target="_blank" rel="noopener">치이카와 공식 소식: 9/23 극장판 굿즈 입고·한복 시리즈(팝콘D플레이)</a></li>
+<li><a href="https://popga.co.kr/popup/5599" target="_blank" rel="noopener">치이카와샵 용산 예약 입장 기간 안내(팝가)</a></li>
+<li><a href="https://popga.co.kr/popup/5599/review/4432" target="_blank" rel="noopener">치이카와샵 용산 첫 현장 입장일 후기, 입장까지 2시간(팝가)</a></li>
+<li><a href="https://x.com/chiikawashop_kr/status/2026129975900848191" target="_blank" rel="noopener">치이카와샵 용산 예약 입장 후 현장 웨이팅 전환 공지(공식 X)</a></li>
+<li><a href="https://atzip.kr/nagano-market-seoul-sungsu-store-opening-2026/" target="_blank" rel="noopener">나가노마켓 서울 상설 매장 개점 예고(엣집, 2026-01-19)</a></li>
+<li><a href="https://www.thetrippick.com/news/articleView.html?idxno=2560" target="_blank" rel="noopener">나가노마켓 서울 소개: 농담곰·치이카와 굿즈(여행픽, 2026-02-02)</a></li>
+<li><a href="https://www.sentv.co.kr/article/view/sentv202508270071" target="_blank" rel="noopener">나가노마켓 성수 팝업 사전예약(센TV, 2025-08-27)</a></li>
+<li><a href="https://x.com/naganomkt_seoul" target="_blank" rel="noopener">나가노마켓 서울 공식 계정(X)</a></li>
+<li><a href="https://www.diningcode.com/profile.php?rid=jAL2mG45kQKq" target="_blank" rel="noopener">소문난성수감자탕 영업시간·가격·최근 후기(다이닝코드)</a></li>
+<li><a href="https://www.siksinhot.com/theme/magazine/6198" target="_blank" rel="noopener">40년 전통 성수 명물, 소문난성수감자탕(식신)</a></li>
+<li><a href="https://www.poom.co.kr/goods/initDetailGoods.action?goods_no=G24020900918" target="_blank" rel="noopener">치이카와 상품 페이지: 아트박스 가방고리</a></li>
+<li><a href="https://hottracks.kyobobook.co.kr/ht/gift/detail/2315054540029" target="_blank" rel="noopener">치이카와 상품 페이지: 핫트랙스 콜렉트북 세트</a></li>
   </ul>
 </footer>
 <script>
